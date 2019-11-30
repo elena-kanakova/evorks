@@ -1,0 +1,78 @@
+@import "../base/mixins";
+
+#header {
+  width: 100%;
+  height: 130px;
+  padding: 30px 52px 30px 48px;
+}
+
+.header-contacts_wrap {
+  a {
+    display: block;
+    font: 25px/30px Montserrat, sans-serif;
+    font-weight: bold;
+    color: #152748;
+    text-decoration: none;
+  }
+
+  .order-call {
+    display: block;
+    margin-top: 12px;
+    font: 16px/20px Montserrat, sans-serif;
+    font-weight: normal;
+    color: #0B80E0;
+    text-decoration: underline;
+    background: none;
+    border: none;
+  }
+}
+
+.header-nav_wrap {
+  margin-left: 80px;
+}
+
+.header-nav {
+  li {
+    padding: 15px 30px;
+    border-radius: 100px;
+    background: transparent;
+    transition: all .3s linear;
+    cursor: pointer;
+
+    a {
+      font: 15px/18px Montserrat, sans-serif;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.85);
+      transition: all .3s linear;
+    }
+
+    &:hover {
+      background: #E2F3FF;
+
+      a {
+        font: 15px/18px Montserrat, sans-serif;
+        font-weight: 500;
+        color: #1F1F1F;
+      }
+    }
+  }
+
+  li.active {
+    background: #E2F3FF;
+
+    a {
+      font: 16px/20px Montserrat, sans-serif;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+}
+
+.order-service_link-wrap {
+  flex: 1 0 auto;
+  text-align: right;
+
+  .order-service_link {
+    @include btn-order;
+  }
+}

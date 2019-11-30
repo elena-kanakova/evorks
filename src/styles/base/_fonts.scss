@@ -1,0 +1,21 @@
+/* Шрифты */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto.ttf');
+  src: local('Roboto'),
+  url('../fonts/Roboto.woff') format('woff'),
+  url('../fonts/Roboto.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik.ttf');
+  src: local('Rubik'),
+  url('../fonts/Rubik.woff') format('woff'),
+  url('../fonts/Rubik.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

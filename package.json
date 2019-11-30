@@ -1,0 +1,39 @@
+{
+  "name": "Evorks",
+  "version": "1.0.0",
+  "description": "web-site",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elena-kanakova/Evorks"
+  },
+  "author": {
+    "name": "Elena Kanakova",
+    "email": "elena.for.job.2015@yandex.ru"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-scss": "^0.1.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-preprocess": "^3.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "node-sass": "^4.12.0"
+  }
+}

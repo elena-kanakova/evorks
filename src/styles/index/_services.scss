@@ -8,6 +8,7 @@
   height: 33.333%;
   flex: 1 1 100%;
   justify-content: space-between;
+  cursor: pointer;
 
   .services-block__item-text {
     padding: 40px 0 40px 40px;
@@ -17,9 +18,9 @@
 
   .services-block__item-title {
     h3 {
-      font: 25px/30px Montserrat, sans-serif;
+      font: 25px/30px $font_main;
       font-weight: bold;
-      color: rgba(0, 0, 0, 0.85);
+      color: $black_80;
       text-transform: uppercase;
     }
   }
@@ -28,15 +29,15 @@
     margin-top: 30px;
 
     p {
-      font: 14px/17px Montserrat, sans-serif;
-      color: rgba(0, 0, 0, 0.35);
+      font: 14px/17px $font_main;
+      color: $dark-grey;
     }
 
     p.bold {
       margin-bottom: 10px;
-      font: 20px/24px Montserrat, sans-serif;
+      font: 20px/24px $font_main;
       font-weight: bold;
-      color: rgba(0, 0, 0, 0.85);
+      color: $black_80
     }
   }
 

@@ -12,9 +12,9 @@
                     с готовым решением.</p>
             </div>
         </div>
-        <div class="index__form_form-wrap">
+        <div class="index__order-form_form-wrap">
             <form action="" id="index__order-form">
-                <div class="form-elements_wrap flex">
+                <div class="index__order-form-elements_wrap flex">
                     <div class="label-input_wrap">
                         <div class="label_wrap">
                             <label for="name">Имя</label>
@@ -32,13 +32,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-elements_wrap flex">
+                <div class="index__order-form-elements_wrap flex">
                     <div class="label-input_wrap">
                         <div class="label_wrap">
                             <label for="text"></label>
                         </div>
                         <div class="input_wrap">
-                            <textarea name="text" id="text" cols="30" rows="4" placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                            <textarea name="text" id="text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
                         </div>
                     </div>
                     <div class="btn-submit_wrap">
@@ -46,12 +46,8 @@
                             <button type="submit">Заказать услугу</button>
                         </div>
                         <div class="check-agree_wrap flex">
-                            <div class="input_wrap">
-                                <input name="agree" id="agree" type="checkbox">
-                            </div>
-                            <div class="label_wrap">
-                                <label for="agree">Согласие на обработку персональных данных</label>
-                            </div>
+                            <input name="agree" id="input_agree" type="checkbox">
+                            <label id="label_agree" for="input_agree">Согласие на обработку персональных данных</label>
                         </div>
                     </div>
                 </div>

@@ -41,22 +41,18 @@ html.fixed {
 /*Контейнер для всего сайта */
 #wrapper {
   z-index: 0;
-  width: 100%;
+  width: 1920px;
   overflow: hidden;
-}
-
-.container {
-  width: 100%;
-  max-width: 1920px;
-  padding-left: 0;
-  padding-right: 0;
-  @include auto;
 }
 
 .content-wrap {
   width: 84%;
   max-width: 1600px;
   flex: 1 1 84%;
+}
+
+.index__content {
+  height: calc(100% - 271px);
 }
 
 // Общие блоки сайта

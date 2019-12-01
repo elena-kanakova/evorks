@@ -14,31 +14,32 @@
 
   .title {
     h3 {
-      font: 40px Montserrat, sans-serif;
+      font: 40px $font_main;
       font-weight: bold;
-      color: #0B80E0;
+      color: $blue;
+      text-transform: uppercase;
     }
   }
 
   .desc {
     margin-top: 10px;
     p {
-      font: 16px/22px Montserrat, sans-serif;
+      font: 16px/22px $font_main;
       font-weight: bold;
-      color: rgba(0, 0, 0, 0.7);
+      color: $black_70;
     }
   }
 }
 
-.index__form_form-wrap {
+.index__order-form_form-wrap {
   width: 60%;
   flex: 1 1 60%;
   padding: 34px 25px 48px 15px;
+}
 
-  .form-elements_wrap {
-    width: 100%;
-    flex: 1 1 100%;
-  }
+.index__order-form-elements_wrap {
+  width: 100%;
+  flex: 1 1 100%;
 
   .label-input_wrap, .btn-submit_wrap {
     margin: 0 15px 15px 0;
@@ -50,9 +51,10 @@
     margin-bottom: 4px;
 
     label {
-      font: 13px/16px Montserrat, sans-serif;
+      font: 13px/16px $font_main;
       font-weight: bold;
-      color: rgba(0, 0, 0, 0.35);
+      color: $dark-grey;
+      cursor: pointer;
     }
   }
 
@@ -61,12 +63,20 @@
       padding: 15px 19px;
       background: none;
       width: 100%;
-      font: 15px/18px Montserrat, sans-serif;
+      font: 15px/18px $font_main;
       font-weight: bold;
-      color: rgba(0, 0, 0, 0.7);
-      border: 1px solid #DADADA;
+      color: $black_70;
+      border: 1px solid $light-grey;;
       border-radius: 3px;
     }
+
+    textarea {
+      resize: none;
+    }
+
+    @include input_placeholder($color:$black_70);
+
+    @include textarea_placeholder();
   }
 
   .btn-submit_wrap {
@@ -81,14 +91,41 @@
     .check-agree_wrap {
       align-items: center;
 
-      .input_wrap {
-        margin-right: 16px;
+      label {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        font: 13px/16px $font_main;
+        font-weight: bold;
+        color: $dark-grey;
+        cursor: pointer;
 
-        input {
+        &:before {
+          @include pseudo($top:50%,$bottom:auto);
           width: 20px;
           height: 20px;
+          background: $gradient;
+          transform: translateY(-50%);
         }
+
+        &:after {
+          @include pseudo(2,$top:50%,$bottom:auto,$left:1px,$right:1px);
+          width: 18px;
+          height: 19px;
+          background: white;
+          transform: translateY(-50%);
+        }
+      }
+
+      input {
+        display: none;
+        width: 20px;
+        height: 20px;
       }
     }
   }
+}
+
+#input_agree:checked + #label_agree::after {
+  background: url("../../img/ic_check.svg") center center no-repeat white;
 }

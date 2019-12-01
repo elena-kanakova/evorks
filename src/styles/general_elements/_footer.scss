@@ -15,18 +15,18 @@
   margin-right: 40px;
 
   h3 {
-    font: 30px Montserrat, sans-serif;
+    font: 30px $font_main;
     font-weight: bold;
-    color: #0B80E0;
+    color: $blue;
     text-transform: uppercase;
   }
 }
 
 .footer_desc {
   p {
-    font: 16px/20px Montserrat, sans-serif;
+    font: 16px/20px $font_main;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.7);
+    color: $black_70;
   }
 }
 
@@ -53,19 +53,21 @@
     flex: 1 1 100%;
     padding: 30px;
     background: white;
-    border: 1px solid #DADADA;
-    font: 14px/17px Montserrat, sans-serif;
+    border: 1px solid $light-grey;;
+    font: 14px/17px $font_main;
     font-weight: normal;
-    color: rgba(0, 0, 0, 0.35);
+    color: $dark-grey;
   }
+
+  @include input_placeholder();
 }
 
 .footer_form__submit-btn {
   button {
     width: 77px;
     height: 77px;
-    background: url("../../img/search-icon_white.svg") center center no-repeat #0B80E0;
+    background: url("../../img/search-icon_white.svg") center center no-repeat $blue;
     cursor: pointer;
-    border: 1px solid #0B80E0;
+    border: 1px solid $blue;
   }
 }

@@ -1,7 +1,5 @@
 #index__section-slider {
-  width: 100%;
   height: 66.666%;
-  flex: 1 1 100%;
 }
 
 #index__slider {
@@ -19,7 +17,7 @@
 
   .slide_title {
     h3 {
-      font: 40px/49px Montserrat, sans-serif;
+      font: 40px/49px $font_main;
       font-weight: 600;
       color: white;
     }
@@ -29,7 +27,7 @@
     margin-top: 20px;
 
     p {
-      font: 17px/30px Montserrat, sans-serif;
+      font: 17px/30px $font_main;
       font-weight: normal;
       color: white;
     }
@@ -45,7 +43,6 @@
 
 .index__slider-wrap {
   position: relative;
-  width: 100%;
   height: 100%;
 
   .pagination {
@@ -53,13 +50,34 @@
     left: 50px;
     bottom: 50px;
 
-    span {
+    .dot {
       display: block;
-      margin-right: 8px;
+      position: relative;
+      margin-right: 12px;
       width: 7px;
       height: 7px;
       border-radius: 50%;
       background: white;
+      cursor: pointer;
+
+      &:before {
+        opacity: 0;
+        visibility: hidden;
+        @include pseudo(1,$top:50%,$bottom:auto,$left:50%,$right:auto);
+        width: 15px;
+        height: 15px;
+        border: 1px solid white;
+        border-radius: 50%;
+        transform: translate(-50%,-50%);
+        transition: all .3s linear;
+      }
+    }
+
+    .dot.active, .dot:hover {
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }

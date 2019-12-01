@@ -1,21 +1,19 @@
 /* Шрифты */
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto.ttf');
-  src: local('Roboto'),
-  url('../fonts/Roboto.woff') format('woff'),
-  url('../fonts/Roboto.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Montserrat';
+  src: local('Montserrat'), local('Montserrat-Regular'), url('../../fonts/montserrat.woff2') format('woff2'), url('../../fonts/montserrat.woff') format('woff'), url('../../fonts/montserrat.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/Rubik.ttf');
-  src: local('Rubik'),
-  url('../fonts/Rubik.woff') format('woff'),
-  url('../fonts/Rubik.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Montserrat';
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../../fonts/montserratbold.woff2') format('woff2'), url('../../fonts/montserratbold.woff') format('woff'), url('../../fonts/montserratbold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Black'), local('Montserrat-Black'), url('../../fonts/montserratblack.woff2') format('woff2'), url('../../fonts/montserratblack.woff') format('woff'), url('../../fonts/montserratblack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}

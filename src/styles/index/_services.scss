@@ -1,6 +1,12 @@
 #services-block {
   width: 40%;
+  flex: 1 1 40%;
   max-width: 100%;
+
+  @include mq-custom(768px) {
+    width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 .services-block__item {
@@ -12,32 +18,62 @@
 
   .services-block__item-text {
     padding: 40px 0 40px 40px;
-    width: 50%;
-    flex: 1 1 50%;
+
+    @include mq-custom(1366px) {
+      padding: 40px 0 40px 30px;
+    }
+
+    @include mq-custom(414px) {
+      padding: 30px 20px;
+    }
   }
 
   .services-block__item-title {
+    width: 50%;
+    flex: 1 1 50%;
+
     h3 {
       font: 25px/30px $font_main;
       font-weight: bold;
       color: $black_80;
       text-transform: uppercase;
+
+      @include mq-custom(1366px) {
+        font: 20px/26px $font_main;
+        font-weight: bold;
+        color: $black_80;
+      }
     }
   }
 
   .services-block__item-desc {
+    width: 50%;
+    flex: 1 1 50%;
     margin-top: 30px;
 
     p {
       font: 14px/17px $font_main;
+      font-weight: normal;
       color: $dark-grey;
+
+      @include mq-custom(1366px) {
+        font: 12px/15px $font_main;
+        font-weight: normal;
+        color: $dark-grey;
+      }
     }
 
     p.bold {
       margin-bottom: 10px;
       font: 20px/24px $font_main;
       font-weight: bold;
-      color: $black_80
+      color: $black_80;
+
+      @include mq-custom(1366px) {
+        font: 16px/20px $font_main;
+        font-weight: bold;
+        color: $black_80;
+      }
     }
   }
 
@@ -47,14 +83,24 @@
     flex: 1 1 50%;
     box-sizing: border-box;
     text-align: right;
+
+    img {
+      max-width: 100%;
+    }
+
+    @include mq-custom(1366px) {
+      padding: 13px 5px 13px 5px;
+    }
   }
 
   &:nth-child(1) {
-    background: #FDEEB4;
+    background: url("/../../img/helmet-photo.png") center center no-repeat #FDEEB4;
+    background-size: cover;
   }
 
   &:nth-child(2) {
-    background: #FF6666;
+    background: url("/../../img/sink-photo.png") center center no-repeat #FF6666;
+    background-size: cover;
 
     .services-block__item-title {
       h3 {
@@ -74,6 +120,7 @@
   }
 
   &:nth-child(3) {
-    background: #D7EFF4;
+    background: url("/../../img/boxes-photo.png") center center no-repeat #D7EFF4;
+    background-size: cover;
   }
 }

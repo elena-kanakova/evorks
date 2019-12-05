@@ -7,12 +7,62 @@
 
 </head>
 <body>
-<div id="wrapper" class="flex">
-    <div id="left-sidebar">
-    <a href="/" class="header-logo">
-        <img src="../../img/header-logo.svg" alt="Logo">
-        <span>Сервис по предоставлению услуг рабочей силы</span>
-    </a>
+<div id="wrapper">
+    <header id="header" class="flex">
+    <div class="header-logo_wrap">
+        <a href="/" class="header-logo">
+            <img src="../../img/header-logo.svg" alt="Logo">
+            <span>Сервис по предоставлению услуг рабочей силы</span>
+        </a>
+    </div>
+    <div class="header-content_wrap flex">
+        <div class="header-contacts_wrap">
+            <div class="select-city_wrap">
+                <form action="" method="get" class="select-form flex">
+                    <div class="select select__city_wrap">
+                        <select name="select__city" id="select__city">
+                            <option value="Самара">Самара</option>
+                            <option value="Самара">Самара</option>
+                            <option value="Самара">Самара</option>
+                            <option value="Самара">Самара</option>
+                            <option value="Самара">Самара</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <a href="tel:89639135451" class="header-contacts">8 (963) 913-54-51</a>
+            <button class="order-call">Заказать звонок</button>
+        </div>
+        <div class="mobile__nav-btn_wrap js-header-menu">
+            <div class="btn-menu flex column">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </div>
+        </div>
+        <nav class="header-nav_wrap">
+            <ul class="header-nav flex">
+                <li><a href="#" class="active">Все услуги</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">О сервисе</a></li>
+                <li><a href="#">Стать мастером</a></li>
+                <li><a href="#">Помощь</a></li>
+            </ul>
+        </nav>
+        <div class="order-service_link-wrap">
+            <button class="order-service_link">Заказать услугу</button>
+        </div>
+    </div>
+</header>
+    <div class="content-sidebar_wrap flex">
+        <div id="left-sidebar">
+    <div class="js-sidebar-menu left-sidebar_btn-menu_wrap">
+        <div class="btn-menu flex column">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+        </div>
+    </div>
     <aside class="categories-filter flex column">
         <div class="categories-filter-items_wrap">
             <div class="categories_filter-form_wrap">
@@ -117,46 +167,28 @@
         </div>
     </aside>
 </div>
-    <div class="content-wrap">
-        <header id="header" class="flex">
-    <div class="header-contacts_wrap">
-        <a href="tel:89639135451" class="header-contacts">8 (963) 913-54-51</a>
-        <button class="order-call">Заказать звонок</button>
-    </div>
-    <nav class="header-nav_wrap">
-        <ul class="header-nav flex">
-            <li><a href="#" class="active">Все услуги</a></li>
-            <li><a href="#">Оплата</a></li>
-            <li><a href="#">О сервисе</a></li>
-            <li><a href="#">Стать мастером</a></li>
-            <li><a href="#">Помощь</a></li>
-        </ul>
-    </nav>
-    <div class="order-service_link-wrap">
-        <button class="order-service_link">Заказать услугу</button>
-    </div>
-</header>
-        <div class="index__content flex">
-            <main id="index__slider-form_wrap">
-                <section id="index__section-slider">
+        <div class="content-footer_wrap flex">
+            <div class="index__content flex">
+                <main id="index__slider-form_wrap">
+                    <section id="index__section-slider">
     <div class="index__slider-wrap">
         <div id="index__slider">
             <div class="slide flex">
                 <div class="slide_content">
                     <div class="slide_title">
-                        <h3>Сервис <br>
-                            по предоставлению услуг рабочей силы</h3>
+                        <h3>Сервис
+                            по предоставлению <br>услуг рабочей силы</h3>
                     </div>
                     <div class="slide_desc">
                         <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
                             и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
                     </div>
                 </div>
-                <div class="slide_img">
+                <!--<div class="slide_img">
                     <picture>
-                        <img src="../../img/slide-photo.png" alt="Фото">
+                        <img src="../../img/slider-photo_1.png" alt="Фото">
                     </picture>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="pagination flex">
@@ -167,7 +199,7 @@
         </div>
     </div>
 </section>
-                <section id="index__section-form">
+                    <section id="index__section-form">
     <div class="index__form-wrap flex">
         <div class="index__form_title-desc_wrap">
             <div class="title">
@@ -175,9 +207,9 @@
                     заказ</h3>
             </div>
             <div class="desc">
-                <p>Укажите ваши контактные данные. <br>
-                    Опишите нужные виды работ. <br>
-                    Менеджер перезвонит вам, <br>
+                <p>Укажите ваши контактные данные.
+                    Опишите нужные виды работ.
+                    Менеджер перезвонит вам,
                     с готовым решением.</p>
             </div>
         </div>
@@ -224,8 +256,8 @@
         </div>
     </div>
 </section>
-            </main>
-            <aside id="services-block">
+                </main>
+                <aside id="services-block">
     <article class="services-block__item flex">
         <div class="services-block__item-text">
             <div class="services-block__item-title">
@@ -237,9 +269,9 @@
                 <p>Рабочий часовой день 8 часов 1300 руб.</p>
             </div>
         </div>
-        <div class="services-block__item-img">
+        <!--<div class="services-block__item-img">
             <picture><img src="../../img/helmet.png" alt="Фото"></picture>
-        </div>
+        </div>-->
     </article>
     <article class="services-block__item flex">
         <div class="services-block__item-text">
@@ -251,9 +283,9 @@
                 <p>Выполнит любую вспомогательную задачу</p>
             </div>
         </div>
-        <div class="services-block__item-img">
+        <!--<div class="services-block__item-img">
             <picture><img src="../../img/sink.png" alt="Фото"></picture>
-        </div>
+        </div>-->
     </article>
     <article class="services-block__item flex">
         <div class="services-block__item-text">
@@ -266,19 +298,19 @@
                 <p>Рабочий часовой день 8 часов 1300 руб</p>
             </div>
         </div>
-        <div class="services-block__item-img">
+        <!--<div class="services-block__item-img">
             <picture><img src="../../img/boxes.png" alt="Фото"></picture>
-        </div>
+        </div>-->
     </article>
 </aside>
-        </div>
-        <footer id="footer" class="flex">
+            </div>
+            <footer id="footer" class="flex">
     <div class="footer_title-desc_wrap flex">
         <div class="footer_title">
             <h3>Поиск</h3>
         </div>
         <div class="footer_desc">
-            <p>Напишите о проблеме <br>
+            <p>Напишите о проблеме
                 или название мастера</p>
         </div>
     </div>
@@ -293,6 +325,7 @@
         </form>
     </div>
 </footer>
+        </div>
     </div>
 </div>
 

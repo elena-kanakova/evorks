@@ -12,18 +12,20 @@
     <!-- @endif -->
 </head>
 <body>
-<div id="wrapper" class="flex">
-    @@include('./general/_sidebar.html')
-    <div class="content-wrap">
-        @@include('./general/_header.html')
-        <div class="index__content flex">
-            <main id="index__slider-form_wrap">
-                @@include('./index/_slider.html')
-                @@include('./index/_form.html')
-            </main>
-            @@include('./index/_services.html')
+<div id="wrapper">
+    @@include('./general/_header.html')
+    <div class="content-sidebar_wrap flex">
+        @@include('./general/_sidebar.html')
+        <div class="content-footer_wrap flex">
+            <div class="index__content flex">
+                <main id="index__slider-form_wrap">
+                    @@include('./index/_slider.html')
+                    @@include('./index/_form.html')
+                </main>
+                @@include('./index/_services.html')
+            </div>
+            @@include('./general/_footer.html')
         </div>
-        @@include('./general/_footer.html')
     </div>
 </div>
 

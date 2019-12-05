@@ -41,18 +41,26 @@ html.fixed {
 /*Контейнер для всего сайта */
 #wrapper {
   z-index: 0;
-  width: 1920px;
+  width: 100%;
   overflow: hidden;
 }
 
-.content-wrap {
+.content-footer_wrap {
   width: 84%;
-  max-width: 1600px;
   flex: 1 1 84%;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq-custom(1024px) {
+    width: auto;
+    flex: 1 1 auto;
+  }
 }
 
 .index__content {
-  height: calc(100% - 271px);
+  @include mq-custom(768px) {
+    flex-direction: column;
+  }
 }
 
 // Общие блоки сайта

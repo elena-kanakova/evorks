@@ -4,35 +4,148 @@
   width: 16%;
   height: inherit;
   flex: 1 1 16%;
+
+  @include mq-custom(1024px) {
+    position: relative;
+    width: auto;
+    flex: 1 1 auto;
+  }
 }
 
-.header-logo {
-  display: block;
-  height: 130px;
-  padding: 30px 40px;
+.left-sidebar_btn-menu_wrap {
+  display: none;
+  height: 100%;
+  background: #F6FBFF;
+  border-right: 1px solid #DADADA;
+  border-top: 1px solid #DADADA;
   cursor: pointer;
 
-  img {
-    display: block;
+  .btn-menu {
+    padding: 20px;
     width: 100%;
-    height: auto;
-    max-width: 156px;
-    max-height: 30px;
+    height: 100%;
+    cursor: pointer;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    span {
+      display: block;
+      height: 2px;
+      margin-bottom: 3px;
+      transition: all .3s linear;
+    }
+
+    .one, .three {
+      width: 14px;
+      background: $blue;
+    }
+
+    .two {
+      width: 19px;
+      background: $blue;
+    }
+
+    .three {
+      margin-bottom: 0;
+    }
+
+    @include mq-custom(640px) {
+      padding: 20px 10px;
+    }
+
+    @include mq-custom(414px) {
+      padding: 12px 5px 0 10px;
+      height: 35px;
+    }
   }
 
-  span {
+  @include mq-custom(1024px) {
     display: block;
-    margin-top: 8px;
-    font: 12px/15px $font_main;
-    font-weight: normal;
-    color: #58647C;
+  }
+
+  @include mq-custom(414px) {
+    display: block;
+    position: absolute;
+    z-index: 4;
+    height: auto;
+    border-bottom: 1px solid #DADADA;
+  }
+}
+
+.left-sidebar_btn-menu_wrap.active {
+  .btn-menu {
+    span {
+      &:nth-child(1), &:nth-child(3) {
+        margin: 0;
+        background-color: $blue !important;
+      }
+
+      &:nth-child(1) {
+        transform: translate(0, 2px) rotate(-45deg) scaleX(1.4);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        height: 0;
+        margin: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translate(0, 0) rotate(45deg) scaleX(1.4);
+        background-color: $blue !important;
+      }
+    }
   }
 }
 
 .categories-filter {
-  height: calc(100% - 130px);
+  height: 100%;
   background: #EEF8FF;
   justify-content: space-between;
+
+  @include mq-custom(1024px) {
+    position: absolute;
+    z-index: 3;
+    left: 60px;
+    top: 0;
+    width: 0;
+    visibility: hidden;
+    transition: all .3s linear .3s;
+  }
+
+  @include mq-custom(640px) {
+    left: 40px;
+  }
+
+  @include mq-custom(414px) {
+    left: 0;
+  }
+}
+
+.categories-filter.active {
+  width: 200px;
+  visibility: visible;
+  transition: all .3s linear 0s;
+
+  .categories-nav {
+    @include mq-custom(1024px) {
+      visibility: visible;
+      transition: visibility .3s linear .3s;
+    }
+  }
+
+  .categories-link {
+    @include mq-custom(1024px) {
+      visibility: visible;
+      transition: visibility .3s linear .3s;
+    }
+  }
+}
+
+.categories_filter-form_wrap {
+  @include mq-custom(414px) {
+    padding-left: 35px;
+  }
 }
 
 .categories_filter-form_label_wrap {
@@ -51,6 +164,10 @@
     img {
       display: block;
       margin-left: 40px;
+
+      @include mq-custom(1366px) {
+        margin-left: 5px;
+      }
     }
   }
 }
@@ -58,7 +175,7 @@
 .categories_filter-form_input_wrap {
   width: 100%;
   background: #F6FBFF;
-  border: 1px solid $light-grey;;
+  border: 1px solid $light-grey;
 
   input {
     padding: 20px 75px;
@@ -66,13 +183,38 @@
     height: 100%;
     border: none;
     background: none;
+
+    @include mq-custom(1366px) {
+      padding: 20px 15px 20px 35px;
+    }
+
+    @include mq-custom(414px) {
+      padding: 10px 15px 10px 35px;
+    }
   }
 
   @include input_placeholder($font-size:16px,$font-weight:500);
+
+  @include mq-custom(1366px) {
+    @include input_placeholder($font-size:12px,$font-weight:500);
+  }
+
+  @include mq-custom(1024px) {
+    border-left: none;
+  }
 }
 
 .categories-nav {
   padding: 20px 35px;
+
+  @include mq-custom(1366px) {
+    padding: 20px 15px;
+  }
+
+  @include mq-custom(1024px) {
+    visibility: hidden;
+    transition: visibility .3s linear 0s;
+  }
 }
 
 .categories-nav_item {
@@ -94,6 +236,10 @@
       height: 4px;
       background: url("../../img/arrow-down.svg") center center no-repeat;
       background-size: cover;
+    }
+
+    @include mq-custom(1366px) {
+      font: 13px/18px Montserrat, sans-serif;
     }
   }
 }
@@ -117,6 +263,10 @@
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+
+    @include mq-custom(1366px) {
+      font: 12px/18px Montserrat, sans-serif;
+    }
   }
 }
 
@@ -141,4 +291,16 @@
   background: $gradient;
   border: none;
   cursor: pointer;
+
+  @include mq-custom(1366px) {
+    height: 60px;
+    font: 14px/18px $font_main;
+    font-weight: normal;
+    color: white;
+  }
+
+  @include mq-custom(1024px) {
+    visibility: hidden;
+    transition: visibility .3s linear 0s;
+  }
 }

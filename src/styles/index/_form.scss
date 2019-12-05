@@ -6,6 +6,12 @@
   flex: 1 1 100%;
 }
 
+.index__form-wrap {
+  @include mq-custom(1366px) {
+    flex-direction: column;
+  }
+}
+
 .index__form_title-desc_wrap {
   width: 40%;
   height: 100%;
@@ -18,16 +24,39 @@
       font-weight: bold;
       color: $blue;
       text-transform: uppercase;
+
+      @include mq-custom(1366px) {
+        font: 30px $font_main;
+        font-weight: bold;
+        color: $blue;
+
+        br {
+          display: none;
+        }
+      }
     }
   }
 
   .desc {
     margin-top: 10px;
+
     p {
       font: 16px/22px $font_main;
       font-weight: bold;
       color: $black_70;
+
+      @include mq-custom(1366px) {
+        font: 12px/18px $font_main;
+        font-weight: bold;
+        color: $black_70;
+      }
     }
+  }
+
+  @include mq-custom(1366px) {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 20px 20px 10px 20px;
   }
 }
 
@@ -35,6 +64,12 @@
   width: 60%;
   flex: 1 1 60%;
   padding: 34px 25px 48px 15px;
+
+  @include mq-custom(1366px) {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 14px 15px 8px 15px;
+  }
 }
 
 .index__order-form-elements_wrap {
@@ -45,6 +80,11 @@
     margin: 0 15px 15px 0;
     width: 50%;
     flex: 1 1 50%;
+
+    @include mq-custom(414px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }
   }
 
   .label_wrap {
@@ -77,6 +117,11 @@
     @include input_placeholder($color:$black_70);
 
     @include textarea_placeholder();
+
+    @include mq-custom(1366px) {
+      @include input_placeholder($font-size:12px);
+      @include textarea_placeholder($font-size:12px);
+    }
   }
 
   .btn-submit_wrap {
@@ -85,6 +130,10 @@
 
       button {
         @include btn-order;
+      }
+
+      @include mq-custom(414px) {
+        text-align: center;
       }
     }
 
@@ -122,7 +171,15 @@
         width: 20px;
         height: 20px;
       }
+
+      @include mq-custom(414px) {
+        justify-content: center;
+      }
     }
+  }
+
+  @include mq-custom(414px) {
+    flex-direction: column;
   }
 }
 

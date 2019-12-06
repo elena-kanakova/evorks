@@ -29,13 +29,18 @@
   font-weight: bold;
 }
 
+.none {
+  display: none !important;
+}
+
 html.fixed {
   position: fixed;
   width: 100%;
   max-width: 1920px;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /*Контейнер для всего сайта */
@@ -45,6 +50,21 @@ html.fixed {
   overflow: hidden;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,.5);
+}
+
+.content-sidebar_wrap {
+  width: inherit;
+}
+
 .content-footer_wrap {
   width: 84%;
   flex: 1 1 84%;
@@ -52,14 +72,123 @@ html.fixed {
   justify-content: space-between;
 
   @include mq-custom(1024px) {
-    width: auto;
+    width: calc(100% - 60px);
     flex: 1 1 auto;
+  }
+
+  @include mq-custom(414px) {
+    width: inherit;
   }
 }
 
 .index__content {
   @include mq-custom(768px) {
     flex-direction: column;
+  }
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+
+  @media only screen and (max-height: 768px) {
+    height: 100%;
+  }
+
+  .modal-wrap {
+    position: relative;
+    padding: 20px;
+    height: inherit;
+    background: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  @include mq-custom(640px) {
+    width: 390px;
+  }
+
+  @include mq-custom(414px) {
+    width: 340px;
+  }
+
+  @include mq-custom(360px) {
+    width: 300px;
+  }
+
+  .index__form_title-desc_wrap {
+    width: 100%;
+    height: 100%;
+    flex: none;
+    padding: 40px 15px 10px;
+
+    @include mq-custom(768px) {
+      .title {
+        h3 {
+          font: 24px Montserrat, sans-serif;
+          font-weight: bold;
+          color: #0B80E0;
+        }
+      }
+    }
+
+    @include mq-custom(414px) {
+      padding: 20px 20px 10px 20px;
+
+      .title {
+        h3 {
+          font: 18px Montserrat, sans-serif;
+          font-weight: bold;
+          color: #0B80E0;
+        }
+      }
+    }
+  }
+
+  .index__order-form_form-wrap {
+    width: 100%;
+    flex: none;
+    padding: 34px 15px 48px 15px;
+
+    @include mq-custom(768px) {
+      padding: 24px 15px 28px 15px;
+    }
+
+    @include mq-custom(414px) {
+      padding: 14px 15px 28px 15px;
+    }
+  }
+
+  .index__order-form-elements_wrap {
+    .label-input_wrap, .btn-submit_wrap {
+      margin: 0 15px 15px 0;
+      width: 100%;
+      flex: none;
+    }
+  }
+
+  .btn-submit_wrap {
+    align-items: center;
+  }
+}
+
+.btn-modal_close {
+  justify-content: flex-end;
+
+  p {
+    font: 12px $font_main;
+    font-weight: normal;
+    color: $dark-blue;
+    cursor: pointer;
+
+    &:hover {
+      color: $blue;
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 @import "../base/mixins";
 
 #header {
-  width: 100%;
+  width: 100vw;
   height: 130px;
 
   @include mq-custom(414px) {
@@ -124,6 +124,11 @@
     background: none;
     border: none;
     cursor: pointer;
+    transition: color .3s linear;
+
+    &:hover {
+      color: $dark-blue;
+    }
 
     @include mq-custom(414px) {
       margin-top: 0;
@@ -345,6 +350,11 @@
 
   .order-service_link {
     @include btn-order;
+    transition: all .3s linear;
+
+    &:hover {
+      background: $gradient_reverse;
+    }
 
     @include mq-custom(768px) {
       width: 170px;
@@ -384,6 +394,11 @@
   background: none;
   border: none;
   cursor: pointer;
+  transition: color .3s linear;
+
+  &:hover {
+    color: $dark-blue;
+  }
 
   @include mq-custom(414px) {
     margin-bottom: 5px;

@@ -1,4 +1,5 @@
 #index__section-slider {
+  max-width: 100%;
   height: auto;
   min-height: 66.66%;
 
@@ -123,8 +124,10 @@
 
   .pagination {
     position: relative;
-    left: 50px;
-    bottom: 50px;
+    z-index: 3;
+    left: 50px !important;
+    bottom: 50px !important;
+    height: 100%;
 
     .dot {
       display: block;
@@ -157,11 +160,11 @@
     }
 
     @include mq-custom(768px) {
-      left: 30px;
+      left: 30px !important;
     }
 
     @include mq-custom(414px) {
-      left: 20px;
+      left: 20px !important;
     }
   }
 }

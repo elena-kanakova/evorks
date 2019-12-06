@@ -114,7 +114,7 @@
     color: $dark-grey;
 
     @include mq-custom(1366px) {
-      padding: 20px;
+      padding: 19px;
     }
   }
 
@@ -129,6 +129,10 @@
     background: url("../../img/search-icon_white.svg") center center no-repeat $blue;
     cursor: pointer;
     border: 1px solid $blue;
+
+    &:hover {
+      background: url("../../img/search-icon_white.svg") center center no-repeat, $gradient_reverse;
+    }
 
     @include mq-custom(1366px) {
       width: 57px;

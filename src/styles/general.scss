@@ -89,15 +89,17 @@ html.fixed {
 
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 500px;
+  width: 480px;
 
   @media only screen and (max-height: 768px) {
+    top: 0;
     height: 100%;
+    transform: translate(-50%,0);
   }
 
   .modal-wrap {
@@ -110,7 +112,7 @@ html.fixed {
   }
 
   @include mq-custom(640px) {
-    width: 390px;
+    width: 380px;
   }
 
   @include mq-custom(414px) {

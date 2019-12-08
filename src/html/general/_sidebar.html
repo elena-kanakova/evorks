@@ -11,18 +11,19 @@
             <div class="categories_filter-form_wrap">
                 <form action="" id="categories_filter-form" class="flex">
                     <div class="categories_filter-form_label_wrap">
-                        <label for="categories_filter-form_input">
+                        <label id="categories_filter-form_label" for="categories_filter-form_input" class="flex">
                             <img src="../../img/search-icon_black.svg" alt="Иконка">
+                            <span>Выберите категорию</span>
                         </label>
                     </div>
                     <div class="categories_filter-form_input_wrap">
-                        <input id="categories_filter-form_input" name="categories_filter-form_input" type="text" placeholder="Выберите категорию">
+                        <input id="categories_filter-form_input" name="categories_filter-form_input" type="text">
                     </div>
                 </form>
             </div>
             <nav class="categories-nav">
                 <ul class="categories-nav-items_wrap">
-                    <li class="categories-nav_item"><span>экворкеры</span>
+                    <li class="categories-nav_item active"><span>экворкеры</span>
                         <ul class="categories-nav_item-inner_wrap">
                             <li class="categories-nav_item-inner">
                                 <a href="">ПОДСОБНИК-РАЗНОРАБОЧИЙ</a>
@@ -65,40 +66,31 @@
                     <li class="categories-nav_item"><span>Услуги</span>
                         <ul class="categories-nav_item-inner_wrap">
                             <li class="categories-nav_item-inner">
-                                <a href="">ПОДСОБНИК-РАЗНОРАБОЧИЙ</a>
+                                <a href="">МЕЛКИЙ РЕМОНТ</a>
                             </li>
                             <li class="categories-nav_item-inner">
-                                <a href="">ГРУЗЧИК И ТАКЕЛАЖНИКИ</a>
+                                <a href="">ОТДЕЛКА И РЕМОНТ</a>
                             </li>
                             <li class="categories-nav_item-inner">
-                                <a href="">МАСТЕР НА ЧАС</a>
+                                <a href="">СТРОИТЕЛЬНЫЕ РАБОТЫ</a>
                             </li>
                             <li class="categories-nav_item-inner">
-                                <a href="">МАСТЕР ПО РЕМОНТУ</a>
+                                <a href="">ДЕМОНТАЖ</a>
                             </li>
                             <li class="categories-nav_item-inner">
-                                <a href="">ЭЛЕКТРИК</a>
+                                <a href="">САНТЕХНИКА</a>
                             </li>
                             <li class="categories-nav_item-inner">
-                                <a href="">САНТЕХНИК</a>
+                                <a href="">ЭЛЕКТРИКА</a>
                             </li>
                             <li class="categories-nav_item-inner">
-                                <a href="">ЗЕМЛЕКОП</a>
+                                <a href="">СБОРКА МЕБЕЛИ</a>
                             </li>
                             <li class="categories-nav_item-inner">
-                                <a href="">ДВОРНИК</a>
+                                <a href="">УБОРКА МУСОРА</a>
                             </li>
                             <li class="categories-nav_item-inner">
-                                <a href="">КЛИНИНГ-МАСТЕР</a>
-                            </li>
-                            <li class="categories-nav_item-inner">
-                                <a href="">УПАКОВЩИК-КОМПЛЕКТОВЩИК</a>
-                            </li>
-                            <li class="categories-nav_item-inner">
-                                <a href="">РАБОЧИЙ НА ПРОИЗВОДСТВО</a>
-                            </li>
-                            <li class="categories-nav_item-inner">
-                                <a href="">другие эворкеры</a>
+                                <a href="">КЛИНИНГ</a>
                             </li>
                         </ul>
                     </li>
@@ -106,7 +98,7 @@
             </nav>
         </div>
         <div class="all-categories-link_wrap">
-            <button class="categories-link js-modal-link_btn" data-href="order-call">Все услуги</button>
+            <button class="categories-link js-modal-link_btn" data-href="order-call" data-title="Оставьте заявку на получение подробностей" data-btnTitle="Оставить заявку">Все услуги</button>
         </div>
     </aside>
 </div>

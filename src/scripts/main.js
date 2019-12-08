@@ -45,7 +45,6 @@ $('.select-form select').each(function() {
 
 $('.js-header-menu').on('click', function (e) {
     $(this).toggleClass('active');
-    //$('html').toggleClass('fixed');
     $('.header-nav_wrap').toggleClass('active');
 });
 
@@ -77,42 +76,70 @@ $(function(){
 });
 
 $(document).ready(function() {
-    $('.js-modal-link').click(function(e) {
-        e.preventDefault();
-
-        var id = $(this).attr('href');
-        var id2 = $(this).offset().top,
-            height = window.innerHeight / 2;
-
-        $('.overlay').fadeIn(200);
-        $(id).fadeIn(200);
-        $(id).css('top', window.scrollY + height + 'px');
-    });
-
     $('.js-modal-link_btn').click(function(e) {
         e.preventDefault();
 
-        var id = '#' + $(this).attr('data-href');
-        var id2 = $(this).offset().top,
-            height = window.outerHeight / 2;
+        let id = '#' + $(this).attr('data-href');
+        let title = $(this).attr('data-title');
+        let btnTitle = $(this).attr('data-btnTitle');
+        let modalTitle = $('.modal-form_title');
+        let modalBtnTitle = $('.js-modal-form_btn');
 
-        $('html').addClass('fixed');
+        //$('html').addClass('fixed');
         $('.overlay').fadeIn(200);
         $(id).fadeIn(500);
-        //$(id).css('top', window.scrollY + height + 'px');
+        $(modalTitle).text(title);
+        $(modalBtnTitle).text(btnTitle);
     });
 
     $('.js-close-btn').click(function (e) {
         e.preventDefault();
         $('.overlay').fadeOut(200);
         $('.modal').fadeOut(500);
-        $('html').removeClass('fixed');
+        //$('html').removeClass('fixed');
     });
 
     $('body').on('click', '.overlay', function(event) {
         event.preventDefault();
         $('.overlay').fadeOut(200);
         $('.modal').fadeOut(500);
-        $('html').removeClass('fixed');
+        //$('html').removeClass('fixed');
+    });
+});
+
+$(document).ready(function() {
+    let input = $('#categories_filter-form_input');
+    let label = $('#categories_filter-form_label span');
+
+    input.focus(function(){
+        label.addClass('hidden');
+    });
+
+    input.blur(function(){
+        label.removeClass('hidden');
+    });
+});
+
+$(document).ready(function() {
+    let img = $('.js-services-block__img');
+
+    img.each(function () {
+        let article = $(this).parent().parent().parent();
+        let imgBg = $(this).attr('src');
+        let imgSrc = 'url("' + imgBg + '") center center no-repeat';
+        article.css('background',imgSrc);
+        article.css('background-size','cover');
+    });
+});
+
+$(document).ready(function() {
+    let img = $('.js-index-slider_img');
+
+    img.each(function () {
+        let article = $(this).parent().parent().parent();
+        let imgBg = $(this).attr('src');
+        let imgSrc = 'url("' + imgBg + '") center center no-repeat';
+        article.css('background',imgSrc);
+        article.css('background-size','cover');
     });
 });

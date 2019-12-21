@@ -1,0 +1,27 @@
+.breadcrumbs_wrap {
+  height: 60px;
+  width: 100%;
+  padding: 20px 50px;
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+}
+
+.breadcrumbs-item {
+  margin-right: 10px;
+}
+
+.breadcrumbs-link {
+  padding-right: 10px;
+  font: 14px $font_main;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.breadcrumbs-link_active {
+  font: 14px $font_main;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  border-right: none;
+}
+

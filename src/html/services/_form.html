@@ -1,0 +1,57 @@
+<section id="services__section-form">
+    <div class="services__form-wrap flex column">
+        <div class="services__form_title-desc_wrap flex">
+            <div class="title">
+                <h3>Быстрый <br>
+                    заказ</h3>
+            </div>
+            <div class="desc">
+                <p>Укажите ваши контактные данные.
+                    Опишите нужные виды работ.
+                    Менеджер перезвонит вам,
+                    с готовым решением.</p>
+            </div>
+        </div>
+        <div class="services__order-form_form-wrap">
+            <form action="" id="services__order-form">
+                <div class="services__order-form-elements_wrap flex">
+                    <div class="label-input_wrap">
+                        <div class="label_wrap">
+                            <label for="services_name">Имя</label>
+                        </div>
+                        <div class="input_wrap">
+                            <input name="name" id="services_name" type="text" placeholder="Ваше имя">
+                        </div>
+                    </div>
+                    <div class="label-input_wrap">
+                        <div class="label_wrap">
+                            <label for="services_phone">Номер телефона</label>
+                        </div>
+                        <div class="input_wrap">
+                            <input name="phone" id="services_phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="services__order-form-elements_wrap flex">
+                    <div class="label-input_wrap">
+                        <div class="label_wrap">
+                            <label for="services_text"></label>
+                        </div>
+                        <div class="input_wrap">
+                            <textarea name="text" id="services_text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-submit_wrap">
+                        <div class="btn_wrap">
+                            <button type="submit">Заказать услугу</button>
+                        </div>
+                        <div class="check-agree_wrap flex">
+                            <input name="agree" id="services_input_agree" type="checkbox" checked class="input_agree">
+                            <label id="services_label_agree" for="services_input_agree" class="label_agree">Согласие на обработку персональных данных</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -194,14 +194,33 @@ html.fixed {
   }
 }
 
+#services__content {
+  width: 62%;
+  flex: 1 1 62%;
+}
+
+#services__aside {
+  width: 38%;
+  flex: 1 1 38%;
+}
+
 // Общие блоки сайта
 @import "general_elements/header";
 @import "general_elements/footer";
+@import "general_elements/footer-inner";
 @import "general_elements/sidebar";
+@import "general_elements/breadcrumbs";
 
 // Главная
 @import "index/slider";
 @import "index/form";
 @import "index/services";
+
+// Сервисы
+@import "services/evorkers";
+@import "services/form";
+@import "services/services";
+@import "services/services-aside";
+@import "services/sidebar";
 
 //Контакты

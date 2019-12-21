@@ -1,0 +1,42 @@
+@import "../base/mixins";
+
+.services__form-wrap {
+  padding: 40px 50px 20px;
+
+  @include mq-custom(1366px) {
+    flex-direction: column;
+  }
+}
+
+.services__form_title-desc_wrap {
+  .title {
+    margin-right: 37px;
+  }
+
+  @include form();
+}
+
+.services__order-form_form-wrap {
+  margin-top: 30px;
+
+  @include mq-custom(1366px) {
+    width: 100%;
+    flex: 1 1 100%;
+    margin-top: 40px;
+  }
+}
+
+.services__order-form-elements_wrap {
+  width: 100%;
+  flex: 1 1 100%;
+
+  @include form_inputs();
+
+  @include mq-custom(414px) {
+    flex-direction: column;
+  }
+}
+
+#services_input_agree:checked + #services_label_agree::after, #services__input_agree:checked + #services__label_agree::after {
+  background: url("../../img/ic_check.svg") center center no-repeat white;
+}

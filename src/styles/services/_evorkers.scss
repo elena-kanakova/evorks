@@ -1,0 +1,133 @@
+#evorkers {
+  justify-content: space-between;
+}
+
+.evorkers_title {
+  position: relative;
+  padding: 30px;
+  width: 66%;
+  flex: 1 1 66%;
+  background: #7266FF;
+
+  &:after {
+    @include pseudo(1,auto,50%,auto,-15px);
+    width: 30px;
+    height: 30px;
+    background: #7266FF;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    font: 24px $font_main;
+    font-weight: bold;
+    color: white;
+  }
+
+  p {
+    font: 14px $font_main;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.evorkers_item {
+  position: relative;
+  padding: 40px;
+  width: 33%;
+  height: 180px;
+  flex: 1 1 33%;
+  background: white;
+  border-right: 1px solid #C6C2F3;
+  border-bottom: 1px solid #C6C2F3;
+
+  &:nth-child(1) {
+    box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5);
+  }
+
+  &:after {
+    display: none;
+    @include pseudo(1,auto,auto,0,0);
+    width: 70px;
+    height: 70px;
+    background: url("../../img/x-icon.svg") center center no-repeat #7266FF;
+    background-size: 20px 20px;
+  }
+}
+
+.evorkers_item_active {
+  position: relative;
+  z-index: 2;
+  box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5);
+
+  &:after {
+    display: block;
+  }
+
+  .evorkers_item-img {
+    right: 108px;
+  }
+}
+
+.evorkers_item-title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+  width: 60%;
+
+  h3 {
+    font: 16px $font_main;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.85);
+    text-transform: uppercase;
+  }
+}
+
+.evorkers_item-desc {
+  width: 60%;
+
+  p {
+    font: 15px $font_main;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.35);
+  }
+}
+
+.evorkers_item-img {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 0;
+
+  img {
+    display: block;
+  }
+}
+
+.evorkers_item__more {
+  padding: 30px;
+  width: 66%;
+  flex: 1 1 66%;
+  background: rgba(114, 102, 255, 0.1);
+
+  .more-icon {
+    span {
+      display: block;
+      margin-right: 10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #7266FF;
+    }
+  }
+
+  .more-text {
+    p {
+      margin-top: 20px;
+      font: 16px $font_main;
+      font-weight: bold;
+      color: #7266FF;
+      text-transform: uppercase;
+    }
+  }
+}

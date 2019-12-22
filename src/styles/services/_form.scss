@@ -3,17 +3,56 @@
 .services__form-wrap {
   padding: 40px 50px 20px;
 
-  @include mq-custom(1366px) {
-    flex-direction: column;
+  @include mq-custom(1750px) {
+    padding: 40px 30px 20px;
   }
 }
 
 .services__form_title-desc_wrap {
   .title {
     margin-right: 37px;
+
+    @include mq-custom(1650px) {
+      margin-bottom: 20px;
+    }
+
+    @include mq-custom(1360px) {
+      margin-right: 0;
+    }
+
+    h3 {
+      @include mq-custom(768px) {
+        font: 26px $font_main !important;
+        font-weight: bold !important;
+        color: $blue !important;
+      }
+
+      @include mq-custom(640px) {
+        font: 24px $font_main !important;
+        font-weight: bold !important;
+        color: $blue !important;
+      }
+
+      @include mq-custom(414px) {
+        font: 20px $font_main !important;
+        font-weight: bold !important;
+        color: $blue !important;
+      }
+
+      @include mq-custom(320px) {
+        font: 18px $font_main !important;
+        font-weight: bold !important;
+        color: $blue !important;
+      }
+    }
   }
 
   @include form();
+
+  @include mq-custom(1650px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .services__order-form_form-wrap {
@@ -32,8 +71,28 @@
 
   @include form_inputs();
 
-  @include mq-custom(414px) {
+  @include mq-custom(640px) {
     flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .label-input_wrap, .btn-submit_wrap {
+    @include mq-custom(640px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+  }
+
+  .btn_wrap {
+    @include mq-custom(640px) {
+      text-align: center;
+    }
+  }
+
+  .check-agree_wrap {
+    @include mq-custom(640px) {
+      justify-content: center;
+    }
   }
 }
 

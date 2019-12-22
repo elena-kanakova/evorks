@@ -197,11 +197,27 @@ html.fixed {
 #services__content {
   width: 62%;
   flex: 1 1 62%;
+
+  @include mq-custom(1360px) {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.services_content-wrap {
+  @include mq-custom(1360px) {
+    flex-direction: column;
+  }
 }
 
 #services__aside {
   width: 38%;
   flex: 1 1 38%;
+
+  @include mq-custom(1360px) {
+    width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 // Общие блоки сайта

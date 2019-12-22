@@ -1,6 +1,7 @@
 #footer-inner {
   width: 100%;
   justify-content: space-between;
+  border-left: 1px solid #C6C2F3;
 
   @include mq-custom(1366px) {
     height: auto;
@@ -11,6 +12,7 @@
   }
 
   @include mq-custom(414px) {
+    border-left: none;
     flex-direction: column;
     justify-content: flex-start;
   }

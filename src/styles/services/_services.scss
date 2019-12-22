@@ -16,16 +16,14 @@
   background: #FF6666;
 
   &:after {
-    @include pseudo(3,auto,50%,auto,-15px);
-    width: 30px;
-    height: 30px;
+    @include pseudo(3,auto,50%,auto,-10px);
+    width: 20px;
+    height: 20px;
     background: #FF6666;
     transform: translateY(-50%) rotate(45deg);
 
     @include mq-custom(1360px) {
       @include pseudo(3,15%,auto,-10px,auto);
-      width: 20px;
-      height: 20px;
       transform: translateY(0) rotate(45deg);
     }
   }
@@ -142,6 +140,7 @@
   width: 33%;
   flex: 1 1 33%;
   border-top: 1px solid #C6C2F3;
+  border-right: 1px solid #C6C2F3;
   background: rgba(255, 102, 102, 0.1);
 
   .more-icon {

@@ -205,8 +205,14 @@ html.fixed {
 }
 
 .services_content-wrap {
+  border-left: 1px solid #C6C2F3;
+
   @include mq-custom(1360px) {
     flex-direction: column;
+  }
+
+  @include mq-custom(414px) {
+    border-left: none;
   }
 }
 

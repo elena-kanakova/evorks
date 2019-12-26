@@ -60,12 +60,12 @@
 
   p {
     font: 16px/20px $font_main;
-    font-weight: bold;
+    font-weight: 500;
     color: $black_70;
 
     @include mq-custom(1366px) {
       font: 12px/20px $font_main;
-      font-weight: bold;
+      font-weight: 500;
       color: $black_70;
     }
   }

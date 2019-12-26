@@ -7,6 +7,8 @@
     <meta name="description" content="Экономит ваше время и старается предоставить лучших работников для дома, дачи и бизнеса.">
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../libs/swiper.min.css">
+    <link rel="stylesheet" href="../libs/slick.css">
+    <link rel="stylesheet" href="../libs/slick-theme.css">
 
 </head>
 <body>
@@ -14,7 +16,7 @@
     <header id="header" class="flex">
     <div class="header-logo_wrap">
         <a href="/" class="header-logo flex column">
-            <img src="../../img/header-logo.svg" alt="Logo">
+            <img src="../../img/header-logo.png" alt="Logo">
             <span>Сервис по предоставлению <br>услуг рабочей силы</span>
         </a>
     </div>
@@ -178,7 +180,7 @@
                     <section id="evorkers" class="evorkers-wrap flex wrap">
     <div class="evorkers_title">
         <h2>выберите нужного вам эворкера</h2>
-        <p>Оплата за час работы</p>
+        <p>Почасовая оплата</p>
     </div>
     <div class="evorkers_item">
         <div class="evorkers_item-title">
@@ -186,7 +188,7 @@
                 РАЗНОРАБОЧИЙ</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>250 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-1.png" alt="Иконка"></picture>
@@ -197,7 +199,7 @@
             <h3>ГРУЗЧИК И ТАКЕЛАЖНИКИ</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>250 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-2.png" alt="Иконка"></picture>
@@ -208,7 +210,7 @@
             <h3>мастер на час </h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>300 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-3.png" alt="Иконка"></picture>
@@ -219,18 +221,18 @@
             <h3>МАСТЕР ПО РЕМОНТУ</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>300 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-4.png" alt="Иконка"></picture>
         </div>
     </div>
-    <div class="evorkers_item evorkers_item_active">
+    <div class="evorkers_item">
         <div class="evorkers_item-title">
             <h3>электрик</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>300 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-5.png" alt="Иконка"></picture>
@@ -241,7 +243,7 @@
             <h3>сантехник</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>300 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-6.png" alt="Иконка"></picture>
@@ -252,7 +254,7 @@
             <h3>землекоп</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>250 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-7.png" alt="Иконка"></picture>
@@ -263,7 +265,7 @@
             <h3>ДВОРНИК</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>200 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-8.png" alt="Иконка"></picture>
@@ -274,7 +276,7 @@
             <h3>КЛИНИНГ-МАСТЕР</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>по договоренности</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-9.png" alt="Иконка"></picture>
@@ -286,7 +288,7 @@
                 КОМПЛЕКТОВЩИК</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>200 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-10.png" alt="Иконка"></picture>
@@ -298,7 +300,7 @@
                 НА ПРОИЗВОДСТВО</h3>
         </div>
         <div class="evorkers_item-desc">
-            <p>600 руб/час</p>
+            <p>200 руб/час</p>
         </div>
         <div class="evorkers_item-img">
             <picture><img src="../../img/evorkers-icon_icon-11.png" alt="Иконка"></picture>
@@ -352,7 +354,7 @@
             <picture><img src="../../img/services-icon_icon-4.png" alt="Иконка"></picture>
         </div>
     </div>
-    <div class="services_item services_item_active">
+    <div class="services_item">
         <div class="services_item-title">
             <h3>САНТЕХНИКА</h3>
         </div>
@@ -487,7 +489,7 @@
     </div>
 </section>
                     <section class="services-aside">
-    <article class="services-aside__item">
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ РИТЕЙЛОВ" data-btnTitle="Заказать">
         <div class="services-aside__item-text">
             <div class="services-aside__item-title">
                 <h3>Для ритейлов</h3>
@@ -497,10 +499,10 @@
             </div>
         </div>
         <div class="services-aside__item-img">
-            <picture><img src="../../img/basket-photo.png" alt="Фото" class="js-services-block__img"></picture>
+            <picture><img src="../../img/services__basket.png" alt="Фото" class=""></picture>
         </div>
     </article>
-    <article class="services-aside__item">
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ СТРОИТЕЛЕЙ" data-btnTitle="Заказать">
         <div class="services-aside__item-text">
             <div class="services-aside__item-title">
                 <h3>Для строителей</h3>
@@ -510,10 +512,10 @@
             </div>
         </div>
         <div class="services-aside__item-img">
-            <picture><img src="../../img/helmet-photo.png" alt="Фото" class="js-services-block__img"></picture>
+            <picture><img src="../../img/services__helmet.png" alt="Фото" class=""></picture>
         </div>
     </article>
-    <article class="services-aside__item">
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ КОМПАНИЙ" data-btnTitle="Заказать">
         <div class="services-aside__item-text">
             <div class="services-aside__item-title">
                 <h3>Частным <br>компаниям</h3>
@@ -523,10 +525,10 @@
             </div>
         </div>
         <div class="services-aside__item-img">
-            <picture><img src="../../img/case-photo.png" alt="Фото" class="js-services-block__img"></picture>
+            <picture><img src="../../img/services__case.png" alt="Фото" class=""></picture>
         </div>
     </article>
-    <article class="services-aside__item">
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ СКЛАДОВ" data-btnTitle="Заказать">
         <div class="services-aside__item-text">
             <div class="services-aside__item-title">
                 <h3>Для складов</h3>
@@ -536,10 +538,10 @@
             </div>
         </div>
         <div class="services-aside__item-img">
-            <picture><img src="../../img/boxes-photo.png" alt="Фото" class="js-services-block__img"></picture>
+            <picture><img src="../../img/services__boxes.png" alt="Фото" class=""></picture>
         </div>
     </article>
-    <article class="services-aside__item">
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="ВЫПОЛНИМ ЛЮБУЮ ЗАДАЧУ" data-btnTitle="Заказать">
         <div class="services-aside__item-text">
             <div class="services-aside__item-title">
                 <h3>Для хозяев <br>домов и квартир</h3>
@@ -549,7 +551,7 @@
             </div>
         </div>
         <div class="services-aside__item-img">
-            <picture><img src="../../img/sink-photo.png" alt="Фото" class="js-services-block__img"></picture>
+            <picture><img src="../../img/services__sink.png" alt="Фото" class=""></picture>
         </div>
     </article>
 </section>
@@ -559,56 +561,58 @@
     <div class="footer-inner__title">
         <h3>Последние выполненные заказы</h3>
     </div>
-    <div class="footer-inner__item">
-        <div class="footer-inner__item__number">
-            <p>№ 23457</p>
+    <div class="footer-inner__items-wrap flex">
+        <div class="footer-inner__item">
+            <div class="footer-inner__item__number">
+                <p>№ 23457</p>
+            </div>
+            <div class="footer-inner__item__title-price flex">
+                <p class="title">Уборка в квартире с очисткой окон</p>
+                <p class="price">3000 p</p>
+            </div>
+            <div class="footer-inner__item__name">
+                <p class="desc">Исполнитель:</p>
+                <p class="name">Иванов Сергей Петрович</p>
+            </div>
         </div>
-        <div class="footer-inner__item__title-price flex">
-            <p class="title">Уборка в квартире с очисткой окон</p>
-            <p class="price">3000 p</p>
+        <div class="footer-inner__item">
+            <div class="footer-inner__item__number">
+                <p>№ 23457</p>
+            </div>
+            <div class="footer-inner__item__title-price flex">
+                <p class="title">Уборка в квартире с очисткой окон</p>
+                <p class="price">3000 p</p>
+            </div>
+            <div class="footer-inner__item__name">
+                <p class="desc">Исполнитель:</p>
+                <p class="name">Иванов Сергей Петрович</p>
+            </div>
         </div>
-        <div class="footer-inner__item__name">
-            <p class="desc">Исполнитель:</p>
-            <p class="name">Иванов Сергей Петрович</p>
+        <div class="footer-inner__item">
+            <div class="footer-inner__item__number">
+                <p>№ 23457</p>
+            </div>
+            <div class="footer-inner__item__title-price flex">
+                <p class="title">Уборка в квартире с очисткой окон</p>
+                <p class="price">3000 p</p>
+            </div>
+            <div class="footer-inner__item__name">
+                <p class="desc">Исполнитель:</p>
+                <p class="name">Иванов Сергей Петрович</p>
+            </div>
         </div>
-    </div>
-    <div class="footer-inner__item">
-        <div class="footer-inner__item__number">
-            <p>№ 23457</p>
-        </div>
-        <div class="footer-inner__item__title-price flex">
-            <p class="title">Уборка в квартире с очисткой окон</p>
-            <p class="price">3000 p</p>
-        </div>
-        <div class="footer-inner__item__name">
-            <p class="desc">Исполнитель:</p>
-            <p class="name">Иванов Сергей Петрович</p>
-        </div>
-    </div>
-    <div class="footer-inner__item">
-        <div class="footer-inner__item__number">
-            <p>№ 23457</p>
-        </div>
-        <div class="footer-inner__item__title-price flex">
-            <p class="title">Уборка в квартире с очисткой окон</p>
-            <p class="price">3000 p</p>
-        </div>
-        <div class="footer-inner__item__name">
-            <p class="desc">Исполнитель:</p>
-            <p class="name">Иванов Сергей Петрович</p>
-        </div>
-    </div>
-    <div class="footer-inner__item">
-        <div class="footer-inner__item__number">
-            <p>№ 23457</p>
-        </div>
-        <div class="footer-inner__item__title-price flex">
-            <p class="title">Уборка в квартире с очисткой окон</p>
-            <p class="price">3000 p</p>
-        </div>
-        <div class="footer-inner__item__name">
-            <p class="desc">Исполнитель:</p>
-            <p class="name">Иванов Сергей Петрович</p>
+        <div class="footer-inner__item">
+            <div class="footer-inner__item__number">
+                <p>№ 23457</p>
+            </div>
+            <div class="footer-inner__item__title-price flex">
+                <p class="title">Уборка в квартире с очисткой окон</p>
+                <p class="price">3000 p</p>
+            </div>
+            <div class="footer-inner__item__name">
+                <p class="desc">Исполнитель:</p>
+                <p class="name">Иванов Сергей Петрович</p>
+            </div>
         </div>
     </div>
 </div>
@@ -616,7 +620,7 @@
     </div>
 </div>
 <div class="overlay"></div>
-<div id="order-call" class="modal">
+<div id="order-call__services" class="modal">
     <div class="modal-wrap">
         <div class="btn-modal_close js-close-btn flex">
             <p class="close">закрыть</p>
@@ -627,10 +631,7 @@
                     <h3 class="modal-form_title"></h3>
                 </div>
                 <div class="desc">
-                    <p>Укажите ваши контактные данные.
-                        Опишите нужные виды работ.
-                        Менеджер перезвонит вам,
-                        с готовым решением.</p>
+                    <p>Оставьте заявку на получение подробностей, менеджер перезвонит вам!</p>
                 </div>
             </div>
             <div class="index__order-form_form-wrap">
@@ -742,6 +743,7 @@
 <script src="../libs/jquery-3.2.1.min.js"></script>
 <script src="../libs/jquery.maskedinput.min.js"></script>
 <script src="../libs/swiper.min.js"></script>
+<script src="../libs/slick.min.js"></script>
 <script src="../js/scripts.js"></script>
 
 </body>

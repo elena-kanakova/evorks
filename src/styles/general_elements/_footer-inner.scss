@@ -2,6 +2,7 @@
   width: 100%;
   justify-content: space-between;
   border-left: 1px solid #C6C2F3;
+  border-top: 1px solid #C6C2F3;
 
   @include mq-custom(1366px) {
     height: auto;
@@ -12,6 +13,24 @@
   }
 
   @include mq-custom(414px) {
+    border-left: none;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.footer-inner__items-wrap {
+  width: 86%;
+  flex: 1 1 86%;
+  justify-content: space-between;
+
+  @include mq-custom(1280px) {
+    flex-wrap: wrap;
+  }
+
+  @include mq-custom(414px) {
+    width: 100%;
+    flex: 1 1 100%;
     border-left: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -47,8 +66,8 @@
 
 .footer-inner__item {
   padding: 25px 25px 15px;
-  width: 19%;
-  flex: 1 1 19%;
+  width: 25%;
+  flex: 1 1 25%;
   border-right: 1px solid $dark-grey;
 
   &:nth-last-child(1) {
@@ -56,24 +75,8 @@
   }
 
   @include mq-custom(1280px) {
-    width: 25%;
-    flex: 1 1 25%;
+    width: 230px;
     border-top: 1px solid $dark-grey;
-  }
-
-  @include mq-custom(850px) {
-    width: 50%;
-    flex: 1 1 50%;
-
-    &:nth-child(3n) {
-      border-right: none;
-    }
-  }
-
-  @include mq-custom(414px) {
-    width: 100%;
-    flex: 1 1 100%;
-    border-right: none;
   }
 }
 

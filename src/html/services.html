@@ -8,6 +8,8 @@
     <!-- @if NODE_ENV='development' -->
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../libs/swiper.min.css">
+    <link rel="stylesheet" href="../libs/slick.css">
+    <link rel="stylesheet" href="../libs/slick-theme.css">
     <!-- @endif -->
 
     <!-- @if NODE_ENV='production' -->
@@ -36,13 +38,14 @@
     </div>
 </div>
 <div class="overlay"></div>
-@@include('./modals/_order-call.html')
+@@include('./modals/_order-call__services-page.html')
 @@include('./modals/_modal-form_search.html')
 
 <!-- @if NODE_ENV='development' -->
 <script src="../libs/jquery-3.2.1.min.js"></script>
 <script src="../libs/jquery.maskedinput.min.js"></script>
 <script src="../libs/swiper.min.js"></script>
+<script src="../libs/slick.min.js"></script>
 <script src="../js/scripts.js"></script>
 <!-- @endif -->
 

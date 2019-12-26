@@ -66,7 +66,7 @@
   @include mq-custom(414px) {
     display: block;
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     height: auto;
     border-bottom: 1px solid #DADADA;
   }
@@ -105,7 +105,7 @@
 
   @include mq-custom(1024px) {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     left: 60px;
     top: 0;
     width: 0;
@@ -126,6 +126,13 @@
   width: 200px;
   visibility: visible;
   transition: all .3s linear 0s;
+
+  .categories_filter-form_label_wrap {
+    @include mq-custom(1024px) {
+      visibility: visible;
+      transition: visibility .3s linear .3s;
+    }
+  }
 
   .categories-nav {
     @include mq-custom(1024px) {
@@ -207,6 +214,11 @@
     span.hidden {
       display: none;
     }
+  }
+
+  @include mq-custom(1024px) {
+    visibility: hidden;
+    transition: visibility .3s linear 0s;
   }
 }
 

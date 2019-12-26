@@ -5,6 +5,10 @@
   border-top: 1px solid $light-grey;
   border-bottom: 1px solid $light-grey;
 
+  @include mq-custom(1366px) {
+    padding: 20px;
+  }
+
   @include mq-custom(414px) {
     height: 52px;
     padding: 16px 50px 16px 70px;

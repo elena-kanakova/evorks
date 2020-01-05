@@ -226,6 +226,28 @@ html.fixed {
   }
 }
 
+#about-service__content {
+  width: 75%;
+  flex: 1 1 75%;
+}
+
+#about-service__aside {
+  width: 25%;
+  flex: 1 1 25%;
+  justify-content: space-between;
+}
+
+#master__content {
+  width: 73%;
+  flex: 1 1 73%;
+}
+
+#master__aside {
+  width: 27%;
+  flex: 1 1 27%;
+  justify-content: space-between;
+}
+
 // Общие блоки сайта
 @import "general_elements/header";
 @import "general_elements/footer";
@@ -245,4 +267,20 @@ html.fixed {
 @import "services/services-aside";
 @import "services/sidebar";
 
-//Контакты
+// О сервисе
+@import "about-service/text";
+@import "about-service/how_it_works";
+@import "about-service/aside";
+
+// Стать мастером
+@import "master/text";
+@import "master/form";
+@import "master/aside";
+
+// Оплата
+@import "payment/content";
+@import "payment/form";
+
+// Помощь
+@import "help/content";
+@import "help/form";

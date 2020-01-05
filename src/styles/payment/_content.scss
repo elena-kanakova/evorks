@@ -1,0 +1,264 @@
+#payment__content {
+  width: 100%;
+}
+
+.payment__payment-wrap {
+  width: 100%;
+  justify-content: space-between;
+
+  .payment-title {
+    padding: 33px 40px;
+    width: 22%;
+    flex: 1 1 22%;
+    background: white;
+
+    h2 {
+      font: 40px $font_main;
+      font-weight: 600;
+      color: #002855;
+      text-transform: uppercase;
+    }
+  }
+
+  .payment-item {
+    position: relative;
+    width: 26%;
+    flex: 1 1 26%;
+    min-height: 163px;
+    padding: 33px 55px;
+
+    &:nth-child(2) {
+      background: #FF6666;
+    }
+
+    &:nth-child(3) {
+      background: #FFB386;
+    }
+
+    &:nth-child(4) {
+      background: #FFB386;
+    }
+  }
+
+  .payment-item__title {
+    position: relative;
+    z-index: 2;
+    margin-right: 20px;
+
+    .number {
+      width: 23px;
+      height: 23px;
+      background: white;
+      border-radius: 50%;
+      font: 14px/23px $font_main;
+      font-weight: normal;
+      color: #FF6666;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .title {
+      display: inline-block;
+      margin: 20px auto 0 -11px;
+      font: 14px/20px $font_main;
+      font-weight: normal;
+      color: white;
+      transform: rotate(-90deg);
+    }
+  }
+
+  .payment-item__text {
+    position: relative;
+    z-index: 2;
+
+    p {
+      font: 20px $font_main;
+      font-weight: 500;
+      color: white;
+    }
+
+    .discount {
+      font: 23px $font_main;
+      font-weight: normal;
+      color: white;
+    }
+
+    .discount-big {
+      font: 78px $font_main;
+      font-weight: 800;
+      color: white;
+    }
+  }
+
+  .payment-item__img {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
+
+.payment__person {
+  .person-title {
+    padding: 33px 40px;
+    width: 22%;
+    flex: 1 1 22%;
+    background: #E9E7FC;
+
+    h2 {
+      font: 25px $font_main;
+      font-weight: bold;
+      color: #484848;
+      text-transform: uppercase;
+    }
+  }
+
+  .person-item {
+    position: relative;
+    width: 26%;
+    flex: 1 1 26%;
+    min-height: 264px;
+    padding: 33px 42px;
+    border-right: 1px solid #DADADA;
+
+    &:nth-last-child(1) {
+      border-right: none;
+    }
+
+    &:nth-child(2) {
+      .person-item__img {
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      .person-item__img {
+        right: 0;
+        bottom: 10px;
+      }
+    }
+
+    &:nth-child(4) {
+      .person-item__img {
+        padding: 0 42px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        right: 0;
+        bottom: 20px;
+      }
+    }
+  }
+
+  .person-item__text {
+    position: relative;
+    z-index: 2;
+
+    p {
+      font: 16px $font_main;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .person-item__img {
+    position: absolute;
+    z-index: 1;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
+
+.payment__legal {
+  .legal-title {
+    padding: 33px 40px;
+    width: 22%;
+    flex: 1 1 22%;
+    background: #FDF2C6;
+
+    h2 {
+      font: 25px $font_main;
+      font-weight: bold;
+      color: #484848;
+      text-transform: uppercase;
+    }
+  }
+
+  .legal-item {
+    position: relative;
+    width: 19.5%;
+    flex: 1 1 19.5%;
+    min-height: 264px;
+    padding: 33px 42px;
+    border-top: 1px solid #DADADA;
+    border-right: 1px solid #DADADA;
+
+    &:nth-last-child(1) {
+      border-right: none;
+    }
+
+    &:nth-child(2) {
+      .legal-item__img {
+        img {
+          width: 26px;
+          height: 29px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .legal-item__img {
+        img {
+          width: 28px;
+          height: 25px;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .legal-item__img {
+        img {
+          width: 25px;
+          height: 30px;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      .legal-item__img {
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+
+  .legal-item__text {
+    position: relative;
+    z-index: 2;
+
+    p {
+      font: 16px $font_main;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .legal-item__img {
+    margin-bottom: 16px;
+
+    img {
+      display: block;
+    }
+  }
+}

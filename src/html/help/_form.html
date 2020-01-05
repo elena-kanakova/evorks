@@ -1,0 +1,57 @@
+<section id="help__form" class="help__form-wrap flex">
+    <div class="help__form_title-desc_wrap">
+        <div class="title">
+            <h2>Помощь</h2>
+        </div>
+        <div class="desc">
+            <p>Оставьте свои данные для получения информации от нашего менеджера</p>
+        </div>
+    </div>
+    <form action="" id="help-form">
+        <div class="help__form-elements_wrap flex">
+            <div class="label-input_wrap">
+                <div class="label_wrap">
+                    <label for="help-form__name">Имя</label>
+                </div>
+                <div class="input_wrap">
+                    <input name="name" id="help-form__name" type="text" placeholder="Имя">
+                </div>
+            </div>
+            <div class="label-input_wrap">
+                <div class="label_wrap">
+                    <label for="help-form__lastname">Имя</label>
+                </div>
+                <div class="input_wrap">
+                    <input name="name" id="help-form__lastname" type="text" placeholder="Фамилия">
+                </div>
+            </div>
+            <div class="label-input_wrap">
+                <div class="label_wrap">
+                    <label for="phone">Номер телефона</label>
+                </div>
+                <div class="input_wrap">
+                    <input name="phone" id="phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                </div>
+            </div>
+        </div>
+        <div class="help__form-elements_wrap flex">
+            <div class="label-input_wrap textarea">
+                <div class="label_wrap">
+                    <label for="text"></label>
+                </div>
+                <div class="input_wrap">
+                    <textarea name="text" id="text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                </div>
+            </div>
+            <div class="btn-submit_wrap flex column">
+                <div class="btn_wrap">
+                    <button type="submit">Отправить</button>
+                </div>
+                <div class="check-agree_wrap flex">
+                    <input name="agree" id="input_agree" type="checkbox" checked class="input_agree">
+                    <label id="label_agree" for="input_agree" class="label_agree">Согласие на обработку персональных данных</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

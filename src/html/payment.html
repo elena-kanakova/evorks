@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Эворкс - Сервис по предоставлению услуг рабочей силы. </title>
+    <meta name="description" content="Экономит ваше время и старается предоставить лучших работников для дома, дачи и бизнеса.">
+    <!-- @if NODE_ENV='development' -->
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../libs/swiper.min.css">
+    <link rel="stylesheet" href="../libs/slick.css">
+    <link rel="stylesheet" href="../libs/slick-theme.css">
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- @endif -->
+</head>
+<body>
+<div id="wrapper">
+    @@include('./general/_header.html')
+    <div class="content-sidebar_wrap flex">
+        @@include('./general/_sidebar.html')
+        <div class="content-footer_wrap">
+            @@include('./general/_breadcrumbs.html')
+            @@include('./payment/_content.html')
+            @@include('./payment/_form.html')
+        </div>
+    </div>
+</div>
+<div class="overlay"></div>
+@@include('./modals/_order-call.html')
+
+<!-- @if NODE_ENV='development' -->
+<script src="../libs/jquery-3.2.1.min.js"></script>
+<script src="../libs/jquery.maskedinput.min.js"></script>
+<script src="../libs/swiper.min.js"></script>
+<script src="../libs/slick.min.js"></script>
+<script src="../js/scripts.js"></script>
+<!-- @endif -->
+
+<!-- @if NODE_ENV='production' -->
+<script src="libs/jquery-3.2.1.min.js"></script>
+<script src="libs/jquery.maskedinput.min.js"></script>
+<script src="js/scripts.min.js"></script>
+<!-- @endif -->
+</body>
+</html>

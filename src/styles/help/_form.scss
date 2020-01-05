@@ -1,0 +1,147 @@
+.help__form-wrap  {
+  width: 100%;
+  background: #FEF5D1;
+}
+
+.help__form_title-desc_wrap{
+  padding: 59px 47px 55px;
+  width: 30%;
+  flex: 1 1 30%;
+
+  .title {
+    h2 {
+      margin-bottom: 20px;
+      font: 40px $font_main;
+      font-weight: bold;
+      color: #002855;
+      text-transform: uppercase;
+    }
+  }
+
+  .desc {
+    p {
+      font: 20px $font_main;
+      font-weight: normal;
+      color: #002855;
+    }
+  }
+}
+
+#help-form {
+  padding: 46px 67px 55px;
+  width: 70%;
+  flex: 1 1 70%;
+}
+
+.help__form-elements_wrap {
+  .label-input_wrap, .btn-submit_wrap {
+    margin: 20px 3% 0 0;
+    width: 30%;
+    flex: 1 1 30%;
+
+    @include mq-custom(414px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+  }
+
+  .label_wrap {
+    margin-bottom: 4px;
+
+    label {
+      font: 13px/16px $font_main;
+      font-weight: bold;
+      color: $dark-grey;
+      cursor: pointer;
+    }
+  }
+
+  .input_wrap {
+    input, textarea {
+      padding: 15px 19px;
+      background: none;
+      width: 100%;
+      font: 15px/18px $font_main;
+      font-weight: bold;
+      color: $black_70;
+      border: 1px solid $light-grey;;
+      border-radius: 3px;
+      background: white;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    @include input_placeholder($color:$black_70);
+
+    @include textarea_placeholder();
+  }
+
+  .btn-submit_wrap {
+    width: 250px;
+    flex: 1 1 250px;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+
+    button {
+      @include btn-order;
+      width: 250px;
+      transition: all .3s linear;
+
+      &:hover {
+        background: $gradient_reverse;
+      }
+    }
+
+    .check-agree_wrap {
+      margin-top: 20px;
+      align-items: center;
+
+      label {
+        display: block;
+        position: relative;
+        z-index: 1;
+        padding-left: 35px;
+        font: 13px/16px $font_main;
+        font-weight: bold;
+        color: $dark-grey;
+        cursor: pointer;
+
+        &:before {
+          @include pseudo($top:50%,$bottom:auto);
+          width: 20px;
+          height: 20px;
+          background: $gradient;
+          transform: translateY(-50%);
+        }
+
+        &:after {
+          @include pseudo(2,$top:50%,$bottom:auto,$left:1px,$right:1px);
+          width: 18px;
+          height: 19px;
+          background: white;
+          transform: translateY(-50%);
+        }
+      }
+
+      input {
+        display: none;
+        width: 20px;
+        height: 20px;
+      }
+
+      @include mq-custom(414px) {
+        justify-content: center;
+      }
+    }
+
+    @include mq-custom(414px) {
+      text-align: center;
+    }
+  }
+}
+
+#input_agree:checked + #label_agree::after {
+  background: url("../../img/ic_check.svg") center center no-repeat white;
+}

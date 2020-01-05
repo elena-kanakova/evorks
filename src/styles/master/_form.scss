@@ -1,0 +1,83 @@
+.master__form-wrap  {
+  width: 100%;
+  padding: 32px 40px 74px;
+  background: #FEF5D1;
+
+  .form_title {
+    h2 {
+      margin-bottom: 20px;
+      font: 30px $font_main;
+      font-weight: bold;
+      color: #002855;
+      text-transform: uppercase;
+    }
+  }
+
+  .label-input_wrap, .btn-submit_wrap {
+    margin: 20px 3% 0 0;
+    width: 30%;
+    flex: 1 1 30%;
+
+    @include mq-custom(414px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+  }
+
+  .label_wrap {
+    margin-bottom: 4px;
+
+    label {
+      font: 13px/16px $font_main;
+      font-weight: bold;
+      color: $dark-grey;
+      cursor: pointer;
+    }
+  }
+
+  .input_wrap {
+    input, textarea {
+      padding: 15px 19px;
+      background: none;
+      width: 100%;
+      font: 15px/18px $font_main;
+      font-weight: bold;
+      color: $black_70;
+      border: 1px solid $light-grey;;
+      border-radius: 3px;
+      background: white;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    @include input_placeholder($color:$black_70);
+
+    @include textarea_placeholder();
+
+    @include mq-custom(1366px) {
+      @include input_placeholder($font-size:12px);
+      @include textarea_placeholder($font-size:12px);
+    }
+  }
+
+  .btn-submit_wrap {
+    margin-bottom: 5px;
+    align-items: flex-end;
+
+    button {
+      @include btn-order;
+      width: 250px;
+      transition: all .3s linear;
+
+      &:hover {
+        background: $gradient_reverse;
+      }
+    }
+
+    @include mq-custom(414px) {
+      text-align: center;
+    }
+  }
+}

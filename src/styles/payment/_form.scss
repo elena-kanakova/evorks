@@ -1,19 +1,19 @@
 @import "../base/mixins";
 
-#index__section-form {
+#payment__section-form {
   width: 100%;
-  height: 33.333%;
   flex: 1 1 100%;
+  border-top: 1px solid #DADADA;
 }
 
-.index__form-wrap {
+.payment__form-wrap {
   @include mq-custom(1919px) {
     flex-direction: column;
   }
 }
 
-#index__section-form {
-  .index__form_title-desc_wrap {
+#payment__section-form {
+  .payment__form_title-desc_wrap {
     .title {
       @include mq-custom(1919px) {
         width: 50%;
@@ -55,16 +55,45 @@
   }
 }
 
-.index__form_title-desc_wrap {
-  width: 40%;
+.payment__form_title-desc_wrap {
+  width: 22%;
   height: 100%;
-  flex: 1 1 40%;
-  padding: 40px 50px 10px 50px;
+  flex: 1 1 22%;
+  padding: 34px 5px 34px 34px;
 
-  @include form();
+  .title {
+    h3 {
+      font: 40px $font_main;
+      font-weight: bold;
+      color: $blue;
+      text-transform: uppercase;
+
+      @include mq-custom(1366px) {
+        font: 30px $font_main;
+        font-weight: bold;
+        color: $blue;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
 
   .desc {
     margin-top: 10px;
+
+    p {
+      font: 16px/22px $font_main;
+      font-weight: normal;
+      color: $black_70;
+
+      @include mq-custom(1366px) {
+        font: 12px/18px $font_main;
+        font-weight: normal;
+        color: $black_70;
+      }
+    }
   }
 
   @include mq-custom(1366px) {
@@ -72,10 +101,10 @@
   }
 }
 
-.index__order-form_form-wrap {
-  width: 60%;
-  flex: 1 1 60%;
-  padding: 34px 25px 48px 15px;
+.payment__order-form_form-wrap {
+  width: 78%;
+  flex: 1 1 78%;
+  padding: 30px 15px 30px 60px;
 
   @include mq-custom(1919px) {
     width: 100%;
@@ -87,17 +116,24 @@
   }
 }
 
-.index__order-form-elements_wrap {
-  width: 100%;
-  flex: 1 1 100%;
-
+.payment__order-form-elements_wrap {
   @include form_inputs();
+
+  .textarea {
+    margin: 17px 55px 15px 15px;
+  }
 
   @include mq-custom(414px) {
     flex-direction: column;
   }
 }
 
-#input_agree:checked + #label_agree::after, #modal-form_search_input_agree:checked + #modal-form_search_label_agree::after, #modal__order-form_input_agree:checked + #modal__order-form_label_agree::after {
+.payment__order-form-elements_wrap {
+  .btn-submit_wrap {
+    margin: 17px 15px 15px 0;
+  }
+}
+
+#input_agree:checked + #label_agree::after {
   background: url("../../img/ic_check.svg") center center no-repeat white;
 }

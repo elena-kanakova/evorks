@@ -1,0 +1,100 @@
+#about-service__aside-items {
+  height: 100%;
+  padding: 30px 10px 50px 30px;
+  background: #7266FF;
+  align-items: center;
+  justify-content: space-between;
+
+  .aside__title {
+    h2 {
+      font: 30px $font_main;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .aside__item {
+    text-align: center;
+
+    picture {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    h3 {
+      margin-top: 20px;
+      font: 17px $font_main;
+      font-weight: normal;
+      color: white;
+    }
+  }
+
+  .aside__button {
+    margin-top: 10px;
+
+    button {
+      padding: 17px 57px;
+      font: 15px $font_main;
+      font-weight: normal;
+      color: white;
+      border: 1px solid white;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+    }
+  }
+}
+
+.about-service__contacts {
+  padding: 73px 10px;
+  background: #E9E7FC;
+  align-items: center;
+  justify-content: space-between;
+
+  .phone {
+    margin-bottom: 20px;
+
+    a {
+      display: block;
+      font: 20px $font_main;
+      font-weight: bold;
+      color: #152748;
+    }
+  }
+
+  .social {
+    a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      font: 17px $font_main;
+      font-weight: normal;
+      color: white;
+      cursor: pointer;
+    }
+
+    .vk-link {
+      background: url("../../img/vk.svg") center center no-repeat;
+      background-size: cover;
+    }
+
+    .insta-link {
+      background: url("../../img/insta.svg") center center no-repeat;
+      background-size: cover;
+    }
+
+    .youtube-link {
+      background: url("../../img/youtube.svg") center center no-repeat;
+      background-size: cover;
+    }
+
+    .fb-link {
+      background: url("../../img/fb.svg") center center no-repeat;
+      background-size: cover;
+    }
+  }
+}

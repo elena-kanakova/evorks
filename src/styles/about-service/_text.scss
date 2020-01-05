@@ -1,0 +1,69 @@
+#about-service__section-text {
+  width: 100%;
+  padding: 60px 50px 0;
+
+  .title-desc {
+    h1 {
+      font: 40px $font_main;
+      font-weight: bold;
+      color: #002855;
+    }
+
+    p {
+      margin-top: 20px;
+      font: 20px $font_main;
+      font-weight: bold;
+      color: #002855;
+    }
+  }
+
+  .text {
+    margin-top: 40px;
+    column-count: 2;
+
+    p {
+      margin-right: 50px;
+      font: 19px $font_main;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+#about-service__section-contacts {
+  padding: 60px 50px 40px;
+
+  .title-desc {
+    margin-bottom: 15px;
+
+    h2 {
+      font: 30px $font_main;
+      font-weight: bold;
+      color: #002855;
+    }
+  }
+
+  .contacts {
+    width: 30%;
+    flex: 1 1 30%;
+
+    a {
+      margin-bottom: 30px;
+      font: 16px $font_main;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .address {
+    width: 70%;
+    flex: 1 1 70%;
+
+    p {
+      margin-bottom: 20px;
+      font: 16px $font_main;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

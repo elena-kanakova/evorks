@@ -11,6 +11,24 @@
       font-weight: 600;
       color: white;
       text-align: center;
+
+      @include mq-custom(1366px) {
+        font: 28px $font_main;
+        font-weight: 600;
+        color: white;
+      }
+
+      @include mq-custom(1280px) {
+        font: 26px $font_main;
+        font-weight: 600;
+        color: white;
+      }
+    }
+
+    @include mq-custom(1024px){
+      margin-bottom: 30px;
+      width: 100%;
+      flex: 1 1 100%;
     }
   }
 
@@ -30,6 +48,22 @@
       font-weight: normal;
       color: white;
     }
+
+    @include mq-custom(1024px){
+      margin: 20px 0;
+      width: 30%;
+      flex: 1 1 30%;
+    }
+
+    @include mq-custom(768px) {
+      width: 50%;
+      flex: 1 1 50%;
+    }
+
+    @include mq-custom(414px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }
   }
 
   .aside__button {
@@ -44,7 +78,25 @@
       border-radius: 100px;
       background: rgba(255, 255, 255, 0.2);
       cursor: pointer;
+
+      @include mq-custom(1280px) {
+        padding: 17px 37px;
+      }
     }
+
+    @include mq-custom(1024px){
+      margin: 40px auto 0;
+    }
+  }
+
+  @include mq-custom(1450px) {
+    padding: 30px 10px 50px 10px;
+  }
+
+  @include mq-custom(1024px){
+    padding: 40px 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -96,5 +148,9 @@
       background: url("../../img/fb.svg") center center no-repeat;
       background-size: cover;
     }
+  }
+
+  @include mq-custom(1024px){
+    padding: 30px 10px;
   }
 }

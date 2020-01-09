@@ -143,3 +143,9 @@ $(document).ready(function() {
         article.css('background-size','cover');
     });
 });
+
+$(document).ready(function() {
+    $('.js-open').on('click', function () {
+        $(this).toggleClass('faq-item_active');
+    });
+});

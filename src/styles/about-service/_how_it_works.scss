@@ -4,18 +4,39 @@
 
   .how-it-works__title {
     position: relative;
+    order: 1;
     width: 33.3%;
     height: 220px;
     flex: 1 1 33.3%;
     padding: 40px;
     background: #FEF5D1;
-    order: 1;
+    border-right: 1px solid white;
 
     h2 {
       font: 30px $font_main;
       font-weight: bold;
       color: #002855;
       text-transform: uppercase;
+
+      @include mq-custom(1366px) {
+        font: 28px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+    }
+
+    @include mq-custom(1366px) {
+      padding: 30px;
+    }
+
+    @include mq-custom(1280px) {
+      width: 50%;
+      flex: 1 1 50%;
+      padding: 20px;
+    }
+
+    @include mq-custom(640px) {
+      height: auto;
     }
   }
 
@@ -26,6 +47,8 @@
     flex: 1 1 33.3%;
     padding: 40px;
     background: #FEF5D1;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
 
     h3 {
       width: 70%;
@@ -46,11 +69,35 @@
       position: absolute;
       z-index: 1;
       right: 0;
+      max-width: 30%;
 
       img {
         display: block;
         max-width: 100%;
       }
+
+      @include mq-custom(1280px) {
+        max-width: 50%;
+      }
+
+      @include mq-custom(1280px) {
+        max-width: 40%;
+      }
+    }
+
+    @include mq-custom(1366px) {
+      padding: 30px;
+    }
+
+    @include mq-custom(1280px) {
+      width: 50%;
+      flex: 1 1 50%;
+      padding: 20px;
+    }
+
+    @include mq-custom(640px) {
+      width: 100%;
+      flex: 1 1 100%;
     }
   }
 
@@ -60,18 +107,28 @@
     picture {
       bottom: 29px;
     }
+
+    @include mq-custom(1280px) {
+      border-right: none;
+    }
   }
 
   .item-2 {
     order: 3;
+    border-right: none;
 
     picture {
       bottom: 0;
+    }
+
+    @include mq-custom(1280px) {
+      border-right: 1px solid white;
     }
   }
 
   .item-3 {
     order: 6;
+    border-right: none;
 
     picture {
       top: 50%;
@@ -94,5 +151,10 @@
     picture {
       bottom: 0;
     }
+
+    @include mq-custom(1280px) {
+      border-right: none;
+    }
   }
 }
+

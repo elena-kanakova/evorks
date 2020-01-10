@@ -1,5 +1,17 @@
 #help__content {
   padding: 53px 47px;
+
+  @include mq-custom(1366px) {
+    padding: 40px 30px;
+  }
+
+  @include mq-custom(768px) {
+    padding: 30px 20px;
+  }
+
+  @include mq-custom(414px) {
+    padding: 30px 10px;
+  }
 }
 
 .help__title {
@@ -10,12 +22,36 @@
     font-weight: bold;
     color: #0B80E0;
     text-transform: uppercase;
+
+    @include mq-custom(768px) {
+      font: 22px $font_main;
+      font-weight: bold;
+      color: #0B80E0;
+    }
+
+    @include mq-custom(414px) {
+      font: 20px $font_main;
+      font-weight: bold;
+      color: #0B80E0;
+    }
+  }
+
+  @include mq-custom(768px) {
+    margin-bottom: 40px;
+  }
+
+  @include mq-custom(640px) {
+    margin-bottom: 30px;
   }
 }
 
 .help__faq-wrap {
   width: 100%;
   column-count: 2;
+
+  @include mq-custom(1024px) {
+    column-count: 1;
+  }
 }
 
 .help__faq-item {
@@ -29,7 +65,7 @@
 
   .question {
     position: relative;
-    padding: 16px 26px;
+    padding: 16px 60px 16px 26px;
     font: 17px $font_main;
     font-weight: 500;
     color: black;
@@ -42,20 +78,51 @@
       height: inherit;
       background: url("../../img/arrow-down-white.svg") center center no-repeat #367EFF;
       background-size: 17px 9px;
+
+      @include mq-custom(768px) {
+        width: 30px;
+      }
+    }
+
+    @include mq-custom(768px) {
+      padding: 10px 40px 10px 15px;
+      height: auto;
+      font: 16px $font_main;
+      font-weight: 500;
+      color: black;
+    }
+
+    @include mq-custom(640px) {
+      height: auto;
+      font: 15px $font_main;
+      font-weight: 500;
+      color: black;
+    }
+
+    @include mq-custom(414px) {
+      height: auto;
+      font: 14px $font_main;
+      font-weight: 500;
+      color: black;
     }
   }
 
   .answer {
     display: none;
-    /*opacity: 0;
-    visibility: hidden;
-    height: 0;*/
     padding: 15px 26px;
     font: 15px $font_main;
     font-weight: normal;
     color: black;
     border-top: 1px solid #CCD5DB;
     transition: all .3s linear;
+
+    @include mq-custom(768px) {
+      padding: 10px 15px;
+      height: auto;
+      font: 14px $font_main;
+      font-weight: normal;
+      color: black;
+    }
   }
 }
 
@@ -65,8 +132,4 @@
   .answer {
     display: block;
   }
-  /*opacity: 1;
-  visibility: visible;
-  height: auto;
-  transition: all .3s linear .3s;*/
 }

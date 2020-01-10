@@ -10,17 +10,71 @@
       font-weight: bold;
       color: #002855;
       text-transform: uppercase;
+
+      @include mq-custom(1024px) {
+        font: 28px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(768px) {
+        font: 26px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
     }
   }
 
-  .label-input_wrap, .btn-submit_wrap {
+  .label-input_wrap {
     margin: 20px 3% 0 0;
     width: 30%;
     flex: 1 1 30%;
 
+    &:nth-child(3n) {
+      @include mq-custom(1366px) {
+        margin: 20px 0 0 0;
+      }
+
+      @include mq-custom(640px) {
+        margin: 20px 3% 0 0;
+      }
+
+      @include mq-custom(414px) {
+        margin: 20px 0 0 0;
+      }
+    }
+
+    &:nth-child(2n) {
+      @include mq-custom(640px) {
+        margin: 20px 0 0 0;
+      }
+    }
+
+    @include mq-custom(640px) {
+      width: 47%;
+      flex: 1 1 47%;
+    }
+
     @include mq-custom(414px) {
       width: 100%;
       flex: 1 1 100%;
+      margin: 10px 0;
+    }
+  }
+
+  .btn-submit_wrap {
+    margin: 20px 0 0;
+    width: 30%;
+    flex: 1 1 30%;
+
+    @include mq-custom(1366px) {
+      margin: 40px 0 0;
+      width: 100%;
+      flex: 1 1 100%;
+
+      button {
+        margin: 0 auto;
+      }
     }
   }
 
@@ -79,5 +133,23 @@
     @include mq-custom(414px) {
       text-align: center;
     }
+  }
+
+  @include mq-custom(1650px) {
+    padding: 32px 40px 74px;
+  }
+
+  @include mq-custom(1366px) {
+    padding: 32px 30px 40px;
+  }
+
+  @include mq-custom(640px) {
+    padding: 30px 20px;
+  }
+}
+
+.master_form {
+  @include mq-custom(1366px) {
+    flex-direction: column;
   }
 }

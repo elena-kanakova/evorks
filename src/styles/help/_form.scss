@@ -1,12 +1,34 @@
 .help__form-wrap  {
   width: 100%;
   background: #FEF5D1;
+
+  @include mq-custom(1024px) {
+    flex-direction: column;
+  }
 }
 
 .help__form_title-desc_wrap{
   padding: 59px 47px 55px;
   width: 30%;
   flex: 1 1 30%;
+
+  @include mq-custom(1366px) {
+    padding: 40px 10px 40px 30px;
+  }
+
+  @include mq-custom(1024px) {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 40px 30px 0;
+  }
+
+  @include mq-custom(768px) {
+    padding: 30px 20px 0;
+  }
+
+  @include mq-custom(414px) {
+    padding: 30px 10px 0;
+  }
 
   .title {
     h2 {
@@ -15,6 +37,36 @@
       font-weight: bold;
       color: #002855;
       text-transform: uppercase;
+
+      @include mq-custom(1450px) {
+        font: 38px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(1366px) {
+        font: 36px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(1024px) {
+        font: 34px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(768px) {
+        font: 30px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(414px) {
+        font: 26px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
     }
   }
 
@@ -23,6 +75,25 @@
       font: 20px $font_main;
       font-weight: normal;
       color: #002855;
+
+      @include mq-custom(1366px) {
+        font: 18px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(1024px) {
+        margin-top: 10px;
+        font: 17px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(768px) {
+        font: 16px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
     }
   }
 }
@@ -31,17 +102,55 @@
   padding: 46px 67px 55px;
   width: 70%;
   flex: 1 1 70%;
+
+  @include mq-custom(1366px) {
+    padding: 40px 30px 40px 10px;
+  }
+
+  @include mq-custom(1024px) {
+    width: 100%;
+    flex: 1 1 100%;
+    padding: 40px 30px;
+  }
+
+  @include mq-custom(768px) {
+    padding: 30px 20px;
+  }
+
+  @include mq-custom(414px) {
+    padding: 20px 10px;
+  }
 }
 
 .help__form-elements_wrap {
-  .label-input_wrap, .btn-submit_wrap {
+  .label-input_wrap {
     margin: 20px 3% 0 0;
     width: 30%;
     flex: 1 1 30%;
 
-    @include mq-custom(414px) {
+    @include mq-custom(640px) {
+      margin: 20px 0 0 0;
       width: 100%;
       flex: 1 1 100%;
+    }
+  }
+
+  .textarea {
+    @include mq-custom(768px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+  }
+
+  .btn-submit_wrap {
+    margin: 20px 0 0 0;
+    width: 30%;
+    flex: 1 1 30%;
+
+    @include mq-custom(768px) {
+      width: 100%;
+      flex: 1 1 100%;
+      align-items: center;
     }
   }
 
@@ -139,6 +248,10 @@
     @include mq-custom(414px) {
       text-align: center;
     }
+  }
+
+  @include mq-custom(768px) {
+    flex-wrap: wrap;
   }
 }
 

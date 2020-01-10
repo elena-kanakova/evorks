@@ -41,7 +41,7 @@
   width: 24%;
   flex: 1 1 24%;
   padding: 44px 10px 20px 30px;
-  border-right: 1px solid $dark-grey;
+  border-right: 1px solid #DADADA;
 
   h3 {
     font: 25px $font_main;
@@ -68,7 +68,7 @@
   padding: 25px 25px 15px;
   width: 25%;
   flex: 1 1 25%;
-  border-right: 1px solid $dark-grey;
+  border-right: 1px solid #DADADA;
 
   &:nth-last-child(1) {
     border-right: none;
@@ -76,7 +76,7 @@
 
   @include mq-custom(1280px) {
     width: 230px;
-    border-top: 1px solid $dark-grey;
+    border-top: 1px solid #DADADA;
   }
 }
 

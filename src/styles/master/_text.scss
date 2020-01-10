@@ -3,7 +3,19 @@
   justify-content: space-between;
 
   .text_wrap {
+    width: 61%;
+    flex: 1 1 61%;
     padding: 60px 0 0 50px;
+
+    @include mq-custom(1366px) {
+      padding: 40px 30px;
+    }
+
+    @include mq-custom(640px) {
+      padding: 30px 20px;
+      width: 100%;
+      flex: 1 1 100%;
+    }
   }
 
   .title-desc {
@@ -11,6 +23,36 @@
       font: 40px $font_main;
       font-weight: bold;
       color: #002855;
+
+      @include mq-custom(1450px) {
+        font: 38px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(1366px) {
+        font: 36px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(1024px) {
+        font: 34px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(768px) {
+        font: 30px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(414px) {
+        font: 26px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
     }
 
     p {
@@ -18,6 +60,25 @@
       font: 20px $font_main;
       font-weight: bold;
       color: #002855;
+
+      @include mq-custom(1366px) {
+        font: 18px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(1024px) {
+        margin-top: 10px;
+        font: 17px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(768px) {
+        font: 16px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
     }
   }
 
@@ -29,15 +90,54 @@
       font: 19px $font_main;
       font-weight: normal;
       color: rgba(0, 0, 0, 0.6);
+
+      @include mq-custom(1366px) {
+        font: 17px $font_main;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      @include mq-custom(1024px) {
+        font: 16px $font_main;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      @include mq-custom(768px) {
+        font: 14px $font_main;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      @include mq-custom(640px) {
+        margin-right: 0;
+      }
+    }
+
+    @include mq-custom(1024px) {
+      margin-top: 30px;
     }
   }
 
   .photo_wrap {
+    width: 39%;
+    flex: 1 1 39%;
+
     picture {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
       img {
         display: block;
-        height: 100%;
+        max-width: 100%;
       }
+    }
+
+    @include mq-custom(640px) {
+      display: none;
     }
   }
 }

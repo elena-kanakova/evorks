@@ -17,6 +17,33 @@
       font-weight: 600;
       color: #002855;
       text-transform: uppercase;
+
+      @include mq-custom(1366px) {
+        font: 36px $font_main;
+        font-weight: 600;
+        color: #002855;
+      }
+
+      @include mq-custom(1280px) {
+        font: 30px $font_main;
+        font-weight: 600;
+        color: #002855;
+      }
+
+      @include mq-custom(1024px) {
+        font: 26px $font_main;
+        font-weight: 600;
+        color: #002855;
+      }
+    }
+
+    @include mq-custom(1366px) {
+      padding: 30px 20px;
+    }
+
+    @include mq-custom(1280px) {
+      width: 100%;
+      flex: 1 1 100%;
     }
   }
 
@@ -37,6 +64,35 @@
 
     &:nth-child(4) {
       background: #FFB386;
+
+      @include mq-custom(640px) {
+        width: 100%;
+        flex: 1 1 100%;
+        justify-content: center;
+        border-top: 1px solid white;
+      }
+    }
+
+    @include mq-custom(1366px) {
+      padding: 30px 30px;
+    }
+
+    @include mq-custom(1280px) {
+      padding: 20px 20px;
+    }
+
+    @include mq-custom(1280px) {
+      width: 33.3%;
+      flex: 1 1 33.3%;
+    }
+
+    @include mq-custom(768px) {
+      padding: 20px 10px;
+    }
+
+    @include mq-custom(640px) {
+      width: 50%;
+      flex: 1 1 50%;
     }
   }
 
@@ -65,6 +121,10 @@
       color: white;
       transform: rotate(-90deg);
     }
+
+    @include mq-custom(768px) {
+      margin-right: 5px;
+    }
   }
 
   .payment-item__text {
@@ -75,6 +135,12 @@
       font: 20px $font_main;
       font-weight: 500;
       color: white;
+
+      @include mq-custom(768px) {
+        font: 18px $font_main;
+        font-weight: 500;
+        color: white;
+      }
     }
 
     .discount {
@@ -87,6 +153,24 @@
       font: 78px $font_main;
       font-weight: 800;
       color: white;
+
+      @include mq-custom(1366px) {
+        font: 70px $font_main;
+        font-weight: 800;
+        color: white;
+      }
+
+      @include mq-custom(1280px) {
+        font: 60px $font_main;
+        font-weight: 800;
+        color: white;
+      }
+
+      @include mq-custom(1024px) {
+        font: 50px $font_main;
+        font-weight: 800;
+        color: white;
+      }
     }
   }
 
@@ -100,21 +184,77 @@
       display: block;
       max-width: 100%;
     }
+
+    @include mq-custom(768px) {
+      position: relative;
+      margin-top: -20px;
+    }
+
+    @include mq-custom(640px) {
+      margin-left: 30px;
+    }
+  }
+
+  @include mq-custom(1280px) {
+    flex-wrap: wrap;
   }
 }
 
 .payment__person {
   .person-title {
+    position: relative;
     padding: 33px 40px;
     width: 22%;
     flex: 1 1 22%;
     background: #E9E7FC;
+
+    &:after {
+      @include pseudo(1,auto,50%,auto,-15px);
+      width: 30px;
+      height: 30px;
+      background: #E9E7FC;
+      transform: translateY(-50%) rotate(45deg);
+
+      @include mq-custom(1024px) {
+        @include pseudo(1,50%,auto,-10px,auto);
+        width: 20px;
+        height: 20px;
+        transform: translateY(0) translateX(-50%) rotate(45deg);
+      }
+    }
 
     h2 {
       font: 25px $font_main;
       font-weight: bold;
       color: #484848;
       text-transform: uppercase;
+
+      @include mq-custom(1366px) {
+        font: 24px $font_main;
+        font-weight: bold;
+        color: #484848;
+      }
+
+      @include mq-custom(1280px) {
+        font: 20px $font_main;
+        font-weight: bold;
+        color: #484848;
+      }
+
+      @include mq-custom(1024px) {
+        font: 18px $font_main;
+        font-weight: bold;
+        color: #484848;
+      }
+    }
+
+    @include mq-custom(1366px) {
+      padding: 30px 20px;
+    }
+
+    @include mq-custom(1280px) {
+      width: 100%;
+      flex: 1 1 100%;
     }
   }
 
@@ -152,7 +292,55 @@
         justify-content: space-between;
         right: 0;
         bottom: 20px;
+
+        @include mq-custom(768px) {
+          padding: 0;
+        }
+
+        @include mq-custom(640px) {
+          bottom: 0;
+          padding: 0;
+          margin: 40px 0;
+          justify-content: center;
+        }
+
+        picture {
+          @include mq-custom(640px) {
+            margin: 0 10px;
+          }
+        }
       }
+
+      @include mq-custom(640px) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex: 1 1 100%;
+        border-top: 1px solid #DADADA;
+      }
+    }
+
+    @include mq-custom(1366px) {
+      padding: 30px 20px;
+    }
+
+    @include mq-custom(1280px) {
+      width: 33.3%;
+      flex: 1 1 33.3%;
+    }
+
+    @include mq-custom(768px) {
+      position: relative;
+      padding: 30px 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include mq-custom(640px) {
+      width: 50%;
+      flex: 1 1 50%;
     }
   }
 
@@ -175,21 +363,72 @@
       display: block;
       max-width: 100%;
     }
+
+    @include mq-custom(768px) {
+      position: relative;
+    }
+  }
+
+  @include mq-custom(1280px) {
+    flex-wrap: wrap;
   }
 }
 
 .payment__legal {
   .legal-title {
+    position: relative;
     padding: 33px 40px;
     width: 22%;
     flex: 1 1 22%;
     background: #FDF2C6;
+
+    &:after {
+      @include pseudo(1,auto,50%,auto,-15px);
+      width: 30px;
+      height: 30px;
+      background: #FDF2C6;
+      transform: translateY(-50%) rotate(45deg);
+
+      @include mq-custom(1024px) {
+        @include pseudo(1,50%,auto,-10px,auto);
+        width: 20px;
+        height: 20px;
+        transform: translateY(0) translateX(-50%) rotate(45deg);
+      }
+    }
 
     h2 {
       font: 25px $font_main;
       font-weight: bold;
       color: #484848;
       text-transform: uppercase;
+
+      @include mq-custom(1366px) {
+        font: 24px $font_main;
+        font-weight: bold;
+        color: #484848;
+      }
+
+      @include mq-custom(1280px) {
+        font: 20px $font_main;
+        font-weight: bold;
+        color: #484848;
+      }
+
+      @include mq-custom(1024px) {
+        font: 18px $font_main;
+        font-weight: bold;
+        color: #484848;
+      }
+    }
+
+    @include mq-custom(1366px) {
+      padding: 30px 20px;
+    }
+
+    @include mq-custom(1280px) {
+      width: 100%;
+      flex: 1 1 100%;
     }
   }
 
@@ -241,6 +480,20 @@
         }
       }
     }
+
+    @include mq-custom(1366px) {
+      padding: 30px 20px;
+    }
+
+    @include mq-custom(1280px) {
+      width: 25%;
+      flex: 1 1 25%;
+    }
+
+    @include mq-custom(640px) {
+      width: 50%;
+      flex: 1 1 50%;
+    }
   }
 
   .legal-item__text {
@@ -260,5 +513,9 @@
     img {
       display: block;
     }
+  }
+
+  @include mq-custom(1280px) {
+    flex-wrap: wrap;
   }
 }

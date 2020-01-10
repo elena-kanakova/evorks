@@ -226,9 +226,21 @@ html.fixed {
   }
 }
 
+#about-service {
+  #footer-inner {
+    border-left: none;
+    border-top: none;
+  }
+}
+
 #about-service__content {
-  width: 75%;
-  flex: 1 1 75%;
+  width: 73%;
+  flex: 1 1 73%;
+
+  @include mq-custom(1366px){
+    width: 75%;
+    flex: 1 1 75%;
+  }
 
   @include mq-custom(1024px){
     width: 100%;
@@ -243,9 +255,14 @@ html.fixed {
 }
 
 #about-service__aside {
-  width: 25%;
-  flex: 1 1 25%;
+  width: 27%;
+  flex: 1 1 27%;
   justify-content: space-between;
+
+  @include mq-custom(1366px){
+    width: 25%;
+    flex: 1 1 25%;
+  }
 
   @include mq-custom(1024px){
     width: 100%;
@@ -256,12 +273,32 @@ html.fixed {
 #master__content {
   width: 73%;
   flex: 1 1 73%;
+
+  @include mq-custom(1366px){
+    width: 75%;
+    flex: 1 1 75%;
+  }
+
+  @include mq-custom(1024px){
+    width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 #master__aside {
   width: 27%;
   flex: 1 1 27%;
   justify-content: space-between;
+
+  @include mq-custom(1366px){
+    width: 25%;
+    flex: 1 1 25%;
+  }
+
+  @include mq-custom(1024px){
+    width: 100%;
+    flex: 1 1 100%;
+  }
 }
 
 // Общие блоки сайта

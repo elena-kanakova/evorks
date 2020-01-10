@@ -7,51 +7,27 @@
 }
 
 .payment__form-wrap {
-  @include mq-custom(1919px) {
+  @include mq-custom(1280px) {
     flex-direction: column;
   }
 }
 
 #payment__section-form {
   .payment__form_title-desc_wrap {
-    .title {
-      @include mq-custom(1919px) {
-        width: 50%;
-        flex: 1 1 50%;
-      }
-
-      @include mq-custom(1650px) {
-        width: 100%;
-        flex: 1 1 100%;
-      }
-    }
-
     .desc {
       margin-top: 10px;
-
-      @include mq-custom(1919px) {
-        width: 50%;
-        flex: 1 1 50%;
-      }
-
-      @include mq-custom(1650px) {
-        width: 100%;
-        flex: 1 1 100%;
-      }
     }
 
-    @include mq-custom(1919px) {
-      display: flex;
-      justify-content: space-between;
+    @include mq-custom(1280px) {
       width: 100%;
       flex: 1 1 100%;
-      padding: 40px 25px 10px 15px;
     }
+  }
+}
 
-    @include mq-custom(1650px) {
-      flex-direction: column;
-      justify-content: flex-start;
-    }
+#payment__order-form {
+  @include mq-custom(768px) {
+    flex-direction: column;
   }
 }
 
@@ -97,7 +73,7 @@
   }
 
   @include mq-custom(1366px) {
-    padding: 20px 20px 10px 20px;
+    padding: 20px 15px 10px 15px;
   }
 }
 
@@ -106,21 +82,45 @@
   flex: 1 1 78%;
   padding: 30px 15px 30px 60px;
 
-  @include mq-custom(1919px) {
-    width: 100%;
-    flex: 1 1 100%;
-  }
-
   @include mq-custom(1366px) {
     padding: 14px 15px 8px 15px;
+  }
+
+  @include mq-custom(1280px) {
+    width: 100%;
+    flex: 1 1 100%;
   }
 }
 
 .payment__order-form-elements_wrap {
   @include form_inputs();
 
+  .label-input_wrap {
+    @include mq-custom(1024px) {
+      width: 48%;
+      flex: 1 1 48%;
+      margin: 0 2% 0 0;
+    }
+
+    @include mq-custom(414px) {
+      width: 100%;
+      flex: 1 1 100%;
+      margin: 0;
+    }
+  }
+
   .textarea {
     margin: 17px 55px 15px 15px;
+
+    @include mq-custom(1024px) {
+      width: 100%;
+      flex: 1 1 100%;
+      margin: 17px 2% 0 0;
+    }
+  }
+
+  @include mq-custom(1024px) {
+    flex-wrap: wrap;
   }
 
   @include mq-custom(414px) {
@@ -129,8 +129,36 @@
 }
 
 .payment__order-form-elements_wrap {
+  @include mq-custom(1024px) {
+    justify-content: flex-end;
+  }
+
+  @include mq-custom(768px) {
+    justify-content: center;
+  }
+
   .btn-submit_wrap {
     margin: 17px 15px 15px 0;
+
+    .btn_wrap {
+      button {
+        display: block;
+
+        @include mq-custom(768px) {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .check-agree_wrap {
+      @include mq-custom(768px) {
+        justify-content: center;
+      }
+    }
+
+    @include mq-custom(1280px) {
+      margin: 17px 0 15px 0;
+    }
   }
 }
 

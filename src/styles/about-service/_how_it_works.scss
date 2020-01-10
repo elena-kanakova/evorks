@@ -25,14 +25,18 @@
       }
     }
 
-    @include mq-custom(1366px) {
+    @include mq-custom(1600px) {
       padding: 30px;
+    }
+
+    @include mq-custom(1366px) {
+      padding: 20px;
     }
 
     @include mq-custom(1280px) {
       width: 50%;
+      height: 180px;
       flex: 1 1 50%;
-      padding: 20px;
     }
 
     @include mq-custom(640px) {
@@ -55,6 +59,10 @@
       font: 20px $font_main;
       font-weight: bold;
       color: $black_80;
+
+      @include mq-custom(1366px) {
+        width: 60%;
+      }
     }
 
     p {
@@ -63,6 +71,10 @@
       font: 16px $font_main;
       font-weight: normal;
       color: $black_70;
+
+      @include mq-custom(1280px) {
+        width: 60%;
+      }
     }
 
     picture {
@@ -77,22 +89,22 @@
       }
 
       @include mq-custom(1280px) {
-        max-width: 50%;
-      }
-
-      @include mq-custom(1280px) {
         max-width: 40%;
       }
     }
 
-    @include mq-custom(1366px) {
+    @include mq-custom(1600px) {
       padding: 30px;
+    }
+
+    @include mq-custom(1366px) {
+      padding: 20px;
     }
 
     @include mq-custom(1280px) {
       width: 50%;
+      height: 180px;
       flex: 1 1 50%;
-      padding: 20px;
     }
 
     @include mq-custom(640px) {
@@ -119,6 +131,11 @@
 
     picture {
       bottom: 0;
+      right: 34px;
+
+      @include mq-custom(1600px) {
+        right: 5px;
+      }
     }
 
     @include mq-custom(1280px) {
@@ -132,7 +149,12 @@
 
     picture {
       top: 50%;
+      right: 54px;
       transform: translateY(-50%);
+
+      @include mq-custom(1600px) {
+        right: 24px;
+      }
     }
   }
 

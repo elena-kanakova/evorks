@@ -1,0 +1,22 @@
+.evorker__title-desc_wrap {
+  width: 55%;
+  padding: 83px 50px 64px;
+
+  .title {
+    margin-bottom: 20px;
+
+    h1 {
+      font: 40px $font_main;
+      font-weight: bold;
+      color: #152748;
+    }
+  }
+
+  .desc {
+    p {
+      font: 16px $font_main;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

@@ -308,6 +308,21 @@ html.fixed {
   }
 }
 
+.evorker__title-list-price_wrap {
+  width: 60%;
+  flex: 1 1 60%;
+}
+
+.evorker__form-title_wrap {
+  width: 40%;
+  flex: 1 1 40%;
+}
+
+.evorker__how-top-pay {
+  width: 100%;
+  flex: 1 1 100%;
+}
+
 // Общие блоки сайта
 @import "general_elements/header";
 @import "general_elements/footer";
@@ -344,3 +359,8 @@ html.fixed {
 // Помощь
 @import "help/content";
 @import "help/form";
+
+// Помощь
+@import "evorker/content";
+@import "evorker/title";
+@import "evorker/form";

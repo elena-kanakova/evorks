@@ -116,6 +116,20 @@
     border-top: 1px solid #CCD5DB;
     transition: all .3s linear;
 
+    a {
+      text-decoration: none;
+      font: 15px $font_main;
+      font-weight: normal;
+      color: #367EFF;
+      cursor: pointer;
+
+      @include mq-custom(768px) {
+        font: 15px $font_main;
+        font-weight: normal;
+        color: #367EFF;
+      }
+    }
+
     @include mq-custom(768px) {
       padding: 10px 15px;
       height: auto;

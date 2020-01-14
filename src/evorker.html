@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Эворкс - Сервис по предоставлению услуг рабочей силы. </title>
     <meta name="description" content="Экономит ваше время и старается предоставить лучших работников для дома, дачи и бизнеса.">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../libs/swiper.min.css">
 
@@ -162,7 +163,7 @@
         </div>
     </aside>
 </div>
-        <div id="master" class="content-footer_wrap">
+        <div id="evorker" class="content-footer_wrap">
             <div id="breadcrumbs">
     <ul class="breadcrumbs_wrap flex">
         <li class="breadcrumbs-item">
@@ -174,7 +175,7 @@
     </ul>
 </div>
             <div class="evorker__content_wrap flex wrap">
-                <div class="evorker__title-list-price_wrap">
+                <div class="evorker__title_wrap">
                     <div class="evorker__title-desc_wrap">
     <div class="title">
         <h1>Подсобник-разнорабочий</h1>
@@ -184,6 +185,8 @@
             начиная от разгрузки строй материала на вашем объекте, заканчивая приготовлением раствора для специалистов.</p>
     </div>
 </div>
+                </div>
+                <div class="evorker__content_part-1-form_wrap flex wrap">
                     <section id="evorker__list" class="flex">
     <div class="evorker__list__title-desc">
         <h2>Список работ, </h2>
@@ -219,101 +222,244 @@
     </div>
 </section>
                 </div>
-                <div class="evorker__form-title_wrap">
-                    <section id="evorker__form__title" class="flex column center">
-    <div class="price">
-        <p>от 175 руб/час</p>
+                <section id="evorker__form-wrap">
+    <div class="evorker__form__title flex column center">
+        <div class="price">
+            <p>от 175 руб/час</p>
+        </div>
+        <div class="desc flex column center">
+            <p>Заполните</p>
+            <span>форму заказа эворкера</span>
+        </div>
     </div>
-    <div class="desc flex column center">
-        <p>Заполните</p>
-        <span>форму заказа эворкера</span>
-    </div>
-</section>
-<section id="evorker__form-wrap">
     <div class="evorker__form__steps_wrap flex">
-        <div class="step step-active">
+        <div class="step js-step-1__title step-active">
             <p class="title">1 шаг</p>
             <p class="desc">Данные
                 о заказчике</p>
         </div>
-        <div class="step">
+        <div class="step js-step-2__title">
             <p class="title">2 шаг</p>
             <p class="desc">Информация
                 о заказе</p>
         </div>
-        <div class="step">
+        <div class="step js-step-3__title">
             <p class="title">3 шаг</p>
             <p class="desc">Готовый заказ</p>
         </div>
     </div>
-    <div id="evorker-form" class="evorker__form__content-wrap">
-        <div class="evorker__from__step-1_wrap">
-            <form action="" id="master_form" class="master_form flex">
-                <div class="form__elements_wrap flex wrap">
-                    <div class="label-input_wrap">
+    <form action="" id="evorker_form" class="evorker_form-wrap">
+        <div class="evorker__form__step-1_wrap">
+            <div class="content-wrap flex wrap">
+                <div class="label-input_wrap">
+                    <div class="label_wrap">
+                        <label for="evorker-form__name">Имя</label>
+                    </div>
+                    <div class="input_wrap">
+                        <input id="evorker-form__name" type="text" placeholder="Ваше имя">
+                    </div>
+                </div>
+                <div class="label-input_wrap">
+                    <div class="label_wrap">
+                        <label for="evorker-form__phone">Телефон</label>
+                    </div>
+                    <div class="input_wrap">
+                        <input id="evorker-form__phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                    </div>
+                </div>
+                <div class="label-input_wrap">
+                    <div class="label_wrap">
+                        <label for="evorker-form__address">Адрес заказа</label>
+                    </div>
+                    <div class="input_wrap">
+                        <input id="evorker-form__address" type="text" placeholder="Введите город">
+                    </div>
+                </div>
+                <div class="label-input__date_wrap">
+                    <div class="label_wrap">
+                        <label for="evorker-form__date">Дата</label>
+                    </div>
+                    <div class="input_wrap">
+                        <input id="evorker-form__date" type="date" placeholder="Дата">
+                    </div>
+                </div>
+                <div class="label-input__time_wrap">
+                    <div class="label_wrap">
+                        <label for="evorker-form__time">Время</label>
+                    </div>
+                    <div class="input_wrap">
+                        <input id="evorker-form__time" type="time" placeholder="Время">
+                    </div>
+                </div>
+            </div>
+            <div class="btn-submit_wrap">
+                <button class="btn-next js-btn-step">Продолжить</button>
+            </div>
+        </div>
+        <div class="evorker__form__step-2_wrap none">
+            <div class="content-wrap flex wrap">
+                <div class="input-number__elements-wrap">
+                    <div class="label-input__number_wrap flex">
                         <div class="label_wrap">
-                            <label for="master-form__name">Имя</label>
+                            <label for="evorker-form__evorkers-number">Сколько
+                                нужно рабочих?</label>
                         </div>
-                        <div class="input_wrap">
-                            <input id="master-form__name" type="text" placeholder="Ваше имя">
+                        <div class="input_wrap flex">
+                            <button class="btn-arrow-minus js-evorker-form__btn-arrow-minus">
+                                <img src="../../img/evorker_arrow.svg" alt="Минус">
+                            </button>
+                            <input id="evorker-form__evorkers-number" class="js-evorker-form__input-number" type="number" value="1">
+                            <button class="btn-arrow-plus js-evorker-form__btn-arrow-plus">
+                                <img src="../../img/evorker_arrow.svg" alt="Плюс">
+                            </button>
                         </div>
                     </div>
-                    <div class="label-input_wrap">
+                    <div class="label-input__number_wrap flex">
                         <div class="label_wrap">
-                            <label for="master-form__phone">Телефон</label>
+                            <label for="evorker-form__hours-number">Сколько
+                                нужно часов?</label>
                         </div>
-                        <div class="input_wrap">
-                            <input id="master-form__phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
-                        </div>
-                    </div>
-                    <div class="label-input_wrap">
-                        <div class="label_wrap">
-                            <label for="master-form__city">Адрес заказа</label>
-                        </div>
-                        <div class="input_wrap">
-                            <input id="master-form__city" type="text" placeholder="Введите город">
-                        </div>
-                    </div>
-                    <div class="label-input_wrap">
-                        <div class="label_wrap">
-                            <label for="master-form__region">Дата</label>
-                        </div>
-                        <div class="input_wrap">
-                            <input id="master-form__region" type="text" placeholder="Введите район">
-                        </div>
-                    </div>
-                    <div class="label-input_wrap">
-                        <div class="label_wrap">
-                            <label for="master-form__vacancy">Время</label>
-                        </div>
-                        <div class="input_wrap">
-                            <input id="master-form__vacancy" type="text" placeholder="Введите название">
+                        <div class="input_wrap flex">
+                            <button class="btn-arrow-minus js-evorker-form__btn-arrow-minus">
+                                <img src="../../img/evorker_arrow.svg" alt="Минус">
+                            </button>
+                            <input id="evorker-form__hours-number" class="js-evorker-form__input-number" type="number" value="1">
+                            <button class="btn-arrow-plus js-evorker-form__btn-arrow-plus">
+                                <img src="../../img/evorker_arrow.svg" alt="Плюс">
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="btn-submit_wrap flex">
-                    <button class="submit">Хочу работать</button>
+                <div class="input-file_wrap">
+                    <label for="evorker-form__file" class="flex column center">
+                        <span class="plus">+</span>
+                        <span class="text">прикрепите
+                            необходимые
+                            материалы</span>
+                    </label>
+                    <input id="evorker-form__file" type="file" class="input_hidden">
                 </div>
-            </form>
+                <div class="input-text_wrap">
+                    <div class="label_wrap">
+                        <label for="evorker-form__text">Опишите, что нужно сделать</label>
+                    </div>
+                    <div class="input_wrap textarea flex">
+                        <textarea id="evorker-form__text"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-submit_wrap">
+                <button class="js-btn-prev btn-prev"><img src="../../img/evorker_arrow.svg" alt="Назад"></button>
+                <button class="js-btn-next btn-next">Продолжить</button>
+            </div>
         </div>
-        <div class="evorker__from__step-2_wrap none">
-
+        <div class="evorker__form__step-3_wrap none">
+            <div class="content-wrap flex wrap">
+                <div class="order-details__elements-wrap flex wrap">
+                    <div class="element">
+                        <p class="title">Номер заказа:</p>
+                        <p class="text">245634</p>
+                    </div>
+                    <div class="element">
+                        <p class="title">Дата заказа:</p>
+                        <p class="text">19.11.2019</p>
+                    </div>
+                </div>
+                <div class="order-details__elements-wrap flex wrap">
+                    <div class="element">
+                        <p class="title">Имя:</p>
+                        <p class="text">Сергей</p>
+                    </div>
+                    <div class="element">
+                        <p class="title">Телефон:</p>
+                        <p class="text">8 (963) 913-54-51 </p>
+                    </div>
+                    <div class="element">
+                        <p class="title">Адрес:</p>
+                        <p class="text">ул. Авроры 128</p>
+                    </div>
+                </div>
+                <div class="order-details__elements-wrap flex wrap">
+                    <div class="element">
+                        <p class="title">Время:</p>
+                        <p class="text">8:00</p>
+                    </div>
+                    <div class="element">
+                        <p class="title">Количество рабочих:</p>
+                        <p class="text">2 человека</p>
+                    </div>
+                    <div class="element">
+                        <p class="title">Количество часов:</p>
+                        <p class="text">8 часов</p>
+                    </div>
+                </div>
+                <div class="input-text_wrap">
+                    <div class="label_wrap">
+                        <label for="evorker-form__text-2">Введите промокод</label>
+                    </div>
+                    <div class="input_wrap textarea flex">
+                        <textarea id="evorker-form__text-2" placeholder="4867483"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="payment_wrap flex wrap">
+                <div class="btn-payment_wrap flex column center">
+                    <div class="cost">
+                        <p>2 500 руб.</p>
+                    </div>
+                    <div class="btn-order js-btn-step">
+                        <button><span>Заказать и оплатить
+                            по окончанию</span></button>
+                    </div>
+                </div>
+                <div class="btn-payment_wrap btn-payment_wrap__active flex column center">
+                    <div class="cost flex">
+                        <p>2 250 руб.</p>
+                        <p class="discont">скидка 10 %</p>
+                    </div>
+                    <div class="btn-order js-btn-step">
+                        <button><span>Заказать и оплатить</span>
+                            <span class="bold">сейчас</span></button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="evorker__from__step-3_wrap none">
-
+        <div class="evorker__form__step-4_wrap none">
+            <div class="content-wrap">
+                <div class="step-3__title">
+                    <h3>Ваш заказ создан!</h3>
+                </div>
+                <div class="order-details__elements-wrap">
+                    <div class="element">
+                        <p class="title">Номер заказа:</p>
+                        <p class="text">245634</p>
+                    </div>
+                </div>
+                <div class="step-3__text">
+                    <p>Ждите звонка от нашего менеджера.
+                        Спасибо, что работаете с «Эворкс»!</p>
+                </div>
+                <div class="help-link">
+                    <a href="../help.html">Помощь</a>
+                </div>
+            </div>
+            <div class="service-add_wrap flex wrap">
+                <div class="btn-add_wrap">
+                    <button class="btn-add evorker"><span>добавить эворкера</span></button>
+                </div>
+                <div class="btn-add_wrap btn-payment_wrap__active">
+                    <button class="btn-add service"><span>добавить услугу</span></button>
+                </div>
+            </div>
         </div>
-        <div class="evorker__from__step-4_wrap none">
-
-        </div>
-    </div>
+    </form>
 </section>
-                </div>
                 <section id="evorker__how-top-pay" class="flex">
     <div class="evorker__how-top-pay__title-desc">
         <h2>Как оплатить услугу?</h2>
         <p>Мы предлагаем вам оплатить услуги двумя способами</p>
     </div>
-    <div class="evorker__how-top-pay__step">
+    <div class="evorker__how-top-pay__step step-1">
         <div class="title flex">
             <p class="step-number">1.</p>
             <h3 class="step-title">Оплата на сайте при заказе
@@ -324,7 +470,7 @@
                 на несколько часов больше, дополнительные часы вы оплачиваете после выполнения работы также  на сайте.</p>
         </div>
     </div>
-    <div class="evorker__how-top-pay__step">
+    <div class="evorker__how-top-pay__step step-2">
         <div class="title flex">
             <p class="step-number">2.</p>
             <h3 class="step-title">Оплата после выполнения работ</h3>
@@ -488,6 +634,7 @@
 <script src="../libs/jquery-3.2.1.min.js"></script>
 <script src="../libs/jquery.maskedinput.min.js"></script>
 <script src="../libs/swiper.min.js"></script>
+<script src="../libs/slick.min.js"></script>
 <script src="../js/scripts.js"></script>
 
 </body>

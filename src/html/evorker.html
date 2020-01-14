@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Эворкс - Сервис по предоставлению услуг рабочей силы. </title>
     <meta name="description" content="Экономит ваше время и старается предоставить лучших работников для дома, дачи и бизнеса.">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <!-- @if NODE_ENV='development' -->
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../libs/swiper.min.css">
@@ -19,16 +20,16 @@
     @@include('./general/_header.html')
     <div class="content-sidebar_wrap flex">
         @@include('./general/_sidebar.html')
-        <div id="master" class="content-footer_wrap">
+        <div id="evorker" class="content-footer_wrap">
             @@include('./general/_breadcrumbs.html')
             <div class="evorker__content_wrap flex wrap">
-                <div class="evorker__title-list-price_wrap">
+                <div class="evorker__title_wrap">
                     @@include('./evorker/_title.html')
+                </div>
+                <div class="evorker__content_part-1-form_wrap flex wrap">
                     @@include('./evorker/_content_part-1.html')
                 </div>
-                <div class="evorker__form-title_wrap">
-                    @@include('./evorker/_form.html')
-                </div>
+                @@include('./evorker/_form.html')
                 @@include('./evorker/_content_part-2.html')
             </div>
             @@include('./general/_footer.html')
@@ -43,6 +44,7 @@
 <script src="../libs/jquery-3.2.1.min.js"></script>
 <script src="../libs/jquery.maskedinput.min.js"></script>
 <script src="../libs/swiper.min.js"></script>
+<script src="../libs/slick.min.js"></script>
 <script src="../js/scripts.js"></script>
 <!-- @endif -->
 

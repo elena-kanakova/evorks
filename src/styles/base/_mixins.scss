@@ -120,7 +120,7 @@ $breakpoints: (
   textarea:focus:-ms-input-placeholder      {opacity:0;}/* IE */
 }
 
-@mixin form() {
+@mixin form__title() {
   .title {
     h3 {
       font: 40px $font_main;
@@ -139,7 +139,9 @@ $breakpoints: (
       }
     }
   }
+}
 
+@mixin form__subtitle() {
   .desc {
     p {
       font: 16px/22px $font_main;
@@ -155,7 +157,7 @@ $breakpoints: (
   }
 }
 
-@mixin form_inputs() {
+@mixin form__inputs() {
   .label-input_wrap, .btn-submit_wrap {
     margin: 0 15px 15px 0;
     width: 50%;
@@ -203,7 +205,9 @@ $breakpoints: (
       @include textarea_placeholder($font-size:12px);
     }
   }
+}
 
+@mixin btn-submit() {
   .btn-submit_wrap {
     .btn_wrap {
       margin: 10px 0;

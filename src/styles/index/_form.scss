@@ -61,7 +61,8 @@
   flex: 1 1 40%;
   padding: 40px 50px 10px 50px;
 
-  @include form();
+  @include form__title();
+  @include form__subtitle();
 
   .desc {
     margin-top: 10px;
@@ -91,7 +92,8 @@
   width: 100%;
   flex: 1 1 100%;
 
-  @include form_inputs();
+  @include form__inputs();
+  @include btn-submit();
 
   @include mq-custom(414px) {
     flex-direction: column;

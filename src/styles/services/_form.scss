@@ -47,7 +47,8 @@
     }
   }
 
-  @include form();
+  @include form__title();
+  @include form__subtitle();
 
   @include mq-custom(1650px) {
     flex-direction: column;
@@ -69,7 +70,8 @@
   width: 100%;
   flex: 1 1 100%;
 
-  @include form_inputs();
+  @include form__inputs();
+  @include btn-submit();
 
   @include mq-custom(640px) {
     flex-direction: column;

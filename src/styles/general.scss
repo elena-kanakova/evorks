@@ -26,7 +26,7 @@
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .none {
@@ -308,19 +308,38 @@ html.fixed {
   }
 }
 
-.evorker__title-list-price_wrap {
-  width: 60%;
-  flex: 1 1 60%;
-}
-
-.evorker__form-title_wrap {
-  width: 40%;
-  flex: 1 1 40%;
-}
-
-.evorker__how-top-pay {
+.evorker__title_wrap {
   width: 100%;
   flex: 1 1 100%;
+}
+
+.evorker__content_wrap {
+  border-left: 1px solid #DADADA;
+
+  @include mq-custom(1023px) {
+    border-left: none;
+  }
+}
+
+.evorker__content_part-1-form_wrap {
+  width: 62%;
+  flex: 1 1 62%;
+
+  @include mq-custom(1023px){
+    width: 100%;
+    flex: 1 1 100%;
+    order: 2;
+  }
+}
+
+#evorker__how-top-pay {
+  width: 100%;
+  flex: 1 1 100%;
+
+  @include mq-custom(1023px){
+    flex-wrap: wrap;
+    order: 3;
+  }
 }
 
 // Общие блоки сайта

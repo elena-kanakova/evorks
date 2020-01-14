@@ -1,8 +1,36 @@
-#evorker__form__title {
-  padding: 74px 50px 64px;
+#evorker__form-wrap {
+  position: relative;
+  width: 38%;
+  flex: 1 1 38%;
+  border-left: 1px solid #DADADA;
+
+  @include mq-custom(1023px){
+    width: 100%;
+    flex: 1 1 100%;
+    order: 4;
+  }
+
+  @include mq-custom(1023px) {
+    border-left: none;
+    border-bottom: 1px solid #DADADA;
+  }
+}
+
+.evorker__form__title {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  bottom: 100%;
+  padding: 74px 0 60px;
+
+  @include mq-custom(1023px){
+    position: static;
+    bottom: unset;
+    padding: 30px 30px 60px;
+  }
 
   .price {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 
     p {
       font: 28px $font_main;
@@ -11,6 +39,18 @@
       background: linear-gradient(90deg, #367EFF 0%, #20B0F2 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @include mq-custom(1280px) {
+        font: 26px $font_main;
+        font-weight: bold;
+        color: #367EFF;
+      }
+
+      @include mq-custom(1024px) {
+        font: 24px $font_main;
+        font-weight: bold;
+        color: #367EFF;
+      }
     }
   }
 
@@ -45,17 +85,45 @@
 }
 
 .evorker__form__steps_wrap {
+  justify-content: space-between;
+
   .step {
+    width: 33.333%;
+    height: 111px;
+    flex: 1 1 33.333%;
     padding: 20px 30px;
     background: #FAFAFA;
-    border: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
     box-sizing: border-box;
+
+    @include mq-custom(1450px) {
+      padding: 20px;
+    }
+
+    @include mq-custom(1280px) {
+      padding: 10px;
+    }
+
+    &:nth-child(1) {
+      border-left: none;
+    }
+
+    &:nth-last-child(1) {
+      border-right: none;
+    }
 
     .title {
       font: 19px $font_main;
       font-weight: bold;
       color: rgba(21, 39, 72, 0.3);
       text-transform: uppercase;
+
+      @include mq-custom(1280px) {
+        font: 18px $font_main;
+        font-weight: bold;
+        color: rgba(21, 39, 72, 0.3);
+      }
     }
 
     .desc {
@@ -63,6 +131,12 @@
       font: 16px $font_main;
       font-weight: normal;
       color: rgba(21, 39, 72, 0.3);
+
+      @include mq-custom(1280px) {
+        font: 14px $font_main;
+        font-weight: normal;
+        color: rgba(21, 39, 72, 0.3);
+      }
     }
   }
 
@@ -73,18 +147,805 @@
       font: 19px $font_main;
       font-weight: bold;
       color: white;
+
+      @include mq-custom(1280px) {
+        font: 18px $font_main;
+        font-weight: bold;
+        color: white;
+      }
     }
 
     .desc {
       font: 16px $font_main;
       font-weight: normal;
       color: white;
+
+      @include mq-custom(1280px) {
+        font: 14px $font_main;
+        font-weight: normal;
+        color: white;
+      }
+    }
+  }
+
+  .step-done {
+    background: rgba(185, 178, 255, 0.4);
+
+    .title {
+      font: 19px $font_main;
+      font-weight: bold;
+      color: #152748;
+    }
+
+    .desc {
+      font: 16px $font_main;
+      font-weight: normal;
+      color: #152748;
     }
   }
 }
 
-
-.evorker__form__content-wrap {
-  padding: 67px 30px;
+.evorker_form-wrap {
+  height: calc(100% - 111px);
   background: #F1F0FF;
+
+  @include mq-custom(1023px){
+    height: auto;
+  }
+
+  .content-wrap {
+    padding: 35px 30px;
+
+    @include mq-custom(1450px) {
+      padding: 35px 20px;
+    }
+
+    @include mq-custom(1280px) {
+      padding: 20px;
+    }
+  }
+
+  .btn-submit_wrap {
+    margin-top: 17px;
+    padding: 0 10px;
+    text-align: center;
+
+    .btn-next, .btn-submit {
+      @include btn-order;
+      transition: all .3s linear;
+
+      &:hover {
+        background: $gradient_reverse;
+      }
+    }
+
+    .btn-next {
+      @include mq-custom(1150px) {
+        min-width: 120px;
+        max-width: 150px;
+      }
+
+      @include mq-custom(1023px){
+        min-width: 170px;
+        max-width: 250px;
+      }
+
+      @include mq-custom(360px) {
+        min-width: 120px;
+        max-width: 150px;
+      }
+    }
+
+    .btn-prev {
+      margin-right: 20px;
+      width: 55px;
+      height: 55px;
+      border: none;
+      background: #FFFFFF;
+      border-radius: 50%;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
+
+      @include mq-custom(1150px) {
+        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+      }
+
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.evorker__form__step-1_wrap {
+  padding-bottom: 30px;
+
+  .content-wrap {
+    justify-content: space-between;
+
+    .label-input_wrap {
+      width: 48%;
+      flex: 1 1 48%;
+      margin-right: 2%;
+      margin-top: 32px;
+
+      &:nth-child(2n), &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      @include mq-custom(1366px) {
+        width: 100%;
+        flex: 1 1 100%;
+        margin-right: 0;
+      }
+
+      @include mq-custom(1023px){
+        width: 48%;
+        flex: 1 1 48%;
+        margin-right: 2%;
+        margin-top: 32px;
+
+        &:nth-child(2n), &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      @include mq-custom(640px){
+        width: 100%;
+        flex: 1 1 100%;
+        margin-right: 0;
+      }
+    }
+
+    .label-input__date_wrap, .label-input__time_wrap {
+      width: 22%;
+      flex: 1 1 22%;
+      margin-left: 2%;
+      margin-top: 32px;
+
+      @include mq-custom(1366px) {
+        width: 48%;
+        flex: 1 1 48%;
+      }
+
+      @include mq-custom(1023px){
+        width: 22%;
+        flex: 1 1 22%;
+      }
+
+      @include mq-custom(640px){
+        width: 48%;
+        flex: 1 1 48%;
+      }
+
+      @include mq-custom(414px) {
+        width: 100%;
+        flex: 1 1 100%;
+        margin-left: 0;
+      }
+
+      input {
+        padding: 15px;
+      }
+    }
+
+    .label-input__date_wrap {
+      @include mq-custom(1366px) {
+        margin-left: 0;
+      }
+
+      @include mq-custom(1023px){
+        margin-left: 2%;
+      }
+
+      @include mq-custom(640px){
+        margin-left: 0;
+      }
+    }
+
+    .label_wrap {
+      margin-bottom: 4px;
+
+      label {
+        font: 14px/17px $font_main;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+    }
+
+    .input_wrap {
+      input {
+        padding: 15px 19px;
+        background: none;
+        width: 100%;
+        font: 17px/21px $font_main;
+        font-weight: normal;
+        color: #152748;
+        border: 1px solid $light-grey;;
+        border-radius: 3px;
+      }
+
+      @include input_placeholder($color: $black_70);
+    }
+  }
+}
+
+.evorker__form__step-2_wrap {
+  padding-bottom: 30px;
+
+  .content-wrap {
+    justify-content: space-between;
+
+    .input-number__elements-wrap {
+      width: 48%;
+      flex: 1 1 48%;
+      margin-right: 2%;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      @include mq-custom(1280px) {
+        width: 100%;
+        flex: 1 1 100%;
+      }
+
+      @include mq-custom(1023px) {
+        width: 48%;
+        flex: 1 1 48%;
+        margin-right: 2%;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      @include mq-custom(640px) {
+        width: 100%;
+        flex: 1 1 100%;
+      }
+    }
+
+    .input-file_wrap {
+      padding-left: 5%;
+      width: 48%;
+      flex: 1 1 48%;
+      cursor: pointer;
+
+      @include mq-custom(1280px) {
+        padding-left: 0;
+        width: 100%;
+        flex: 1 1 100%;
+        margin-top: 20px;
+      }
+
+      @include mq-custom(1023px) {
+        padding-left: 5%;
+        width: 48%;
+        flex: 1 1 48%;
+        margin-top: 0;
+      }
+
+      @include mq-custom(640px) {
+        padding-left: 0;
+        width: 100%;
+        flex: 1 1 100%;
+        margin-top: 20px;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      input {
+        display: none;
+      }
+
+      label {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(54, 126, 255, 0.2) 0%, rgba(32, 176, 242, 0.2) 100%);
+        text-align: center;
+
+        span {
+          display: block;
+        }
+
+        .plus {
+          font: 30px $font_main;
+          font-weight: 500;
+          color: #367EFF;
+          text-transform: uppercase;
+          background: linear-gradient(90deg, #367EFF 0%, #20B0F2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .text {
+          font: 14px/130% $font_main;
+          font-weight: 500;
+          color: #367EFF;
+          text-transform: uppercase;
+          background: linear-gradient(90deg, #367EFF 0%, #20B0F2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    .label-input__number_wrap {
+      margin-bottom: 25px;
+      align-items: center;
+      justify-content: space-between;
+
+      &:nth-child(2n) {
+        margin-bottom: 0;
+      }
+
+      .label_wrap {
+        width: 50%;
+        flex: 1 1 50%;
+        padding-right: 5px;
+      }
+
+      .input_wrap {
+        width: 50%;
+        flex: 1 1 50%;
+        padding: 15px 20px;
+        background: #FFFFFF;
+        border-radius: 3px;
+
+        @include mq-custom(1280px) {
+          padding: 0 15px;
+        }
+      }
+    }
+
+    .label_wrap {
+      margin-bottom: 4px;
+
+      label {
+        font: 14px/17px $font_main;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+    }
+
+    .btn-arrow-minus {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    .input_wrap {
+      input {
+        padding: 15px 0;
+        width: 100%;
+        font: 17px/21px $font_main;
+        font-weight: normal;
+        color: #152748;
+        text-align: center;
+        border: none;
+        border-radius: 3px;
+      }
+
+      button {
+        display: block;
+        border: none;
+        background: white;
+        cursor: pointer;
+
+        img {
+          display: block;
+          width: 10px;
+          height: 16px;
+        }
+      }
+
+      @include input_placeholder($color:$black_70);
+    }
+
+    .input-text_wrap {
+      margin-top: 30px;
+      width: 100%;
+      flex: 1 1 100%;
+
+      .label_wrap {
+        margin-bottom: 7px;
+        padding: 0 10px;
+
+        label {
+          font: 14px/17px $font_main;
+          font-weight: bold;
+          color: rgba(0, 0, 0, 0.5);
+          cursor: pointer;
+        }
+      }
+
+      .input_wrap {
+        textarea {
+          resize: none;
+          padding: 15px 20px;
+          width: 100%;
+          font: 17px/21px $font_main;
+          font-weight: normal;
+          color: #152748;
+          border: none;
+          border-radius: 3px;
+          background: white;
+        }
+      }
+    }
+  }
+}
+
+.evorker__form__step-3_wrap {
+  .content-wrap {
+    @include mq-custom(1450px) {
+      padding-bottom: 0;
+    }
+  }
+  .order-details__elements-wrap {
+    width: 100%;
+    flex: 1 1 100%;
+    justify-content: flex-start;
+
+    .element {
+      margin-top: 25px;
+      padding-right: 10px;
+      width: 33.3%;
+      flex: 0 1 33.3%;
+
+      @include mq-custom(1450px) {
+        width: 50%;
+        flex: 0 1 50%;
+      }
+
+      @include mq-custom(1366px) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex: 0 1 100%;
+      }
+
+      .title {
+        font: 16px/20px $font_main;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .text {
+        margin-top: 10px;
+        font: 16px/20px $font_main;
+        font-weight: normal;
+        color: #152748;
+
+        @include mq-custom(1366px) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .input-text_wrap {
+    margin-top: 30px;
+    width: 100%;
+    flex: 1 1 100%;
+
+    .label_wrap {
+      margin-bottom: 13px;
+      padding: 0 20px;
+
+      label {
+        font: 14px/17px $font_main;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+    }
+
+    .input_wrap {
+      textarea {
+        resize: none;
+        padding: 15px 20px;
+        width: 100%;
+        font: 17px/21px $font_main;
+        font-weight: normal;
+        color: #152748;
+        border: none;
+        border-radius: 3px;
+        background: white;
+      }
+    }
+  }
+
+  .payment_wrap {
+    width: 100%;
+    flex: 1 1 100%;
+
+    @include mq-custom(1650px) {
+      align-items: flex-end;
+    }
+
+    @include mq-custom(1450px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .btn-payment_wrap {
+    padding: 30px;
+    width: 50%;
+    flex: 1 1 50%;
+
+    @include mq-custom(1919px) {
+      padding: 30px 10px;
+    }
+
+    @include mq-custom(1450px) {
+      width: 100%;
+      flex: 1 1 100%;
+    }
+
+    .cost {
+      width: 100%;
+      padding: 0 10px;
+      margin-bottom: 13px;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      @include mq-custom(1650px) {
+        flex-direction: column;align-items: center;
+      }
+
+      p {
+        font: 25px/30px $font_main;
+        font-weight: 600;
+        color: #152748;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include mq-custom(1366px) {
+          font: 22px/30px $font_main;
+          font-weight: 600;
+          color: #152748;
+        }
+
+        @include mq-custom(1280px) {
+          font: 20px/28px $font_main;
+          font-weight: 600;
+          color: #152748;
+        }
+
+        @include mq-custom(1024px) {
+          font: 18px/26px $font_main;
+          font-weight: 600;
+          color: #152748;
+        }
+      }
+
+      p.discont {
+        margin: 0 0 2px 5px;
+        font: 14px $font_main;
+        font-weight: bold;
+        color: #152748;
+        text-transform: none;
+
+        @include mq-custom(1366px) {
+          font: 12px $font_main;
+          font-weight: bold;
+          color: #152748;
+        }
+
+        @include mq-custom(1280px) {
+          font: 10px $font_main;
+          font-weight: bold;
+          color: #152748;
+        }
+
+        @include mq-custom(1024px) {
+          font: 9px $font_main;
+          font-weight: bold;
+          color: #152748;
+        }
+      }
+    }
+
+    .btn-order {
+      button {
+        max-width: 250px;
+        padding: 13px 33px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+
+        span {
+          display: block;
+          font: 14px/17px $font_main;
+          font-weight: 500;
+          color: #367EFF;
+          text-transform: uppercase;
+          background: linear-gradient(90deg, #367EFF 0%, #20B0F2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          @include mq-custom(1366px) {
+            font: 12px/15px $font_main;
+            font-weight: 500;
+            color: #367EFF;
+          }
+
+          @include mq-custom(1280px) {
+            font: 10px/13px $font_main;
+            font-weight: 500;
+            color: #367EFF;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-payment_wrap__active {
+    background: #7266FF;
+
+    .cost {
+      p {
+        font: 25px/30px $font_main;
+        font-weight: 600;
+        color: white;
+
+        @include mq-custom(1366px) {
+          font: 22px/30px $font_main;
+          font-weight: 600;
+          color: white;
+        }
+
+        @include mq-custom(1280px) {
+          font: 20px/28px $font_main;
+          font-weight: 600;
+          color: white;
+        }
+
+        @include mq-custom(1024px) {
+          font: 18px/26px $font_main;
+          font-weight: 600;
+          color: white;
+        }
+      }
+
+      p.discont {
+        font: 14px/17px $font_main;
+        font-weight: bold;
+        color: white;
+
+        @include mq-custom(1366px) {
+          font: 12px $font_main;
+          font-weight: bold;
+          color: white;
+        }
+
+        @include mq-custom(1280px) {
+          font: 10px $font_main;
+          font-weight: bold;
+          color: white;
+        }
+
+        @include mq-custom(1024px) {
+          font: 9px $font_main;
+          font-weight: bold;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.evorker__form__step-4_wrap {
+  .content-wrap {
+    padding: 60px 30px 36px;
+
+    @include mq-custom(1366px) {
+      padding: 30px 20px 0;
+    }
+  }
+
+  .step-3__title {
+    margin-bottom: 30px;
+
+    h3 {
+      font: 25px/135% $font_main;
+      font-weight: bold;
+      color: #152748;
+    }
+  }
+
+  .order-details__elements-wrap {
+    margin-bottom: 30px;
+
+    .element {
+      padding-right: 10px;
+
+      .title {
+        font: 16px/20px $font_main;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .text {
+        margin-top: 10px;
+        font: 16px/20px $font_main;
+        font-weight: normal;
+        color: #152748;
+      }
+    }
+  }
+
+  .step-3__text {
+    margin-bottom: 50px;
+
+    p {
+      font: 19px/23px $font_main;
+      font-weight: normal;
+      color: rgba(21, 39, 72, 0.6);
+    }
+  }
+
+  .help-link {
+    a {
+      font: 16px $font_main;
+      font-weight: normal;
+      text-decoration-line: underline;
+      color: #0B80E0;
+    }
+  }
+
+  .service-add_wrap {
+    padding: 30px;
+    justify-content: space-between;
+
+    @include mq-custom(1919px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-add {
+      width: 255px;
+      height: 55px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+    }
+
+    .btn-add.evorker {
+      @include mq-custom(1919px) {
+        margin-bottom: 20px;
+      }
+
+      span {
+        display: block;
+        text-transform: uppercase;
+        font: 15px/18px $font_main;
+        font-weight: 600;
+        color: #7266FF;
+      }
+    }
+
+    .btn-add.service {
+      span {
+        display: block;
+        text-transform: uppercase;
+        font: 15px/18px $font_main;
+        font-weight: 600;
+        color: #FF6666;
+      }
+    }
+  }
 }

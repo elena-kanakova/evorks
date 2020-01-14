@@ -1,21 +1,78 @@
 .evorker__title-desc_wrap {
+  width: 60%;
+  flex: 1 1 60%;
   padding: 83px 50px 64px;
 
+  @include mq-custom(1450px) {
+    padding: 73px 40px 54px;
+  }
+
+  @include mq-custom(1366px) {
+    padding: 40px 30px 44px;
+  }
+
+  @include mq-custom(1280px) {
+    padding: 30px 20px;
+  }
+
+  @include mq-custom(1023px){
+    width: 100%;
+    flex: 1 1 100%;
+    order: 1;
+  }
+
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     h1 {
-      font: 40px $font_main;
+      font: 40px/135% $font_main;
       font-weight: bold;
       color: #152748;
+      text-transform: uppercase;
+
+      @include mq-custom(1450px) {
+        font: 38px/135% $font_main;
+        font-weight: bold;
+        color: #152748;
+      }
+
+      @include mq-custom(1366px) {
+        font: 36px/135% $font_main;
+        font-weight: bold;
+        color: #152748;
+      }
+
+      @include mq-custom(1280px) {
+        font: 34px/135% $font_main;
+        font-weight: bold;
+        color: #152748;
+      }
+
+      @include mq-custom(1024px) {
+        font: 30px/135% $font_main;
+        font-weight: bold;
+        color: #152748;
+      }
+
+      @include mq-custom(640px) {
+        font: 26px/135% $font_main;
+        font-weight: bold;
+        color: #152748;
+      }
     }
   }
 
   .desc {
     p {
-      font: 16px $font_main;
+      font: 16px/190% $font_main;
       font-weight: normal;
       color: rgba(0, 0, 0, 0.6);
+
+      @include mq-custom(640px) {
+        font: 14px/190% $font_main;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.6);
+      }
     }
   }
 }

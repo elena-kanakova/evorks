@@ -198,6 +198,21 @@ html.fixed {
   #footer-inner {
     border-left: 1px solid #C6C2F3;
     border-top: 1px solid #C6C2F3;
+
+    @include mq-custom(1024px) {
+      border-left: none;
+      border-top: none;
+    }
+  }
+}
+
+#evorker {
+  #footer {
+    border-left: 1px solid $light-grey;
+
+    @include mq-custom(1023px) {
+      border-left: none;
+    }
   }
 }
 
@@ -218,7 +233,7 @@ html.fixed {
     flex-direction: column;
   }
 
-  @include mq-custom(414px) {
+  @include mq-custom(1024px) {
     border-left: none;
   }
 }

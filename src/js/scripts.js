@@ -166,3 +166,64 @@ $(window).on('load resize', function() {
         $(".footer-inner__items-wrap.slick-initialized").slick("unslick");
     }
 });
+
+$(document).ready(function() {
+    let $btnNextStep1 = $('.evorker__form__step-1_wrap .js-btn-step');
+    let $btnNextStep2 = $('.evorker__form__step-2_wrap .js-btn-next');
+    let $btnPrevStep2 = $('.evorker__form__step-2_wrap .js-btn-prev');
+    let $btnNextStep3 = $('.evorker__form__step-3_wrap .js-btn-step');
+
+    $btnNextStep1.click(function (e) {
+        e.preventDefault();
+        $('.evorker__form__step-1_wrap').addClass('none');
+        $('.evorker__form__step-2_wrap').removeClass('none').addClass('active');
+        $('.js-step-2__title').addClass('step-active');
+        $('.js-step-1__title').removeClass('step-active').addClass('done');
+    });
+
+    $btnPrevStep2.click(function (e) {
+        e.preventDefault();
+        $('.evorker__form__step-2_wrap').addClass('none').removeClass('done');
+        $('.evorker__form__step-1_wrap').removeClass('none').addClass('active');
+        $('.js-step-1__title').addClass('step-active');
+        $('.js-step-2__title').removeClass('step-active').removeClass('done');
+    });
+
+    $btnNextStep2.click(function (e) {
+        e.preventDefault();
+        $('.evorker__form__step-2_wrap').removeClass('active').addClass('none');
+        $('.evorker__form__step-3_wrap').removeClass('none').addClass('active');
+        $('.js-step-3__title').addClass('step-active');
+        $('.js-step-2__title').removeClass('step-active').addClass('done');
+    });
+
+    $btnNextStep3.click(function (e) {
+        e.preventDefault();
+        $('.evorker__form__step-3_wrap').addClass('none');
+        $('.evorker__form__step-4_wrap').removeClass('none').addClass('active');
+        $('.js-step-3__title').removeClass('step-active').addClass('done');
+    });
+});
+
+$(document).ready(function() {
+    let $quantityArrowMinus = $(".js-evorker-form__btn-arrow-minus");
+    let $quantityArrowPlus = $(".js-evorker-form__btn-arrow-plus");
+
+    $quantityArrowMinus.click(
+        function (e) {
+            e.preventDefault();
+            let $quantityNum = $(this).siblings('.js-evorker-form__input-number');
+            if ($quantityNum.val() > 1) {
+                $quantityNum.val(+$quantityNum.val() - 1);
+            }
+        }
+    );
+
+    $quantityArrowPlus.click(
+        function (e) {
+            e.preventDefault();
+            let $quantityNum = $(this).siblings('.js-evorker-form__input-number');
+            $quantityNum.val(+$quantityNum.val() + 1);
+        }
+    );
+});

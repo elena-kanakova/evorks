@@ -5,7 +5,7 @@
   .text_wrap {
     width: 61%;
     flex: 1 1 61%;
-    padding: 60px 0 0 50px;
+    padding: 60px 30px 20px 50px;
 
     @include mq-custom(1366px) {
       padding: 40px 30px;
@@ -86,7 +86,6 @@
     margin-top: 40px;
 
     p {
-      margin-right: 50px;
       font: 19px $font_main;
       font-weight: normal;
       color: rgba(0, 0, 0, 0.6);
@@ -127,8 +126,12 @@
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       overflow: hidden;
+
+      @include mq-custom(1920px) {
+        justify-content: center;
+      }
 
       img {
         display: block;

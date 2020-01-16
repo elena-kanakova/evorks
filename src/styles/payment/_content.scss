@@ -56,10 +56,12 @@
 
     &:nth-child(2) {
       background: #FF6666;
+      border-right: 1px solid #FF6666;
     }
 
     &:nth-child(3) {
       background: #FFB386;
+      border-right: 1px solid #FFB386;
     }
 
     &:nth-child(4) {
@@ -93,6 +95,10 @@
     @include mq-custom(640px) {
       width: 50%;
       flex: 1 1 50%;
+
+      &:nth-child(3), &:nth-child(5) {
+        border-right: none;
+      }
     }
   }
 
@@ -493,6 +499,10 @@
     @include mq-custom(640px) {
       width: 50%;
       flex: 1 1 50%;
+
+      &:nth-child(2), &:nth-child(3) {
+        border-top: none;
+      }
     }
   }
 

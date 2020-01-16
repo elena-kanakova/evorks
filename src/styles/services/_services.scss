@@ -64,42 +64,42 @@
   cursor: pointer;
   transition: all .3s linear;
 
-  /*&:after {
-    display: none;
-    @include pseudo(1,auto,auto,0,0);
-    width: 70px;
-    height: 70px;
-    background: url("../../img/x-icon.svg") center center no-repeat #FF6666;;
-    background-size: 20px 20px;
-  }*/
-
   &:hover {
     position: relative;
     z-index: 2;
     box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5);
-
-    /*&:after {
-      display: block;
-    }
-
-    .services_item-img {
-      right: 108px;
-    }*/
   }
 
   @include mq-custom(1366px) {
     padding: 30px 20px;
+
+    &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13) {
+      border-right: none;
+    }
   }
 
   @include mq-custom(768px) {
     width: 50%;
     flex: 1 1 50%;
+
+    &:nth-child(4), &:nth-child(10) {
+      border-right: 1px solid #C6C2F3;
+    }
+
+    &:nth-child(3), &:nth-child(5), &:nth-child(9), &:nth-child(11) {
+      border-right: none;
+    }
   }
 
   @include mq-custom(414px) {
     width: 100%;
     padding: 30px 20px 50px;
     flex: 1 1 100%;
+    border-right: none;
+
+    &:nth-child(4), &:nth-child(10) {
+      border-right: none;
+    }
   }
 }
 
@@ -107,14 +107,6 @@
   position: relative;
   z-index: 2;
   box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5);
-
-  /*&:after {
-    display: block;
-  }
-
-  .services_item-img {
-    right: 108px;
-  }*/
 }
 
 .services_item-title {
@@ -185,6 +177,12 @@
       color: #FF6666;
       text-transform: uppercase;
     }
+  }
+
+  @include mq-custom(1366px) {
+    width: 100%;
+    flex: 1 1 100%;
+    border-right: none;
   }
 
   @include mq-custom(414px) {

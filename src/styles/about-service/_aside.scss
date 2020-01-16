@@ -143,16 +143,19 @@
     }
 
     .insta-link {
+      display: none;
       background: url("../../img/insta.svg") center center no-repeat;
       background-size: cover;
     }
 
     .youtube-link {
+      display: none;
       background: url("../../img/youtube.svg") center center no-repeat;
       background-size: cover;
     }
 
     .fb-link {
+      display: none;
       margin-right: 0;
       background: url("../../img/fb.svg") center center no-repeat;
       background-size: cover;

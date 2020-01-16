@@ -168,7 +168,6 @@
 .evorker__price__content {
   width: 55%;
   flex: 1 1 55%;
-  border-left: 1px solid #DADADA;
 
   @include mq-custom(640px) {
     width: 100%;

@@ -27,14 +27,28 @@
       padding: 40px 0 40px 30px;
     }
 
-    @include mq-custom(414px) {
-      padding: 30px 20px;
+    @include mq-custom(768px) {
+      padding: 40px 0 40px 20px;
+    }
+
+    @include mq-custom(640px) {
+      padding: 30px 10px;
     }
   }
 
   .services-block__item-title {
     width: 50%;
     flex: 1 1 50%;
+
+    @include mq-custom(640px) {
+      width: 70%;
+      flex: 1 1 70%;
+    }
+
+    @include mq-custom(414px) {
+      width: 50%;
+      flex: 1 1 50%;
+    }
 
     h3 {
       font: 25px/30px $font_main;
@@ -54,6 +68,16 @@
     width: 50%;
     flex: 1 1 50%;
     margin-top: 30px;
+
+    @include mq-custom(640px) {
+      width: 70%;
+      flex: 1 1 70%;
+    }
+
+    @include mq-custom(414px) {
+      width: 50%;
+      flex: 1 1 50%;
+    }
 
     p {
       font: 14px/17px $font_main;

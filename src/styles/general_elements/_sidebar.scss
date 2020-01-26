@@ -236,19 +236,33 @@
 
 .categories_filter-form_input_wrap {
   width: 100%;
+  height: 57px;
   background: #F6FBFF;
   border-top: 1px solid $light-grey;
   border-bottom: 1px solid $light-grey;
 
   input {
-    padding: 20px 75px;
+    padding: 18px 65px;
     width: 100%;
-    height: 100%;
+    font: 16px $font_main;
+    font-weight: 500;
+    color: $dark-grey;
     border: none;
     background: none;
 
+    @include mq-custom(1650px) {
+      padding: 18px 55px;
+    }
+
+    @include mq-custom(1450px) {
+      padding: 18px 45px;
+    }
+
     @include mq-custom(1366px) {
-      padding: 20px 15px 20px 35px;
+      padding: 18px 15px 18px 45px;
+      font: 12px $font_main;
+      font-weight: 500;
+      color: $dark-grey;
     }
 
     @include mq-custom(414px) {
@@ -259,6 +273,10 @@
 
   @include mq-custom(1024px) {
     border-left: none;
+  }
+
+  @include mq-custom(414px) {
+    height: 52px;
   }
 }
 
@@ -385,8 +403,8 @@
 
 ::-webkit-scrollbar { width: 5px; height: 5px;}
 ::-webkit-scrollbar-button { display: none;  background-color: rgba(0, 40, 85, 0.9); }
-::-webkit-scrollbar-track { margin: 10px 0; background-color: rgba(0, 40, 85, 0.9);}
-::-webkit-scrollbar-track-piece { background-color: rgba(0, 40, 85, 0.9);}
+::-webkit-scrollbar-track { margin: 10px 0; background-color: white;}
+::-webkit-scrollbar-track-piece { background-color: white;}
 ::-webkit-scrollbar-thumb { height: 50px; background-color: rgba(0, 40, 85, 0.9); border-radius: 0;}
 ::-webkit-scrollbar-corner { background-color: rgba(0, 40, 85, 0.9);}
 ::-webkit-resizer { background-color: rgba(0, 40, 85, 0.9);}

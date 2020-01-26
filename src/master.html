@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Эворкс - Сервис по предоставлению услуг рабочей силы. </title>
-    <meta name="description" content="Экономит ваше время и старается предоставить лучших работников для дома, дачи и бизнеса.">
+    <title>Эворкс — сервис по предоставлению услуг рабочей силы | Evorks</title>
+    <meta name="description" content="Экономим Ваше время и стараемся предоставить лучших работников для дома, дачи или бизнеса. Звоните:  +7 (963) 913-54-51">
+    <meta name="Keywords" content="эворкс, evorks, строители, подсобные рабочие, грузчики, мастер на час, электрики, сантехники, дворники, уборщики, упаковщики, комплектовщики, ремонт, отделка, строительные работы, демонтаж, сборка мебели, уборка мусора">
     <link rel="icon" href="https://raw.githubusercontent.com/elena-kanakova/evorks_page/master/favikon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../libs/swiper.min.css">
@@ -80,7 +81,7 @@
                         </label>
                     </div>
                     <div class="categories_filter-form_input_wrap">
-                        <input id="categories_filter-form_input" name="categories_filter-form_input" type="text">
+                        <input id="categories_filter-form_input" type="text" name="categories_filter-form_input">
                     </div>
                 </form>
             </div>
@@ -161,7 +162,7 @@
             </nav>
         </div>
         <div class="all-categories-link_wrap">
-            <button class="categories-link js-modal-link_btn" data-href="order-call" data-title="Оставьте заявку на получение подробностей" data-btnTitle="Оставить заявку">Все услуги</button>
+            <button class="categories-link" onclick="window.location.href='services.html'">Все услуги</button>
         </div>
     </aside>
 </div>
@@ -182,10 +183,10 @@
     <div class="text_wrap">
         <div class="title-desc">
             <h1>СТАТЬ МАСТЕРОМ</h1>
-            <p>Работай с сервисом ЭВОРКС, зарабатывай и формируй свой график работы.</p>
+            <p>Работайте с сервисом ЭВОРКС, зарабатывайте и формируйте свой график работы.</p>
         </div>
         <div class="text">
-            <p>Работай с сервисом ЭВОРКС, зарабатывай и формируй свой график работы.
+            <p>Работайте с сервисом ЭВОРКС, зарабатывайте и формируйте свой график работы.
                 Мы всегда находимся в поиске новых работников, профессионалов мастеров и трудолюбивых работяг.
                 Оставляйте заявку, указывате контактные данные, наш менеджер свяжется с Вами и пригласит
                 на собеседование.</p>
@@ -248,7 +249,14 @@
                     <label for="master-form__vacancy">Выбор вакансии</label>
                 </div>
                 <div class="input_wrap">
-                    <input id="master-form__vacancy" type="text" placeholder="Введите название">
+                    <select id="master-form__vacancy" name="select__vacancy" class="input-select">
+                        <option value="Подсобник">Подсобник</option>
+                        <option value="Подсобник">Подсобник</option>
+                        <option value="Подсобник">Подсобник</option>
+                        <option value="Подсобник">Подсобник</option>
+                        <option value="Подсобник">Подсобник</option>
+                        <option value="Подсобник">Подсобник</option>
+                    </select>
                 </div>
             </div>
         </div>

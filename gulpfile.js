@@ -102,8 +102,8 @@ gulp.task('sass:dev', function(done) {
 gulp.task('sass:prod', function(done) {
     gulp.src(path.src.sass)
         .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(autoprefyixer({
-            browsers: ['last 10 versions']
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 10 versions']
         }))
         .pipe(gulp.dest(path.build.css));
     done();
@@ -142,8 +142,6 @@ gulp.task('js:dev', function(done) {
 //prod
 gulp.task('js:prod', function(done) {
     gulp.src(path.src.scripts)
-        .pipe(concat('scripts.min.js'))
-        .pipe(uglify())
         .pipe(gulp.dest(path.build.js));
     done();
 });

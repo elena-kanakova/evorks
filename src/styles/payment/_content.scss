@@ -45,6 +45,10 @@
       width: 100%;
       flex: 1 1 100%;
     }
+
+    @include mq-custom(640px) {
+      padding: 30px 10px;
+    }
   }
 
   .payment-item {
@@ -262,6 +266,10 @@
       width: 100%;
       flex: 1 1 100%;
     }
+
+    @include mq-custom(640px) {
+      padding: 20px 10px;
+    }
   }
 
   .person-item {
@@ -345,6 +353,7 @@
     }
 
     @include mq-custom(640px) {
+      padding: 20px 10px 0;
       width: 50%;
       flex: 1 1 50%;
     }
@@ -436,6 +445,10 @@
       width: 100%;
       flex: 1 1 100%;
     }
+
+    @include mq-custom(640px) {
+      padding: 20px 10px;
+    }
   }
 
   .legal-item {
@@ -497,6 +510,7 @@
     }
 
     @include mq-custom(640px) {
+      padding: 20px 10px;
       width: 50%;
       flex: 1 1 50%;
 

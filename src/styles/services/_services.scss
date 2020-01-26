@@ -49,6 +49,10 @@
     width: 100%;
     flex: 1 1 100%;
   }
+
+  @include mq-custom(640px) {
+    padding: 20px 10px;
+  }
 }
 
 .services_item {
@@ -72,7 +76,9 @@
 
   @include mq-custom(1366px) {
     padding: 30px 20px;
+  }
 
+  @include mq-custom(1360px) {
     &:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(13) {
       border-right: none;
     }
@@ -89,6 +95,10 @@
     &:nth-child(3), &:nth-child(5), &:nth-child(9), &:nth-child(11) {
       border-right: none;
     }
+  }
+
+  @include mq-custom(640px) {
+    padding: 20px 10px;
   }
 
   @include mq-custom(414px) {
@@ -179,15 +189,23 @@
     }
   }
 
-  @include mq-custom(1366px) {
+  @include mq-custom(1360px) {
     width: 100%;
     flex: 1 1 100%;
     border-right: none;
   }
 
+  @include mq-custom(768px) {
+    padding: 30px 20px;
+  }
+
+  @include mq-custom(640px) {
+    padding: 20px 10px;
+  }
+
   @include mq-custom(414px) {
     width: 100%;
-    padding: 30px 20px 50px;
     flex: 1 1 100%;
+    padding: 30px 20px 50px;
   }
 }

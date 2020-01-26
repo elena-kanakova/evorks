@@ -28,6 +28,7 @@
   }
 
   @include mq-custom(640px) {
+    padding: 10px;
     width: 100%;
     flex: 1 1 100%;
   }
@@ -78,6 +79,7 @@
   }
 
   @include mq-custom(640px) {
+    padding: 10px;
     width: 100%;
     flex: 1 1 100%;
   }
@@ -133,6 +135,7 @@
   }
 
   @include mq-custom(640px) {
+    padding: 10px;
     width: 100%;
     flex: 1 1 100%;
   }
@@ -231,6 +234,10 @@
     flex: 1 1 100%;
   }
 
+  @include mq-custom(640px) {
+    padding: 10px;
+  }
+
   &:after {
     @include pseudo(1,auto,50%,auto,-11px);
     width: 30px;
@@ -291,6 +298,10 @@
 
   @include mq-custom(1023px) {
     border-bottom: 1px solid #DADADA;
+  }
+
+  @include mq-custom(640px) {
+    padding: 10px;
   }
 
   .title {

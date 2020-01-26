@@ -21,6 +21,10 @@
     order: 1;
   }
 
+  @include mq-custom(640px) {
+    padding: 30px 10px;
+  }
+
   .title {
     margin-bottom: 25px;
 

@@ -64,7 +64,7 @@
                         <label for="evorker-form__time">Время</label>
                     </div>
                     <div class="input_wrap">
-                        <input id="evorker-form__time" type="time" placeholder="Время">
+                        <input id="evorker-form__time" type="text" placeholder="Время">
                     </div>
                 </div>
             </div>
@@ -109,11 +109,13 @@
                 <div class="input-file_wrap">
                     <label for="evorker-form__file" class="flex column center">
                         <span class="plus">+</span>
+                        <span id="info"></span>
                         <span class="text">прикрепите
                             необходимые
                             материалы</span>
                     </label>
-                    <input id="evorker-form__file" type="file" class="input_hidden">
+                    <p id="demo"></p>
+                    <input id="evorker-form__file" type="file" multiple onchange="check()" class="input_hidden">
                 </div>
                 <div class="input-text_wrap">
                     <div class="label_wrap">
@@ -199,6 +201,12 @@
                     </div>
                 </div>
             </div>
+            <div class="btn-submit_wrap">
+                <button class="js-btn-prev btn-prev flex center">
+                    <img src="../../img/evorker_arrow.svg" alt="Назад">
+                    <span>Вернуться назад</span>
+                </button>
+            </div>
         </div>
         <div class="evorker__form__step-4_wrap none">
             <div class="content-wrap">
@@ -220,10 +228,13 @@
                 </div>
             </div>
             <div class="service-add_wrap flex wrap">
-                <div class="btn-add_wrap">
-                    <button class="btn-add evorker"><span>добавить эворкера</span></button>
+                <div class="btn-submit_wrap none">
+                    <button class="js-btn-prev btn-prev"><img src="../../img/evorker_arrow.svg" alt="Назад"></button>
                 </div>
-                <div class="btn-add_wrap btn-payment_wrap__active">
+                <div class="btn-add_wrap">
+                    <a target="_blank" href="services.html" class="btn-add evorker flex center"><span>добавить эворкера</span></a>
+                </div>
+                <div class="btn-add_wrap btn-payment_wrap__active none">
                     <button class="btn-add service"><span>добавить услугу</span></button>
                 </div>
             </div>

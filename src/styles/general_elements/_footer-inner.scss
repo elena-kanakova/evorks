@@ -60,6 +60,10 @@
     padding: 20px;
     border-right: none;
   }
+
+  @include mq-custom(640px) {
+    padding: 10px;
+  }
 }
 
 .footer-inner__item {

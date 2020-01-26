@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Эворкс — сервис по предоставлению услуг рабочей силы | Evorks</title>
+    <meta name="description" content="Экономим Ваше время и стараемся предоставить лучших работников для дома, дачи или бизнеса. Звоните:  +7 (963) 913-54-51">
+    <meta name="Keywords" content="эворкс, evorks, строители, подсобные рабочие, грузчики, мастер на час, электрики, сантехники, дворники, уборщики, упаковщики, комплектовщики, ремонт, отделка, строительные работы, демонтаж, сборка мебели, уборка мусора">
+    <link rel="icon" href="https://raw.githubusercontent.com/elena-kanakova/evorks_page/master/favikon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="../libs/swiper.min.css">
+    <link rel="stylesheet" href="../libs/slick.css">
+    <link rel="stylesheet" href="../libs/slick-theme.css">
+</head>
+<body>
+<div id="wrapper">
+    <header id="header" class="flex">
+    <div class="header-logo_wrap">
+        <a href="/" class="header-logo flex column">
+            <img src="../../img/header-logo.png" alt="Logo">
+            <span>Сервис по предоставлению <br>услуг рабочей силы</span>
+        </a>
+    </div>
+    <div class="header-content_wrap flex">
+        <div class="header-contacts_wrap">
+            <div class="select-city_wrap">
+                <form action="" method="get" class="select-form flex">
+                    <div class="select select__city_wrap">
+                        <select name="select__city" id="select__city">
+                            <option value="Самара">Самара</option>
+                            <option value="Самара">Самара</option>
+                            <option value="Самара">Самара</option>
+                            <option value="Самара">Самара</option>
+                            <option value="Самара">Самара</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <a href="tel:89639135451" class="header-contacts">8 (963) 913-54-51</a>
+            <button class="order-call js-modal-link_btn" data-href="order-call" data-title="Заказать звонок" data-btnTitle="Заказать звонок">Заказать звонок</button>
+        </div>
+        <div class="mobile__nav-btn_wrap js-header-menu">
+            <div class="btn-menu flex column">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+            </div>
+        </div>
+        <nav class="header-nav_wrap">
+            <ul class="header-nav flex">
+                <li><a href="../../services.html">Все услуги</a></li>
+                <li><a href="../../payment.html">Оплата</a></li>
+                <li><a href="../../about-service.html">О сервисе</a></li>
+                <li><a href="../../master.html">Стать мастером</a></li>
+                <li><a href="../../help.html">Помощь</a></li>
+            </ul>
+        </nav>
+        <div class="order-service_link-wrap">
+            <button class="order-service_link js-modal-link_btn" data-href="order-call" data-title="Заказать услугу" data-btnTitle="Заказать услугу">Заказать услугу</button>
+        </div>
+    </div>
+</header>
+    <div class="content-sidebar_wrap flex">
+        <div id="left-sidebar">
+    <div class="js-sidebar-menu left-sidebar_btn-menu_wrap">
+        <div class="btn-menu flex column">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+        </div>
+    </div>
+    <aside class="categories-filter flex column">
+        <div class="categories-filter-items_wrap">
+            <div class="categories_filter-form_wrap">
+                <form action="" id="categories_filter-form" class="flex">
+                    <div class="categories_filter-form_label_wrap">
+                        <label id="categories_filter-form_label" for="categories_filter-form_input" class="flex">
+                            <img src="../../img/search-icon_black.svg" alt="Иконка">
+                            <span>Выберите категорию</span>
+                        </label>
+                    </div>
+                    <div class="categories_filter-form_input_wrap">
+                        <input id="categories_filter-form_input" type="text" name="categories_filter-form_input">
+                    </div>
+                </form>
+            </div>
+            <nav class="categories-nav">
+                <ul class="categories-nav-items_wrap">
+                    <li class="categories-nav_item categories-nav_item_active"><span>экворкеры</span>
+                        <ul class="categories-nav_item-inner_wrap">
+                            <li class="categories-nav_item-inner">
+                                <a href="">ПОДСОБНИК-РАЗНОРАБОЧИЙ</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">ГРУЗЧИК И ТАКЕЛАЖНИКИ</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">МАСТЕР НА ЧАС</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">МАСТЕР ПО РЕМОНТУ</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">ЭЛЕКТРИК</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">САНТЕХНИК</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">ЗЕМЛЕКОП</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">ДВОРНИК</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">КЛИНИНГ-МАСТЕР</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">УПАКОВЩИК-КОМПЛЕКТОВЩИК</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">РАБОЧИЙ НА ПРОИЗВОДСТВО</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">другие эворкеры</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="categories-nav_item"><span>Услуги</span>
+                        <ul class="categories-nav_item-inner_wrap">
+                            <li class="categories-nav_item-inner">
+                                <a href="">МЕЛКИЙ РЕМОНТ</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">ОТДЕЛКА И РЕМОНТ</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">СТРОИТЕЛЬНЫЕ РАБОТЫ</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">ДЕМОНТАЖ</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">САНТЕХНИКА</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">ЭЛЕКТРИКА</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">СБОРКА МЕБЕЛИ</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">УБОРКА МУСОРА</a>
+                            </li>
+                            <li class="categories-nav_item-inner">
+                                <a href="">КЛИНИНГ</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="all-categories-link_wrap">
+            <button class="categories-link" onclick="window.location.href='services.html'">Все услуги</button>
+        </div>
+    </aside>
+</div>
+        <div id="services-page_content" class="content-footer_wrap">
+            <div id="breadcrumbs">
+    <ul class="breadcrumbs_wrap flex">
+        <li class="breadcrumbs-item">
+            <a href="index.html" class="breadcrumbs-link">Главная</a>
+        </li>
+        <li class="breadcrumbs-item">
+            <a href="" class="breadcrumbs-link breadcrumbs-link_active">Все услуги</a>
+        </li>
+    </ul>
+</div>
+            <div class="services_content-wrap flex">
+                <main id="services__content" class="services_content_left-part">
+                    <section id="evorkers" class="evorkers-wrap flex wrap">
+    <div class="evorkers_title">
+        <h2>выберите нужного вам эворкера</h2>
+        <p>Почасовая оплата</p>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>ПОДСОБНИК-
+                РАЗНОРАБОЧИЙ</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>175 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-1.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>ГРУЗЧИК И ТАКЕЛАЖНИКИ</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>175 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-2.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>мастер на час </h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>300 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-3.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>МАСТЕР ПО РЕМОНТУ</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>300 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-4.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>электрик</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>300 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-5.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>сантехник</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>300 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-6.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>землекоп</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>175 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-7.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>ДВОРНИК</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>162,5 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-8.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>КЛИНИНГ-МАСТЕР</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>по договоренности</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-9.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>УПАКОВЩИК-
+                КОМПЛЕКТОВЩИК</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>162,5 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-10.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item">
+        <div class="evorkers_item-title">
+            <h3>РАБОЧИЙ
+                НА ПРОИЗВОДСТВО</h3>
+        </div>
+        <div class="evorkers_item-desc">
+            <p>162,5 руб/час</p>
+        </div>
+        <div class="evorkers_item-img">
+            <picture><img src="../../img/evorkers-icon_icon-11.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="evorkers_item__more js-modal-link_btn" data-href="order-call__services-evorkers" data-title="не нашли нужного эворкера?" data-btnTitle="Заказать">
+        <div class="more-icon flex">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="more-text">
+            <p>другие эквокеры</p>
+        </div>
+    </div>
+</section>
+                    <section id="services" class="services-wrap flex wrap">
+    <div class="services_title">
+        <h2>ЕЩЁ УСЛУГИ, КОТОРЫЕ МОГУТ ВЫПОЛНИТЬ ЭВОРКЕРЫ</h2>
+        <p>Оплата за сделанную работу</p>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>МЕЛКИЙ РЕМОНТ</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-1.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>ОТДЕЛКА И РЕМОНТ</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-2.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>СТРОИТЕЛЬНЫЕ РАБОТЫ</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-3.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>ДЕМОНТАЖ</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-4.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>САНТЕХНИКА</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-5.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>ЭЛЕКТРИКА</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-6.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>СБОРКА МЕБЕЛИ</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-7.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>УБОРКА МУСОРА</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-8.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>КЛИНИНГ</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-9.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>уборка снега</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-10.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>установка оборудования</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-11.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item">
+        <div class="services_item-title">
+            <h3>благоустройство</h3>
+        </div>
+        <div class="services_item-img">
+            <picture><img src="../../img/services-icon_icon-12.png" alt="Иконка"></picture>
+        </div>
+    </div>
+    <div class="services_item__more js-modal-link_btn" data-href="order-call__services-evorkers" data-title="не нашли нужную услугу?" data-btnTitle="Заказать">
+        <div class="more-icon flex">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="more-text">
+            <p>Прочеее</p>
+        </div>
+    </div>
+</section>
+                </main>
+                <aside id="services__aside" class="services_content_right-part flex column">
+                    <section id="services__section-form">
+    <div class="services__form-wrap flex column">
+        <div class="services__form_title-desc_wrap flex">
+            <div class="title">
+                <h3>Быстрый <br>
+                    заказ</h3>
+            </div>
+            <div class="desc">
+                <p>Укажите ваши контактные данные.
+                    Опишите нужные виды работ.
+                    Менеджер перезвонит вам,
+                    с готовым решением.</p>
+            </div>
+        </div>
+        <div class="services__order-form_form-wrap">
+            <form action="" id="services__order-form">
+                <div class="services__order-form-elements_wrap flex">
+                    <div class="label-input_wrap">
+                        <div class="label_wrap">
+                            <label for="services_name">Имя</label>
+                        </div>
+                        <div class="input_wrap">
+                            <input name="name" id="services_name" type="text" placeholder="Ваше имя">
+                        </div>
+                    </div>
+                    <div class="label-input_wrap">
+                        <div class="label_wrap">
+                            <label for="services_phone">Номер телефона</label>
+                        </div>
+                        <div class="input_wrap">
+                            <input name="phone" id="services_phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="services__order-form-elements_wrap flex">
+                    <div class="label-input_wrap">
+                        <div class="label_wrap">
+                            <label for="services_text"></label>
+                        </div>
+                        <div class="input_wrap">
+                            <textarea name="text" id="services_text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-submit_wrap">
+                        <div class="btn_wrap">
+                            <button type="submit">Заказать услугу</button>
+                        </div>
+                        <div class="check-agree_wrap flex">
+                            <input name="agree" id="services_input_agree" type="checkbox" checked class="input_agree">
+                            <label id="services_label_agree" for="services_input_agree" class="label_agree">Согласие на обработку персональных данных</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+                    <section class="services-aside flex column">
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ РИТЕЙЛОВ" data-btnTitle="Заказать">
+        <div class="services-aside__item-text">
+            <div class="services-aside__item-title">
+                <h3>Для ритейлов</h3>
+            </div>
+            <div class="services-aside__item-desc">
+                <a href="#">Перейти</a>
+            </div>
+        </div>
+        <div class="services-aside__item-img">
+            <picture><img src="../../img/basket-photo.png" alt="Фото" class="js-services-block__img"></picture>
+        </div>
+    </article>
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ СТРОИТЕЛЕЙ" data-btnTitle="Заказать">
+        <div class="services-aside__item-text">
+            <div class="services-aside__item-title">
+                <h3>Для строителей</h3>
+            </div>
+            <div class="services-aside__item-desc">
+                <a href="#">Перейти</a>
+            </div>
+        </div>
+        <div class="services-aside__item-img">
+            <picture><img src="../../img/services__helmet-photo.png" alt="Фото" class="js-services-block__img"></picture>
+        </div>
+    </article>
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ КОМПАНИЙ" data-btnTitle="Заказать">
+        <div class="services-aside__item-text">
+            <div class="services-aside__item-title">
+                <h3>Частным <br>компаниям</h3>
+            </div>
+            <div class="services-aside__item-desc">
+                <a href="#">Перейти</a>
+            </div>
+        </div>
+        <div class="services-aside__item-img">
+            <picture><img src="../../img/case-photo.png" alt="Фото" class="js-services-block__img"></picture>
+        </div>
+    </article>
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ СКЛАДОВ" data-btnTitle="Заказать">
+        <div class="services-aside__item-text">
+            <div class="services-aside__item-title">
+                <h3>Для складов</h3>
+            </div>
+            <div class="services-aside__item-desc">
+                <a href="#">Перейти</a>
+            </div>
+        </div>
+        <div class="services-aside__item-img">
+            <picture><img src="../../img/boxes-photo.png" alt="Фото" class="js-services-block__img"></picture>
+        </div>
+    </article>
+    <article class="services-aside__item js-modal-link_btn" data-href="order-call__services" data-title="СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ ДЛЯ РИТЕЙЛОВ" data-btnTitle="Заказать">
+        <div class="services-aside__item-text">
+            <div class="services-aside__item-title">
+                <h3>Для хозяев <br>домов и квартир</h3>
+            </div>
+            <div class="services-aside__item-desc">
+                <a href="#">Перейти</a>
+            </div>
+        </div>
+        <div class="services-aside__item-img">
+            <picture><img src="../../img/sink-photo.png" alt="Фото" class="js-services-block__img"></picture>
+        </div>
+    </article>
+</section>
+                </aside>
+            </div>
+            <div id="footer-inner" class="flex">
+    <div class="footer-inner__title">
+        <h3>Последние выполненные заказы</h3>
+    </div>
+    <div class="footer-inner__items-wrap flex">
+        <div class="footer-inner__item">
+            <div class="footer-inner__item__number">
+                <p>№ 23457</p>
+            </div>
+            <div class="footer-inner__item__title-price flex">
+                <p class="title">Уборка в квартире с очисткой окон</p>
+                <p class="price">3000 p</p>
+            </div>
+            <div class="footer-inner__item__name">
+                <p class="desc">Исполнитель:</p>
+                <p class="name">Иванов Сергей Петрович</p>
+            </div>
+        </div>
+        <div class="footer-inner__item">
+            <div class="footer-inner__item__number">
+                <p>№ 23457</p>
+            </div>
+            <div class="footer-inner__item__title-price flex">
+                <p class="title">Уборка в квартире с очисткой окон</p>
+                <p class="price">3000 p</p>
+            </div>
+            <div class="footer-inner__item__name">
+                <p class="desc">Исполнитель:</p>
+                <p class="name">Иванов Сергей Петрович</p>
+            </div>
+        </div>
+        <div class="footer-inner__item">
+            <div class="footer-inner__item__number">
+                <p>№ 23457</p>
+            </div>
+            <div class="footer-inner__item__title-price flex">
+                <p class="title">Уборка в квартире с очисткой окон</p>
+                <p class="price">3000 p</p>
+            </div>
+            <div class="footer-inner__item__name">
+                <p class="desc">Исполнитель:</p>
+                <p class="name">Иванов Сергей Петрович</p>
+            </div>
+        </div>
+        <div class="footer-inner__item">
+            <div class="footer-inner__item__number">
+                <p>№ 23457</p>
+            </div>
+            <div class="footer-inner__item__title-price flex">
+                <p class="title">Уборка в квартире с очисткой окон</p>
+                <p class="price">3000 p</p>
+            </div>
+            <div class="footer-inner__item__name">
+                <p class="desc">Исполнитель:</p>
+                <p class="name">Иванов Сергей Петрович</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+<div class="overlay"></div>
+<div id="order-call__services-evorkers" class="modal">
+    <div class="modal-wrap">
+        <div class="btn-modal_close js-close-btn flex">
+            <p class="close">закрыть</p>
+        </div>
+        <div class="index__form-wrap">
+            <div class="index__form_title-desc_wrap">
+                <div class="title">
+                    <h3 class="modal-form_title"></h3>
+                </div>
+                <div class="desc">
+                    <p>Оставьте заявку, наш менеджер перезвонит вам.</p>
+                </div>
+            </div>
+            <div class="index__order-form_form-wrap">
+                <form action="" id="modal__order-form__services-evorkers">
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal__order-form__services-evorkers_name">Имя</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="name" id="modal__order-form__services-evorkers_name" type="text" placeholder="Введите имя">
+                            </div>
+                        </div>
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal__order-form__services-evorkers_phone">Номер телефона</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="phone" id="modal__order-form__services-evorkers_phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal__order-form__services-evorkers_text"></label>
+                            </div>
+                            <div class="input_wrap">
+                                <textarea name="text" id="modal__order-form__services-evorkers_text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                            </div>
+                        </div>
+                        <div class="btn-submit_wrap flex column">
+                            <div class="btn_wrap">
+                                <button type="submit" class="js-modal-form_btn"></button>
+                            </div>
+                            <div class="check-agree_wrap flex">
+                                <input name="agree" id="modal__order-form__services-evorkers_input_agree" type="checkbox" checked class="input_agree">
+                                <label id="modal__order-form__services-evorkers_label_agree" for="modal__order-form__services-evorkers_input_agree" class="label_agree">Согласие на обработку персональных данных</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="order-call__services" class="modal">
+    <div class="modal-wrap">
+        <div class="btn-modal_close js-close-btn flex">
+            <p class="close">закрыть</p>
+        </div>
+        <div class="index__form-wrap">
+            <div class="index__form_title-desc_wrap">
+                <div class="title">
+                    <h3 class="modal-form_title"></h3>
+                </div>
+                <div class="desc">
+                    <p>Оставьте заявку на получение подробностей, менеджер перезвонит вам!</p>
+                </div>
+            </div>
+            <div class="index__order-form_form-wrap">
+                <form action="" id="modal__order-form__services">
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal__order-form__services_name">Имя</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="name" id="modal__order-form__services_name" type="text" placeholder="Введите имя">
+                            </div>
+                        </div>
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal__order-form__services_phone">Номер телефона</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="phone" id="modal__order-form__services_phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal__order-form__services_text"></label>
+                            </div>
+                            <div class="input_wrap">
+                                <textarea name="text" id="modal__order-form__services_text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                            </div>
+                        </div>
+                        <div class="btn-submit_wrap flex column">
+                            <div class="btn_wrap">
+                                <button type="submit" class="js-modal-form_btn"></button>
+                            </div>
+                            <div class="check-agree_wrap flex">
+                                <input name="agree" id="modal__order-form__services_input_agree" type="checkbox" checked class="input_agree">
+                                <label id="modal__order-form__services_label_agree" for="modal__order-form__services_input_agree" class="label_agree">Согласие на обработку персональных данных</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="order-call" class="modal">
+    <div class="modal-wrap">
+        <div class="btn-modal_close js-close-btn flex">
+            <p class="close">закрыть</p>
+        </div>
+        <div class="index__form-wrap">
+            <div class="index__form_title-desc_wrap">
+                <div class="title">
+                    <h3 class="modal-form_title"></h3>
+                </div>
+                <div class="desc">
+                    <p>Укажите ваши контактные данные.
+                        Опишите нужные виды работ.
+                        Менеджер перезвонит вам,
+                        с готовым решением.</p>
+                </div>
+            </div>
+            <div class="index__order-form_form-wrap">
+                <form action="" id="modal__order-form">
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal__order-form_name">Имя</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="name" id="modal__order-form_name" type="text" placeholder="Введите имя">
+                            </div>
+                        </div>
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal__order-form_phone">Номер телефона</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="phone" id="modal__order-form_phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal__order-form_text"></label>
+                            </div>
+                            <div class="input_wrap">
+                                <textarea name="text" id="modal__order-form_text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                            </div>
+                        </div>
+                        <div class="btn-submit_wrap flex column">
+                            <div class="btn_wrap">
+                                <button type="submit" class="js-modal-form_btn"></button>
+                            </div>
+                            <div class="check-agree_wrap flex">
+                                <input name="agree" id="modal__order-form_input_agree" type="checkbox" checked class="input_agree">
+                                <label id="modal__order-form_label_agree" for="modal__order-form_input_agree" class="label_agree">Согласие на обработку персональных данных</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-form_search" class="modal">
+    <div class="modal-wrap">
+        <div class="btn-modal_close js-close-btn flex">
+            <p class="close">закрыть</p>
+        </div>
+        <div class="index__form-wrap">
+            <div class="index__form_title-desc_wrap">
+                <div class="title">
+                    <h3 class="modal-form_title"></h3>
+                </div>
+                <div class="desc">
+                    <p>Поиск на сервисе временно не доступен.
+                        Укажите ваши контактные данные.
+                        Опишите то, что вы ищете.
+                        Мы перезвоним вам и поможем с поиском.</p>
+                </div>
+            </div>
+            <div class="index__order-form_form-wrap">
+                <form action="" id="modal-form_search_form">
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal-form_search_name">Имя</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="name" id="modal-form_search_name" type="text" placeholder="Введите имя">
+                            </div>
+                        </div>
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal-form_search_phone">Номер телефона</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="phone" id="modal-form_search_phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal-form_search_text"></label>
+                            </div>
+                            <div class="input_wrap">
+                                <textarea name="text" id="modal-form_search_text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                            </div>
+                        </div>
+                        <div class="btn-submit_wrap flex column">
+                            <div class="btn_wrap">
+                                <button type="submit" class="js-modal-form_btn"></button>
+                            </div>
+                            <div class="check-agree_wrap flex">
+                                <input name="agree" id="modal-form_search_input_agree" type="checkbox" checked class="input_agree">
+                                <label id="modal-form_search_label_agree" for="modal-form_search_input_agree" class="label_agree">Согласие на обработку персональных данных</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../libs/jquery-3.2.1.min.js"></script>
+<script src="../libs/jquery.maskedinput.min.js"></script>
+<script src="../libs/swiper.min.js"></script>
+<script src="../libs/slick.min.js"></script>
+<script src="../js/scripts.js"></script>
+</body>
+</html>

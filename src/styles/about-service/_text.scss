@@ -9,8 +9,32 @@
       color: #002855;
       text-transform: uppercase;
 
-      @include mq-custom(1280px) {
+      @include mq-custom(1450px) {
+        font: 38px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(1366px) {
         font: 36px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(1024px) {
+        font: 34px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(768px) {
+        font: 30px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(414px) {
+        font: 26px $font_main;
         font-weight: bold;
         color: #002855;
       }
@@ -22,8 +46,21 @@
       font-weight: bold;
       color: #002855;
 
-      @include mq-custom(1280px) {
+      @include mq-custom(1366px) {
         font: 18px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(1024px) {
+        margin-top: 10px;
+        font: 17px $font_main;
+        font-weight: bold;
+        color: #002855;
+      }
+
+      @include mq-custom(768px) {
+        font: 16px $font_main;
         font-weight: bold;
         color: #002855;
       }
@@ -31,9 +68,11 @@
   }
 
   .text {
+    width: 100%;
     margin-top: 40px;
     column-count: 2;
-    break-inside: avoid-column;
+    page-break-inside: avoid;
+    break-inside: avoid;
 
     p {
       margin-bottom: 20px;
@@ -59,8 +98,20 @@
     }
   }
 
+  @include mq-custom(1366px) {
+    padding: 50px 30px 0;
+  }
+
   @include mq-custom(1280px) {
     padding: 40px 30px 0;
+  }
+
+  @include mq-custom(768px) {
+    padding: 40px 20px 0;
+  }
+
+  @include mq-custom(640px) {
+    padding: 30px 10px 0;
   }
 }
 
@@ -145,7 +196,19 @@
     }
   }
 
+  @include mq-custom(1366px) {
+    padding: 50px 30px 40px;
+  }
+
   @include mq-custom(1280px) {
     padding: 40px 30px;
+  }
+
+  @include mq-custom(768px) {
+    padding: 40px 20px;
+  }
+
+  @include mq-custom(640px) {
+    padding: 40px 10px;
   }
 }

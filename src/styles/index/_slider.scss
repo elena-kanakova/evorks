@@ -27,37 +27,53 @@
 
   .slide {
     position: relative;
-    padding-bottom: 120px;
-    height: 100%;
+    height: inherit;
     justify-content: center;
     flex-direction: column;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+
+    &:after {
+      display: none;
+      @include pseudo(1,0,0,0,0);
+      background: rgba(0,0,0,.6);
+
+      @include mq-custom(1024px) {
+        display: block;
+      }
+    }
   }
 
   .slide_content {
     position: relative;
     z-index: 2;
-    padding: 114px 50px 0 50px;
+    padding: 11.8% 50px 12.5% 50px;
     width: 70%;
     flex: 1 1 70%;
+    height: inherit;
 
     @include mq-custom(1366px) {
-      padding: 114px 30px 0 30px;
+      padding: 10% 30px 80px 30px;
     }
 
-    @include mq-custom(768px) {
-      padding: 80px 30px 0 30px;
+    @include mq-custom(1280px) {
+      padding: 9% 30px 80px 30px;
     }
 
-    @include mq-custom(640px) {
+    @include mq-custom(1024px) {
+      padding: 8% 30px 80px 30px;
       width: 100%;
       flex: 1 1 100%;
     }
 
+    @include mq-custom(768px) {
+      padding: 11.8% 20px 80px;
+    }
+
+    @include mq-custom(640px) {
+      padding: 11.8% 10px 80px;
+    }
+
     @include mq-custom(414px) {
-      padding: 60px 20px 0 20px;
+      padding: 100px 10px 80px;
     }
   }
 
@@ -73,8 +89,14 @@
         color: white;
       }
 
+      @include mq-custom(1280px) {
+        font: 26px/32px $font_main;
+        font-weight: 600;
+        color: white;
+      }
+
       @include mq-custom(414px) {
-        font: 24px/36px $font_main;
+        font: 24px/30px $font_main;
         font-weight: 600;
         color: white;
       }
@@ -83,6 +105,7 @@
 
   .slide_desc {
     margin-top: 20px;
+    margin-bottom: 20px;
 
     p {
       font: 17px/30px $font_main;
@@ -111,6 +134,9 @@
     width: 100%;
     height: 100%;
     text-align: right;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     img {
       display: none;
@@ -127,7 +153,7 @@
     z-index: 3;
     left: 50px !important;
     bottom: 50px !important;
-    height: 100%;
+    height: 8px;
 
     .dot {
       display: block;
@@ -159,11 +185,11 @@
       }
     }
 
-    @include mq-custom(768px) {
+    @include mq-custom(1366px) {
       left: 30px !important;
     }
 
-    @include mq-custom(414px) {
+    @include mq-custom(768px) {
       left: 20px !important;
     }
   }

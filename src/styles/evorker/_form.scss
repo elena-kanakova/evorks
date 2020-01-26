@@ -11,40 +11,17 @@ input[type=number]{
   -moz-appearance: textfield;
 }
 
-/*
-input[type=time]::-webkit-datetime-edit-fields-wrapper {
-  display: flex;
-}
-
-!* Hour *!
-input[type=time]::-webkit-datetime-edit-hour-field {
-  background-color: #f2f4f5;
-  border-radius: 15%;
-}
-
-!* Minute *!
-input[type=time]::-webkit-datetime-edit-minute-field {
-  background-color: #f2f4f5;
-  border-radius: 15%;
-}
-
-!* AM/PM *!
-input[type=time]::-webkit-datetime-edit-ampm-field {
-  background-color: #7155d3;
-  border-radius: 15%;
-  color: #fff;
-}
-
-
-'X' button for resetting/clearing time
 input[type=date]::-webkit-clear-button {
   display: none;
 }
 
-!* Up/Down arrows for incrementing/decrementing the value *!
-input[type=time]::-webkit-inner-spin-button {
+input[type=date]::-webkit-inner-spin-button {
   display: none;
-}*/
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  margin-right: -8px;
+}
 
 #evorker__form-wrap {
   position: relative;
@@ -252,6 +229,10 @@ input[type=time]::-webkit-inner-spin-button {
     @include mq-custom(1280px) {
       padding: 20px;
     }
+
+    @include mq-custom(640px) {
+      padding: 10px;
+    }
   }
 
   .btn-submit_wrap {
@@ -319,7 +300,13 @@ input[type=time]::-webkit-inner-spin-button {
       margin-right: 2%;
       margin-top: 32px;
 
-      &:nth-child(2n), &:nth-child(3n) {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(3) {
+        width: 100%;
+        flex: 1 1 100%;
         margin-right: 0;
       }
 
@@ -348,30 +335,13 @@ input[type=time]::-webkit-inner-spin-button {
     }
 
     .label-input__date_wrap, .label-input__time_wrap {
-      width: 22%;
-      flex: 1 1 22%;
-      margin-left: 2%;
+      width: 48%;
+      flex: 1 1 48%;
       margin-top: 32px;
-
-      @include mq-custom(1366px) {
-        width: 48%;
-        flex: 1 1 48%;
-      }
-
-      @include mq-custom(1023px){
-        width: 22%;
-        flex: 1 1 22%;
-      }
-
-      @include mq-custom(640px){
-        width: 48%;
-        flex: 1 1 48%;
-      }
 
       @include mq-custom(414px) {
         width: 100%;
         flex: 1 1 100%;
-        margin-left: 0;
       }
 
       input {
@@ -379,16 +349,10 @@ input[type=time]::-webkit-inner-spin-button {
       }
     }
 
-    .label-input__date_wrap {
-      @include mq-custom(1366px) {
-        margin-left: 0;
-      }
+    .label-input__time_wrap {
+      margin-left: 2%;
 
-      @include mq-custom(1023px){
-        margin-left: 2%;
-      }
-
-      @include mq-custom(640px){
+      @include mq-custom(414px) {
         margin-left: 0;
       }
     }
@@ -414,6 +378,13 @@ input[type=time]::-webkit-inner-spin-button {
         color: #152748;
         border: 1px solid $light-grey;;
         border-radius: 3px;
+
+        @include mq-custom(1280px) {
+          padding: 10px;
+          font: 15px/21px $font_main;
+          font-weight: normal;
+          color: #152748;
+        }
       }
 
       @include input_placeholder($color: $black_70);
@@ -521,6 +492,21 @@ input[type=time]::-webkit-inner-spin-button {
           background: linear-gradient(90deg, #367EFF 0%, #20B0F2 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+        }
+
+        #info {
+          display: none;
+          margin-top: 10px;
+          font: 10px $font_main;
+          font-weight: 500;
+          color: #367EFF;
+          background: linear-gradient(90deg, #367EFF 0%, #20B0F2 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        #info.show {
+          display: block;
         }
       }
     }
@@ -638,6 +624,7 @@ input[type=time]::-webkit-inner-spin-button {
       padding-bottom: 0;
     }
   }
+
   .order-details__elements-wrap {
     width: 100%;
     flex: 1 1 100%;
@@ -723,6 +710,32 @@ input[type=time]::-webkit-inner-spin-button {
     @include mq-custom(1450px) {
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  .btn-submit_wrap {
+    margin: 30px 0;
+
+    .btn-prev {
+      margin: 0 auto;
+      padding: 13px 33px;
+      min-width: 150px;
+      width: auto;
+      max-width: 250px;
+      height: auto;
+      border-radius: 100px;
+
+      span {
+        display: block;
+        margin-left: 10px;
+        font: 14px/17px $font_main;
+        font-weight: 500;
+        color: #367EFF;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #367EFF 0%, #20B0F2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 
@@ -902,6 +915,10 @@ input[type=time]::-webkit-inner-spin-button {
     @include mq-custom(1366px) {
       padding: 30px 20px 0;
     }
+
+    @include mq-custom(640px) {
+      padding: 30px 10px 0;
+    }
   }
 
   .step-3__title {
@@ -956,11 +973,19 @@ input[type=time]::-webkit-inner-spin-button {
 
   .service-add_wrap {
     padding: 30px;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 
-    @include mq-custom(1919px) {
-      flex-direction: column;
-      align-items: center;
+    @include mq-custom(640px) {
+      padding: 30px 10px;
+    }
+
+    .btn-submit_wrap {
+      margin-top: 0;
+    }
+
+    .btn-prev {
+      margin-right: 0;
     }
 
     .btn-add {
@@ -971,13 +996,24 @@ input[type=time]::-webkit-inner-spin-button {
       border: none;
       border-radius: 100px;
       cursor: pointer;
+
+      @include mq-custom(1150px) {
+        min-width: 120px;
+        max-width: 150px;
+      }
+
+      @include mq-custom(1023px){
+        min-width: 170px;
+        max-width: 250px;
+      }
+
+      @include mq-custom(360px) {
+        min-width: 120px;
+        max-width: 150px;
+      }
     }
 
     .btn-add.evorker {
-      @include mq-custom(1919px) {
-        margin-bottom: 20px;
-      }
-
       span {
         display: block;
         text-transform: uppercase;

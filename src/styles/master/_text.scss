@@ -11,8 +11,12 @@
       padding: 40px 30px;
     }
 
+    @include mq-custom(768px) {
+      padding: 40px 20px;
+    }
+
     @include mq-custom(640px) {
-      padding: 30px 20px;
+      padding: 30px 10px;
       width: 100%;
       flex: 1 1 100%;
     }
@@ -23,6 +27,7 @@
       font: 40px $font_main;
       font-weight: bold;
       color: #002855;
+      text-transform: uppercase;
 
       @include mq-custom(1450px) {
         font: 38px $font_main;

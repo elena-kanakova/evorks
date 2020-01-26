@@ -9,7 +9,7 @@
     padding: 30px 20px;
   }
 
-  @include mq-custom(414px) {
+  @include mq-custom(640px) {
     padding: 30px 10px;
   }
 }
@@ -142,6 +142,12 @@
 
 .help__faq-item.faq-item_active {
   height: auto;
+
+  .question {
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
 
   .answer {
     display: block;

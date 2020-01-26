@@ -52,6 +52,14 @@
       flex-direction: column;
       justify-content: flex-start;
     }
+
+    @include mq-custom(768px) {
+      padding: 40px 20px 10px;
+    }
+
+    @include mq-custom(640px) {
+      padding: 30px 10px 10px;
+    }
   }
 }
 
@@ -85,6 +93,14 @@
 
   @include mq-custom(1366px) {
     padding: 14px 15px 8px 15px;
+  }
+
+  @include mq-custom(768px) {
+    padding: 14px 20px 8px;
+  }
+
+  @include mq-custom(640px) {
+    padding: 14px 10px 8px;
   }
 }
 
